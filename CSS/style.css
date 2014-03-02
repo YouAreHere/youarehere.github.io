@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/* ----------- WHOLE DOCUMENT  ----------- */
+* {
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+/* ----------- MAIN BODY  ----------- */
+#logo {
+	width: 25%;
+    margin: 0 auto;
+}
+
+#title {
+	color: RGB(106, 58, 134);
+	font-size: 16pt;
+	text-align: center;
+	font-weight: bold;
+}
+
+.eventTextbox{
+	height: 45px;
+}
+
+.goButton{
+	height: 22px;
+	width: 60% !important;
+
+}
+
+#map_canvas {
+    width: 500px;
+    height: 500px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.controls {
+	margin-top: 16px;
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 32px;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#pac-input {
+	background-color: #fff;
+	padding: 0 11px 0 13px;
+    width: 100%;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    text-overflow: ellipsis;
+}
+
+#pac-input:focus {
+    border-color: #4d90fe;
+    margin-left: -1px;
+    padding-left: 14px;  /* Regular padding-left + 1. */
+    width: 100%;
+}
+
+.pac-container {
+	margin-top: 20px;
+	margin-left:30px;
+	width: 70%;
+	background: none;
+	border: none;
+	box-shadow: none;
+	font-family: Roboto;
+}
+
+.tableHeaderRows {
+	text-align: center; 
+	border-bottom: 4px solid #E9E9E9;
+	color: red;
+	height: 35px;
+}
+
+.tableRows {
+	height: 35px;
+}

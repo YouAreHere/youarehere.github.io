@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> You Are Here </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="CSS/jquery.mobile-1.4.1.css" />
+        <link rel="stylesheet" href="CSS/style.css" />
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+        <script src="JS/navigate.js"></script>
+    </head>
+  
+  <body>
+
+    <!-- =========================================================================================================================== -->
+    <!-- Start of first page                    HOME                    -->
+    <!-- =========================================================================================================================== -->
+      <div data-role="page" id="home">
+
+          <!-- **NAVIGATION HEADER MENU** -->
+          <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
+              <h1></h1>
+              <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+          </div>
+          
+
+          <!-- **MAIN BODY** -->
+          <div role="main" class="ui-content">
+              <! -- logo -->
+              <div id="logo">
+                  <img width="250px" src="Images/logo2.png" />
+              </div>
+
+              <!-- main on-screen buttons -->
+              <fieldset class="ui-grid-b" width="500px;">
+                  <div class="ui-block-a">
+                    <a href="#navigation" class="ui-btn">Navigation</a>
+                  </div>
+
+                  <div class="ui-block-b">
+                    <a href="#events" class="ui-btn">Events @ NU</a>
+                  </div>
+
+                  <div class="ui-block-c">
+                    <a href="#explore" class="ui-btn">Explore NU</a>
+                  </div>
+              </fieldset>
+          </div>
+
+
+          <!-- ** SIDEBAR PANEL ** -->
+          <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open ui-corner-all" data-theme="a">
+              <div class="ui-panel-inner">
+                <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
+                  <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
+                  <li data-icon="heart" class="ui-mini"><a href="#explore">Explore</a></li>
+                  <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
+                  <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
+                  <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
+                  <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
+                  <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
+                </ul>
+              </div>
+          </div>
+
+
+          <!-- ** BOTTOM PANEL ** -->
+          <div data-role="panel" id="updates" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open ui-corner-all" data-theme="a">
+              <div class="ui-panel-inner">
+                <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
+                  <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
+                  <li data-icon="heart" class="ui-mini"><a href="#explore">Explore</a></li>
+                  <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
+                  <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
+                  <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
+                  <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
+                  <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
+                </ul>
+              </div>
+          </div>
+
+           <!-- ** FOOTER **  -->
+           <!-- 
+          <div data-role="footer">
+              <h1> Updates </h1>
+              <a href="#updates" class="ui-nodisc-icon ui-alt-icon ui-btn-icon-bottom ui-btn ui-icon-carat-d ui-btn-icon-notext ui-corner-all ui-mini" data-role="button" role="button">Menu</a>
+          </div> -->
+      </div>
+
+
+    <!-- =========================================================================================================================== -->
+    <!-- Start of second page                    NAVIGATION                    -->
+    <!-- =========================================================================================================================== -->
+      <div data-role="page" id="navigation">
+
+          <!-- **NAVIGATION HEADER MENU** -->
+          <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
+              <a href="index.html" data-rel="back" data-icon="back">Back</a>
+              <h1>Navigation</h1>
+              <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+          </div>
+          
+          <!-- **MAIN BODY** -->
+          <div role="main" class="ui-content">
+              <div data-role="fieldcontain" class="pac-container">
+                  <input id="pac-input" type="text" placeholder="Search"/>
+              </div>
+
+              <div id="map_canvas"></div>
+          </div>
+
+          <!-- ** SIDEBAR PANEL ** -->
+          <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
+            <div class="ui-panel-inner">
+              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
+                <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
+                <li data-icon="heart" class="ui-mini"><a href="#explore">Explore</a></li>
+                <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
+                <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
+                <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
+                <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
+                <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ** FOOTER **  -->
+          <div data-role="footer"></div>
+      </div>
+
+
+    <!-- =========================================================================================================================== -->
+    <!-- Start of third page                    EXPLORE                    -->
+    <!-- =========================================================================================================================== -->
+      <div data-role="page" id="explore">
+
+          <!-- **NAVIGATION HEADER MENU** -->
+          <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
+              <a href="#home" data-rel="back" data-icon="back"> Back</a>
+              <h1>Explore NU</h1>
+              <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+          </div>
+
+          <!-- **MAIN BODY** -->
+          <div role="main" class="ui-content" style="margin:20px;">
+              <div id="title">
+                  <h1>Explore NU</h1>
+              </div>
+
+              <div class="choice_list" style="margin-left: 15em;width:70%;">
+                  <ul data-role="listview" data-inset="true" data-filter="true">
+                      <li><a href="#nu-landmarks" data-transition="slidedown"><h3>NU Landmarks</h3></a></li>
+                      <li><a href="#food" data-transition="slidedown"><h3>Food</h3></a></li>
+                      <li><a href="#" data-transition="slidedown"><h3>Entertainment</h3></a></li>
+                  </ul>
+              </div>
+          </div>
+
+          <!-- ** SIDEBAR PANEL ** -->
+          <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
+            <div class="ui-panel-inner">
+              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
+                <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
+                <li data-icon="heart" class="ui-mini"><a href="#explore">Explore</a></li>
+                <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
+                <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
+                <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
+                <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
+                <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ** FOOTER **  -->
+          <div data-role="footer"></div>
+      </div>
+
+      <!-- =========================================================================================================================== -->
+
+      <!-- Start of landmarks page -->
+      <div data-role="page" id="nu-landmarks">
+
+          <!-- **NAVIGATION HEADER MENU** -->
+          <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
+              <a href="index.html" data-rel="back" data-icon="back">Back</a>
+              <h1></h1>
+              <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+          </div>
+
+          <!-- **MAIN BODY** -->
+          <div role="main" class="ui-content" style="margin:20px;">
+              <div id="title">
+                  <h1>NU Landmarks</h1>
+              </div>
+
+              <div class="choice_list" style="margin-left: 20em;width:50%;">
+                  <ul data-role="listview" data-inset="true" data-filter="true">
+                      <li><a href="#rock" data-role="button"><h3>The Rock</h3></a></li>
+                      <li><a href="#navigation" data-role="button"><h3>Arch</h3></a></li>
+                      <li><a href="#" data-role="button"><h3>The Lakefill</h3></a></li>
+                      <li><a href="#" data-role="button"><h3>Shakespeare Garden</h3></a></li>
+                  </ul>
+              </div>
+          </div>
+
+          <!-- ** SIDEBAR PANEL ** -->
+          <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
+            <div class="ui-panel-inner">
+              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
+                <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
+                <li data-icon="heart" class="ui-mini"><a href="#explore">Explore</a></li>
+                <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
+                <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
+                <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
+                <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
+                <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ** FOOTER **  -->
+          <div data-role="footer"></div>
+      </div>
+
+    <!-- =========================================================================================================================== -->
+
+    <!-- Start of rock page -->
+    <div data-role="page" id="rock">
+      
+      <!-- **NAVIGATION HEADER MENU** -->
+      <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
+          <a href="index.html" data-rel="back" data-icon="back"> Back</a>
+          <h1> </h1>
+          <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+      </div>
+
+      <!-- **MAIN BODY** -->
+      <div class="ui-grid-a">
+          <div class="ui-block-a" style="padding-left: 2em;">
+            <h1>The Rock</h1>
+            <p style="text-align:justify; width: 70%;"><strong> The Rock, near University Hall, is one of the best-known landmarks on the Evanston campus.</strong></p>
+            <p style="text-align:justify; width: 70%;"><strong>Students began painting the Rock in the 1950s, first as a prank, then as an accepted avenue of expression.
+            Now, almost every night, a different group paints a message or symbols promoting a particular cause or event.</strong></p>
+            <p> Quick Facts: </p>
+            <ul>
+                    <li>Date: 1902</li>
+            </ul>
+          </div>
+      </div>
+
+      <div class="ui-block-b" >
+        <p><img src="Images/The-Rock.jpg" alt="The Rock-Northwestern" height="300" width="450"/></p>
+        <p>
+          <a href="http://digital.library.northwestern.edu/architecture/building.php?bid=25" data-role="button" style="width:60%">More information about The Rock</a>
+        </p>
+      </div>
+
+      <div class="ui-grid-a">
+          <div class="ui-block-a" style="padding-left: 2em;">
+                  <h2>Location</h2>
+                  <p>The Rock</p>
+                  <p> Northwestern University</p>
+                  <p>Evanston, IL 60208</p>
+          </div>
+
+          <div id="map_canvas" ></div>
+              <script type="text/javascript">
+                      function init_map(){
+                              if (map == undefined)   {
+                                      var map_canvas = document.getElementById('map_canvas');
+                                      map_canvas.offSetWidth = window.innerWidth;
+                                      map_canvas.offSetHeight = window.innerHeight;
+                                      var mapOpts = {
+                                              center: new google.maps.LatLng(42.054647, -87.677139),
+                                              zoom: 15,
+                                              streetViewControl: false,
+                                              mapTypeId: google.maps.MapTypeId.ROADMAP
+                                              };
+                                              var map = new google.maps.Map(map_canvas, mapOpts);
+                                              var marker = new google.maps.Marker({
+                                                      position: new google.maps.LatLng(42.05155,-87.67591),
+                                                      map: map,
+                                                      title: 'Rock!'
+                                                      });
+                                              }}
+                                              $(document).on("pageshow","#rock",function(){init_map();});
+              </script>
+
+      </div>
+
+      <!-- ** SIDEBAR PANEL ** -->
+          <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
+            <div class="ui-panel-inner">
+              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
+                <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
+                <li data-icon="heart" class="ui-mini"><a href="#explore">Explore</a></li>
+                <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
+                <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
+                <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
+                <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
+                <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ** FOOTER **  -->
+          <div data-role="footer"></div>
+    </div>
+
+
+  <!-- =========================================================================================================================== -->
+      <!-- Start of food page -->
+      <div data-role="page" id="food">
+
+      <!-- **NAVIGATION HEADER MENU** -->
+      <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
+          <a href="index.html" data-rel="back" data-icon="back"> Back</a>
+          <h1></h1>
+          <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+      </div>
+
+      <!-- **MAIN BODY** -->
+      <div role="main" class="ui-content" style="margin:20px;">
+          <div class="choice_list">
+              <h1>Restuarants</h1>
+              <ul data-role="listview" data-inset="true" data-filter="true">
+                      <li><a href="#frontera" data-transition="slidedown"> <img src="http://www.waltchurchillsmarket.com/images/recipes/frontera%20logo.jpg"/> <h2> Frontera</h2> <p>Norris University Center </p></a></li>
+                      <li><a href="#" data-transition="slidedown"> <img src="http://fontmeme.com/images/Subway-Logo.jpg"/> <h2> Subway </h2> <p> Norris University Center </p> </a></li>
+                      <li><a href="#" data-transition="slidedown"> <img src="http://primalburgher.com/wp-content/uploads/2012/08/fork-Knife-Blk-white.jpg"/> <h2> Tech Express</h2> <p> Tech Institute</p> </a></li>
+                      <li><a href="#" data-transition="slidedown"> <h2> View More</h2> </a></li>
+              </ul>
+          </div>
+
+          <div class="choice_list">
+              <h1>Cafeteria</h1>
+              <ul data-role="listview" data-inset="true" data-filter="true">
+                      <li><a href="#" data-transition="slidedown"> <img src="http://www.brandinsightblog.com/wp-content/uploads/2008/04/starbucks-logo.png"/> <h2>Starbucks</h2> <p>Norris University Center </p></a></li>
+                      <li><a href="#" data-transition="slidedown"> <img src="http://beltwaybargainmom.com/wp-content/uploads/2014/01/Einstein_Bros_Bagels_DC.jpg"/> <h2>Einstein Bagels</h2> <p>Pancoe</p> </a></li>
+                      <li><a href="#" data-transition="slidedown"> <h2> View More</h2> </a></li>
+              </ul>
+          </div>
+       </div>
+
+      <!-- ** SIDEBAR PANEL ** -->
+          <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
+            <div class="ui-panel-inner">
+              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
+                <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
+                <li data-icon="heart" class="ui-mini"><a href="#explore">Explore</a></li>
+                <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
+                <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
+                <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
+                <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
+                <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ** FOOTER **  -->
+          <div data-role="footer"></div>
+    </div>
+
+   <!-- =========================================================================================================================== -->
+    
+     <!-- Start of restuarant page -->
+    <div data-role="page" id="frontera">
+
+      <!-- **NAVIGATION HEADER MENU** -->
+      <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
+          <a href="index.html" data-rel="back" data-icon="back"> Back</a>
+          <h1></h1>
+          <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+      </div>
+
+      <!-- **MAIN BODY** -->
+      <div role="main" class="ui-content" style="margin:20px;">
+            <div class="ui-grid-a" id="restau_infos">
+                <div class="ui-block-a">
+                <h1>Frontera</h1>
+                <p><strong>  Restaurant bar in the ground level of Norris University Center</strong></p>
+                <p> On the menu: </p>
+                      <ul>
+                              <li> Tacos</li>
+                              <li> Salads</li>
+                              <li> Tortas </li>
+                              <li> Huaraches</li>
+                              <li>Quesadillas</li>
+                              <li>Salads</li>
+                              <li>Desserts</li>
+                      </ul>
+              </div>
+
+              <div class="ui-block-b">
+                  <p><img src="http://www.waltchurchillsmarket.com/images/recipes/frontera%20logo.jpg" alt="Frontera Fresco"/></p>
+                  <p><a href="http://www.fronterafresco.com/home.php" rel="external" data-role="button" style="width:35%"> See our website</a></p>
+              </div>
+
+            </div>
+
+            <div class="ui-grid-a" id="contact_infos">
+              <div class="ui-block-a">
+              <h2>Location</h2>
+              <p>Northwestern University, Norris University Center</p>
+              <p> 1999 Campus Drive</p>
+              <p>Evanston, IL 60208</p>
+              </div>
+              <div id="map_canvas1" style="height: 300px;width: 300px;">
+            </div>
+
+              <script type="text/javascript">
+              function init_map1(){
+                    if (map == undefined)   {
+                            var map_canvas1 = document.getElementById('map_canvas1');
+                            map_canvas.offSetWidth = window.innerWidth;
+                            map_canvas.offSetHeight = window.innerHeight;
+                            var mapOpts = {
+                                    center: new google.maps.LatLng(42.054647, -87.677139),
+                                    zoom: 15,
+                                    streetViewControl: false,
+                                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                                    };
+                                    var map = new google.maps.Map(map_canvas1, mapOpts);
+                                    var marker = new google.maps.Marker({
+                                            position: new google.maps.LatLng(42.05332,-87.67279),
+                                            map: map,
+                                            title: 'Frontera'
+                                            });
+                                    }}
+                                    $(document).on("pageshow","#frontera",function(){init_map1();});
+                            </script>
+              </div>
+      </div>
+
+      <!-- ** SIDEBAR PANEL ** -->
+      <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
+        <div class="ui-panel-inner">
+          <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
+            <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
+            <li data-icon="heart" class="ui-mini"><a href="#explore">Explore</a></li>
+            <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
+            <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
+            <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
+            <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
+            <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ** FOOTER **  -->
+      <div data-role="footer"></div>
+
+    </div>
+
+    <!-- =========================================================================================================================== -->
+    <!-- Start of fourth page                    EVENTS                   -->
+    <!-- =========================================================================================================================== -->
+
+    <div data-role="page" id="events">
+        
+        <!-- **NAVIGATION HEADER MENU** -->
+        <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
+            <a href="#home" data-rel="back" data-icon="back"> Back</a>
+            <h1> </h1>
+            <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+        </div>
+        
+        <!-- **MAIN BODY** -->
+        <div role="main" class="ui-content" style="margin:20px;">
+    
+      <div id="title">
+        Events @ NU
+      </div>
+      
+      <form>
+        <div id="browse">
+          <span class="label">Browse</span>
+          <br/>
+          <br/>
+    
+          <fieldset class="ui-grid-a">
+            <div class="ui-block-a" style="width:85%">
+            <select name="browseEvents">
+              <option value="na">Browse Events</option>
+              <option value="aca">Academics</option>
+              <option value="ath">Athletics</option>
+              <option value="ent">Entertainment</option>
+              <option value="ge">Greek Events</option>
+              <option value="nl">Night Life</option>
+              <option value="sg">Student Group Events</option>
+            </select></div>
+            <div class="ui-block-b" style="width:15%"><a data-role="button" href="#eventsbrowse" class="goButton">Go!</a></div>
+          </fieldset>         
+        </div>
+        
+        <br/>
+        <hr/>
+        <br/>
+        
+        <div id="search">
+          <span class="label">Search</span>
+          <br/>
+          <br/>
+          <fieldset class="ui-grid-a">
+            <div class="ui-block-a" style="width:85%"><input class="eventTextbox" type="text" placeholder="Search Events"/></div>
+            <div class="ui-block-b" style="width:15%"><a data-role="button" href="#eventssearch" class="goButton">Go!</a></div>
+          </fieldset>
+        </div>
+      </form>
+        </div>
+
+        <!-- ** SIDEBAR PANEL ** -->
+        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
+          <div class="ui-panel-inner">
+            <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
+              <li data-icon="home" class="ui-mini"><a href="index.html">Home</a></li>
+              <li data-icon="heart" class="ui-mini"><a href="#explore">Explore</a></li>
+              <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
+              <li data-icon="location" class="ui-mini"><a href="#">Maps</a></li>
+              <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
+              <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
+              <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
+              <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
+            </ul>
+          </div>
+        </div>
+
+         <!-- ** FOOTER **  -->
+        <div data-role="footer"></div>
+      </div>
+    
+    
+    <!-- Start of events browse page -->
+      <div data-role="page"  id="eventsbrowse">
+        
+        <!-- **NAVIGATION HEADER MENU** -->
+        <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
+            <a href="index.html" data-rel="back" data-icon="back"> Back</a>
+      <h1>Browse NU Events</h1>
+            <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+        </div>
+        
+        <!-- **MAIN BODY** -->
+        <div role="main" class="ui-content" style="margin:20px;">
+      <table style="width: 90%; margin: 0 auto;">
+        <tr>
+          <th class="tableHeaderRows">Category</th>
+          <th class="tableHeaderRows">Event Name</th>
+          <th class="tableHeaderRows">Date</th>
+          <th class="tableHeaderRows">Time</th>
+          <th class="tableHeaderRows">Location</th>
+          <th class="tableHeaderRows">Description</th>
+        <tr/>
+        <tr>
+          <td class="tableRows">Academic</td>
+          <td class="tableRows">Study Hall</td>
+          <td class="tableRows">3/15/2014</td>
+          <td class="tableRows">2:00 PM</td>
+          <td class="tableRows">Tech LR5</td>
+          <td class="tableRows">Blah de de blah blah blah dee la la de la blah klah  blah blha bla aaaaaalllllaaaa</td>
+        <tr/>
+        <tr>
+          <td class="tableRows">Athletic</td>
+          <td class="tableRows">Game</td>
+          <td class="tableRows">3/26/2014</td>
+          <td class="tableRows">11:00 AM</td>
+          <td class="tableRows">Ryan Field</td>
+          <td class="tableRows">Blah de de blah blah blah dee la la de la blah klah  blah blha bla aaaaaalllllaaaa</td>
+        <tr/>
+        <tr>
+          <td class="tableRows">Student Group</td>
+          <td class="tableRows">NSBE</td>
+          <td class="tableRows">3/17/2014</td>
+          <td class="tableRows">1:30 PM</td>
+          <td class="tableRows">Norris</td>
+          <td class="tableRows">Blah de de blah blah blah dee la la de la blah klah  blah blha bla aaaaaalllllaaaa</td>
+        <tr/>
+        <tr>
+          <td class="tableRows">Entertainment</td>
+          <td class="tableRows">ASG Concert</td>
+          <td class="tableRows">3/25/2014</td>
+          <td class="tableRows">9:00 PM</td>
+          <td class="tableRows">Ryan Field</td>
+          <td class="tableRows">Blah de de blah blah blah dee la la de la blah klah  blah blha bla aaaaaalllllaaaa</td>
+        <tr/>
+      </table>
+    
+        </div>
+
+        <!-- ** SIDEBAR PANEL ** -->
+        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
+          <div class="ui-panel-inner">
+            <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
+              <li data-icon="home" class="ui-mini"><a href="index.html">Home</a></li>
+              <li data-icon="heart" class="ui-mini"><a href="#explore">Explore</a></li>
+              <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
+              <li data-icon="location" class="ui-mini"><a href="#">Maps</a></li>
+              <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
+              <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
+              <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
+              <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
+            </ul>
+          </div>
+        </div>
+
+         <!-- ** FOOTER **  -->
+        <div data-role="footer"></div>
+      </div>
+    
+    
+    <!-- Start of events search page -->
+      <div data-role="page"  id="eventssearch">
+        
+        <!-- **NAVIGATION HEADER MENU** -->
+        <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
+            <a href="index.html" data-rel="back" data-icon="back"> Back</a>
+      <h1>Events Search Results</h1>
+            <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+        </div>
+        
+        <!-- **MAIN BODY** -->
+        <div role="main" class="ui-content" style="margin:20px; text-align: center;">
+      
+      <table style="width: 90%; margin: 0 auto;">
+        <tr>
+          <th class="tableHeaderRows">Category</th>
+          <th class="tableHeaderRows">Event Name</th>
+          <th class="tableHeaderRows">Date</th>
+          <th class="tableHeaderRows">Time</th>
+          <th class="tableHeaderRows">Location</th>
+          <th class="tableHeaderRows">Description</th>
+        <tr/>
+        <tr>
+          <td class="tableRows">Academic</td>
+          <td class="tableRows">Study Hall</td>
+          <td class="tableRows">3/15/2014</td>
+          <td class="tableRows">2:00 PM</td>
+          <td class="tableRows">Tech LR5</td>
+          <td class="tableRows">Blah de de blah blah blah dee la la de la blah klah  blah blha bla aaaaaalllllaaaa</td>
+        <tr/>
+        <tr>
+          <td class="tableRows">Athletic</td>
+          <td class="tableRows">Game</td>
+          <td class="tableRows">3/26/2014</td>
+          <td class="tableRows">11:00 AM</td>
+          <td class="tableRows">Ryan Field</td>
+          <td class="tableRows">Blah de de blah blah blah dee la la de la blah klah  blah blha bla aaaaaalllllaaaa</td>
+        <tr/>
+        <tr>
+          <td class="tableRows">Student Group</td>
+          <td class="tableRows">NSBE</td>
+          <td class="tableRows">3/17/2014</td>
+          <td class="tableRows">1:30 PM</td>
+          <td class="tableRows">Norris</td>
+          <td class="tableRows">Blah de de blah blah blah dee la la de la blah klah  blah blha bla aaaaaalllllaaaa</td>
+        <tr/>
+        <tr>
+          <td class="tableRows">Entertainment</td>
+          <td class="tableRows">ASG Concert</td>
+          <td class="tableRows">3/25/2014</td>
+          <td class="tableRows">9:00 PM</td>
+          <td class="tableRows">Ryan Field</td>
+          <td class="tableRows">Blah de de blah blah blah dee la la de la blah klah  blah blha bla aaaaaalllllaaaa</td>
+        <tr/>
+      </table>
+    </div>
+
+        <!-- ** SIDEBAR PANEL ** -->
+        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
+          <div class="ui-panel-inner">
+            <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
+              <li data-icon="home" class="ui-mini"><a href="index.html">Home</a></li>
+              <li data-icon="heart" class="ui-mini"><a href="#explore">Explore</a></li>
+              <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
+              <li data-icon="location" class="ui-mini"><a href="#">Maps</a></li>
+              <li data-icon="calendar" class="ui-mini"><a href="events.html">Events</a></li>
+              <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
+              <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
+              <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
+            </ul>
+          </div>
+        </div>
+
+         <!-- ** FOOTER **  -->
+        <div data-role="footer"></div>
+      </div>
+
+  </body>
+</html>
