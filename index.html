@@ -4,10 +4,14 @@
     <meta charset="utf-8">
     <title> You Are Here </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link href="CSS/jquery.mobile-1.4.1.css" rel="stylesheet"/>
     <link href="CSS/style.css" rel="stylesheet"/>
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    
+    <link href="CSS/jquery.mobile-1.4.1.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="CSS/themes/pack1.min.css" />
+    <link rel="stylesheet" href="CSS/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.1/jquery.mobile.structure-1.4.1.min.css" />
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
     <script src="JS/navigate.js"></script>
@@ -18,7 +22,7 @@
   <!-- =========================================================================================================================== -->
   <!-- Start of first page                    HOME                    -->
   <!-- =========================================================================================================================== -->
-    <div data-role="page" id="home">
+    <div data-role="page" id="home" data-theme="a">
 
         <!-- HEADER -->
         <div id="custom-header">
@@ -29,8 +33,8 @@
 
 
         <!-- MAIN TEXT -->
-        <div id="custom-main" style='width:100%;'>
-          <img src="Images/title1.png" id="title"/>
+        <div id="custom-main">
+          <img src="Images/title1.gif"/>
         </div>
 
 
@@ -101,7 +105,7 @@
   <!-- =========================================================================================================================== -->
   <!-- Start of second page                    NAVIGATION                    -->
   <!-- =========================================================================================================================== -->
-    <div data-role="page" id="navigation">
+    <div data-role="page" id="navigation" data-theme="a">
 
         <!-- **NAVIGATION HEADER MENU** -->
         <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
