@@ -15,11 +15,14 @@
 }
 
 #custom-main {
+	width: 50%;
 	padding-top: 12%;
+	margin: 0 auto;
 }
 
-#title {
-	max-width: 200px;
+#custom-main img {
+	max-width: 50%;
+	height: auto;
 }
 
 #custom-header {
