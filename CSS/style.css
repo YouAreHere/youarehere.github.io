@@ -15,9 +15,11 @@
 }
 
 #custom-main {
-	width: 50%;
-	margin: 0 auto;
 	padding-top: 12%;
+}
+
+#title {
+	max-width: 200px;
 }
 
 #custom-header {
