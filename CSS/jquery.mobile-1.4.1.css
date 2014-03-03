@@ -4469,7 +4469,7 @@ textarea.ui-input-text.ui-textinput-autogrow {
 }
 /* Panel */
 .ui-panel {
-	width: 12em;
+	width: 10em;
 	height: auto;
 	max-height: none;
 	border-width: 0;
