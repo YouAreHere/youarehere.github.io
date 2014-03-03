@@ -6,6 +6,9 @@
 	font-family: 'Open Sans', sans-serif;
 }
 
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+    display: block;
+}
 
 /* ----------- HOME PAGE  ----------- */
 #home {
@@ -16,7 +19,7 @@
 
 #custom-main {
 	width: 50%;
-	padding-top: 20%;
+	padding-top: 15%;
 	margin: 0 auto;
 }
 
@@ -34,6 +37,11 @@
 	float: right;
 	background-color: white;
 }
+
+#footer {
+	bottom: 0;
+}
+
 
 
 

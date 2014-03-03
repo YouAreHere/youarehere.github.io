@@ -23,9 +23,6 @@
   <!-- =========================================================================================================================== -->
     <div data-role="page" id="home" data-theme="a">
 
-        
-
-
         <!-- HEADER -->
         <div id="custom-header">
           <div id="custom-panel">
@@ -33,29 +30,26 @@
           </div>
         </div>
 
-
         <!-- MAIN TEXT -->
         <div id="custom-main" role="main" class="ui-content">
           <img src="Images/title1.png"/>
         </div>
-
 
         <!-- MAIN BUTTONS -->
         <div data-role="navbar"  data-iconpos="bottom" data-theme="b">
           <ul class="ui-alt-icon ui-nodisc-icon">
             <li><a href="#navigation" data-icon="navigation">Navigation</a></li>
             <li><a href="#events" data-icon="calendar">Events @ NU</a></li>
-            <li><a href="#explore" data-icon="heart">Explore NU</a></li>
+            <li><a href="#explore" data-icon="search">Explore NU</a></li>
           </ul>
         </div>
 
-
         <!-- ** SIDEBAR PANEL ** -->
-        <div data-role="panel" id="sidebar" data-position="right" data-display="push" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open ui-corner-all" data-theme="a">
+        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open ui-corner-all" data-theme="a">
             <div class="ui-panel-inner">
               <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
                 <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
-                <li data-icon="heart" class="ui-mini"><a href="#explore">Explore</a></li>
+                <li data-icon="search" class="ui-mini"><a href="#explore">Explore</a></li>
                 <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
                 <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
                 <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
@@ -65,15 +59,31 @@
             </div>
         </div>
 
-
         <!-- ** FOOTER **  -->
-        <div data-role="footer">
+        <div data-role="footer" id="footer">
             <div data-role="collapsible" data-theme="a" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-inset="false">
                 <h4>Updates</h4>
-                <ul data-role="listview" data-inset="false">
-                    <li data-icon="alert">Monday, 2 March 2014 - Frostbite shuttles will be in effect. Click Here for more details. </li>
-                    <li>Read-only list item 2</li>
-                    <li>Read-only list item 3</li>
+                <ul data-role="listview" data-inset="true">
+                    <li data-role="list-divider">Friday, October 8, 2010 <span class="ui-li-count">2</span></li>
+                    <li><a href="index.html">
+                    <h2>Stephen Weber</h2>
+                    <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
+                    <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
+                        <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                    </a></li>
+                    <li><a href="index.html">
+                    <h2>jQuery Team</h2>
+                    <p><strong>Boston Conference Planning</strong></p>
+                    <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
+                        <p class="ui-li-aside"><strong>9:18</strong>AM</p>
+                    </a></li>
+                    <li data-role="list-divider">Thursday, October 7, 2010 <span class="ui-li-count">1</span></li>
+                    <li><a href="index.html">
+                    <h2>Avery Walker</h2>
+                    <p><strong>Re: Dinner Tonight</strong></p>
+                    <p>Sure, let's plan on meeting at Highland Kitchen at 8:00 tonight. Can't wait!</p>
+                        <p class="ui-li-aside"><strong>4:48</strong>PM</p>
+                    </a></li>
                 </ul>
             </div>
         </div>
@@ -119,7 +129,7 @@
 
         <!-- **NAVIGATION HEADER MENU** -->
         <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
-            <a href="index.html" data-rel="back" data-icon="back">Back</a>
+            <a href="#home" data-rel="back" data-icon="back" class="ui-nodisc-icon ui-alt-icon">Back</a>
             <h1>Navigation</h1>
             <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
         </div>
@@ -134,18 +144,18 @@
         </div>
 
         <!-- ** SIDEBAR PANEL ** -->
-        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
-          <div class="ui-panel-inner">
-            <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
-              <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
-              <li data-icon="heart" class="ui-mini"><a href="#explore">Explore</a></li>
-              <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
-              <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
-              <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
-              <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
-              <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
-            </ul>
-          </div>
+        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open ui-corner-all" data-theme="a">
+            <div class="ui-panel-inner">
+              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
+                <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
+                <li data-icon="search" class="ui-mini"><a href="#explore">Explore</a></li>
+                <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
+                <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
+                <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
+                <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
+                <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
+              </ul>
+            </div>
         </div>
 
         <!-- ** FOOTER **  -->
@@ -156,22 +166,18 @@
   <!-- =========================================================================================================================== -->
   <!-- Start of third page                    EXPLORE                    -->
   <!-- =========================================================================================================================== -->
-    <div data-role="page" id="explore">
+    <div data-role="page" id="explore" data-theme="a">
 
         <!-- **NAVIGATION HEADER MENU** -->
         <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
             <a href="#home" data-rel="back" data-icon="back"> Back</a>
             <h1>Explore NU</h1>
-            <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+            <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button"></a>
         </div>
 
         <!-- **MAIN BODY** -->
-        <div role="main" class="ui-content" style="margin:20px;">
-            <div id="title">
-                <h1>Explore NU</h1>
-            </div>
-
-            <div class="choice_list" style="margin-left: 15em;width:70%;">
+        <div role="main" class="ui-content">
+            <div class="choice_list">
                 <ul data-role="listview" data-inset="true" data-filter="true">
                     <li><a href="#nu-landmarks" data-transition="slidedown"><h3>NU Landmarks</h3></a></li>
                     <li><a href="#food" data-transition="slidedown"><h3>Food</h3></a></li>
@@ -181,18 +187,18 @@
         </div>
 
         <!-- ** SIDEBAR PANEL ** -->
-        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
-          <div class="ui-panel-inner">
-            <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
-              <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
-              <li data-icon="heart" class="ui-mini"><a href="#explore">Explore</a></li>
-              <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
-              <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
-              <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
-              <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
-              <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
-            </ul>
-          </div>
+        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open ui-corner-all" data-theme="a">
+            <div class="ui-panel-inner">
+              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
+                <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
+                <li data-icon="search" class="ui-mini"><a href="#explore">Explore</a></li>
+                <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
+                <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
+                <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
+                <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
+                <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
+              </ul>
+            </div>
         </div>
 
         <!-- ** FOOTER **  -->
@@ -202,21 +208,17 @@
     <!-- =========================================================================================================================== -->
 
     <!-- Start of landmarks page -->
-    <div data-role="page" id="nu-landmarks">
+    <div data-role="page" id="nu-landmarks" data-theme="a">
 
         <!-- **NAVIGATION HEADER MENU** -->
         <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
             <a href="index.html" data-rel="back" data-icon="back">Back</a>
-            <h1></h1>
+            <h1>NU Landmarks</h1>
             <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
         </div>
 
         <!-- **MAIN BODY** -->
         <div role="main" class="ui-content" style="margin:20px;">
-            <div id="title">
-                <h1>NU Landmarks</h1>
-            </div>
-
             <div class="choice_list" style="margin-left: 20em;width:50%;">
                 <ul data-role="listview" data-inset="true" data-filter="true">
                     <li><a href="#rock" data-role="button"><h3>The Rock</h3></a></li>
@@ -228,18 +230,18 @@
         </div>
 
         <!-- ** SIDEBAR PANEL ** -->
-        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
-          <div class="ui-panel-inner">
-            <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
-              <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
-              <li data-icon="heart" class="ui-mini"><a href="#explore">Explore</a></li>
-              <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
-              <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
-              <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
-              <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
-              <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
-            </ul>
-          </div>
+        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open ui-corner-all" data-theme="a">
+            <div class="ui-panel-inner">
+              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
+                <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
+                <li data-icon="search" class="ui-mini"><a href="#explore">Explore</a></li>
+                <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
+                <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
+                <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
+                <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
+                <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
+              </ul>
+            </div>
         </div>
 
         <!-- ** FOOTER **  -->
@@ -249,35 +251,35 @@
   <!-- =========================================================================================================================== -->
 
   <!-- Start of rock page -->
-  <div data-role="page" id="rock">
+  <div data-role="page" id="rock" data-theme="a">
     
     <!-- **NAVIGATION HEADER MENU** -->
     <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
         <a href="index.html" data-rel="back" data-icon="back"> Back</a>
-        <h1> </h1>
+        <h1>The Rock</h1>
         <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
     </div>
 
     <!-- **MAIN BODY** -->
     <div class="ui-grid-a">
-        <div class="ui-block-a" style="padding-left: 2em;">
-          <h1>The Rock</h1>
-          <p style="text-align:justify; width: 70%;"><strong> The Rock, near University Hall, is one of the best-known landmarks on the Evanston campus.</strong></p>
-          <p style="text-align:justify; width: 70%;"><strong>Students began painting the Rock in the 1950s, first as a prank, then as an accepted avenue of expression.
+        <div class="ui-block-a">
+          <p><strong> The Rock, near University Hall, is one of the best-known landmarks on the Evanston campus.</strong></p>
+          <p><strong>Students began painting the Rock in the 1950s, first as a prank, then as an accepted avenue of expression.
           Now, almost every night, a different group paints a message or symbols promoting a particular cause or event.</strong></p>
           <p> Quick Facts: </p>
           <ul>
-                  <li>Date: 1902</li>
+              <li>Date: 1902</li>
           </ul>
+        </div>
+
+        <div class="ui-block-b" >
+          <p><img src="Images/The-Rock.jpg" alt="The Rock-Northwestern" height="300" width="450"/></p>
+          <p>
+            <a href="http://digital.library.northwestern.edu/architecture/building.php?bid=25" data-role="button" style="width:60%">More information about The Rock</a>
+          </p>
         </div>
     </div>
 
-    <div class="ui-block-b" >
-      <p><img src="Images/The-Rock.jpg" alt="The Rock-Northwestern" height="300" width="450"/></p>
-      <p>
-        <a href="http://digital.library.northwestern.edu/architecture/building.php?bid=25" data-role="button" style="width:60%">More information about The Rock</a>
-      </p>
-    </div>
 
     <div class="ui-grid-a">
         <div class="ui-block-a" style="padding-left: 2em;">
@@ -313,18 +315,18 @@
     </div>
 
     <!-- ** SIDEBAR PANEL ** -->
-        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
-          <div class="ui-panel-inner">
-            <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
-              <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
-              <li data-icon="heart" class="ui-mini"><a href="#explore">Explore</a></li>
-              <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
-              <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
-              <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
-              <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
-              <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
-            </ul>
-          </div>
+        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open ui-corner-all" data-theme="a">
+            <div class="ui-panel-inner">
+              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
+                <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
+                <li data-icon="search" class="ui-mini"><a href="#explore">Explore</a></li>
+                <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
+                <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
+                <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
+                <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
+                <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
+              </ul>
+            </div>
         </div>
 
         <!-- ** FOOTER **  -->
@@ -334,7 +336,7 @@
 
 <!-- =========================================================================================================================== -->
     <!-- Start of food page -->
-  <div data-role="page" id="food">
+  <div data-role="page" id="food" data-theme="a">
 
       <!-- **NAVIGATION HEADER MENU** -->
       <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
@@ -366,11 +368,11 @@
        </div>
 
       <!-- ** SIDEBAR PANEL ** -->
-          <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
+        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open ui-corner-all" data-theme="a">
             <div class="ui-panel-inner">
               <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
                 <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
-                <li data-icon="heart" class="ui-mini"><a href="#explore">Explore</a></li>
+                <li data-icon="search" class="ui-mini"><a href="#explore">Explore</a></li>
                 <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
                 <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
                 <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
@@ -378,7 +380,7 @@
                 <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
               </ul>
             </div>
-          </div>
+        </div>
 
           <!-- ** FOOTER **  -->
           <div data-role="footer"></div>
@@ -456,19 +458,19 @@
     </div>
 
     <!-- ** SIDEBAR PANEL ** -->
-    <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
-      <div class="ui-panel-inner">
-        <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
-          <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
-          <li data-icon="heart" class="ui-mini"><a href="#explore">Explore</a></li>
-          <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
-          <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
-          <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
-          <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
-          <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
-        </ul>
-      </div>
-    </div>
+        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open ui-corner-all" data-theme="a">
+            <div class="ui-panel-inner">
+              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
+                <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
+                <li data-icon="search" class="ui-mini"><a href="#explore">Explore</a></li>
+                <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
+                <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
+                <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
+                <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
+                <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
+              </ul>
+            </div>
+        </div>
 
     <!-- ** FOOTER **  -->
     <div data-role="footer"></div>
@@ -533,20 +535,19 @@
       </div>
 
       <!-- ** SIDEBAR PANEL ** -->
-      <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
-        <div class="ui-panel-inner">
-          <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
-            <li data-icon="home" class="ui-mini"><a href="index.html">Home</a></li>
-            <li data-icon="heart" class="ui-mini"><a href="#explore">Explore</a></li>
-            <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
-            <li data-icon="location" class="ui-mini"><a href="#">Maps</a></li>
-            <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
-            <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
-            <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
-            <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
-          </ul>
+        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open ui-corner-all" data-theme="a">
+            <div class="ui-panel-inner">
+              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
+                <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
+                <li data-icon="search" class="ui-mini"><a href="#explore">Explore</a></li>
+                <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
+                <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
+                <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
+                <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
+                <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
+              </ul>
+            </div>
         </div>
-      </div>
 
        <!-- ** FOOTER **  -->
       <div data-role="footer"></div>
@@ -689,20 +690,19 @@
   </div>
 
       <!-- ** SIDEBAR PANEL ** -->
-      <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
-        <div class="ui-panel-inner">
-          <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
-            <li data-icon="home" class="ui-mini"><a href="index.html">Home</a></li>
-            <li data-icon="heart" class="ui-mini"><a href="#explore">Explore</a></li>
-            <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
-            <li data-icon="location" class="ui-mini"><a href="#">Maps</a></li>
-            <li data-icon="calendar" class="ui-mini"><a href="events.html">Events</a></li>
-            <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
-            <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
-            <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
-          </ul>
+        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open ui-corner-all" data-theme="a">
+            <div class="ui-panel-inner">
+              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
+                <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
+                <li data-icon="search" class="ui-mini"><a href="#explore">Explore</a></li>
+                <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
+                <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
+                <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
+                <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
+                <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
+              </ul>
+            </div>
         </div>
-      </div>
 
        <!-- ** FOOTER **  -->
       <div data-role="footer"></div>
