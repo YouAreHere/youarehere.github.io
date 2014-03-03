@@ -15,6 +15,7 @@
     <script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
     <script src="JS/navigate.js"></script>
+    <script src="JS/navbar.js"></script>
   </head>
   
   <body>
@@ -36,16 +37,7 @@
           <img src="Images/title1.png"/>
         </div>
 
-        <!-- MAIN BUTTONS -->
-        <div data-role="navbar"  data-iconpos="bottom" data-theme="b">
-          <ul class="ui-alt-icon ui-nodisc-icon">
-            <li><a href="#navigation" data-icon="navigation">Navigation</a></li>
-            <li><a href="#events" data-icon="calendar">Events @ NU</a></li>
-            <li><a href="#explore" data-icon="search">Explore NU</a></li>
-          </ul>
-        </div>
-
-        <!-- ** SIDEBAR PANEL ** -->
+        <!-- ** SIDEBAR PANEL ** 
         <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open ui-corner-all" data-theme="a">
             <div class="ui-panel-inner">
               <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
@@ -58,38 +50,75 @@
                 <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
               </ul>
             </div>
-        </div>
+        </div>-->
 
-        <div class="non-semantic-protector"> 
+        <!-- Navigation -->
+        <nav id="slide-menu">
+          <ul>
+            <li class="timeline">Timeline</li>
+            <li class="events">Events</li>
+            <li class="calendar">Calendar</li>
+            <li class="sep settings">Settings</li>
+            <li class="logout">Logout</li>
+          </ul>
+        </nav>
+
+        <!-- <div class="non-semantic-protector"> 
           <div id="ribbon">
             <h4 id="ribbon-content">Campus News + Alerts</h4>
           </div>
+        </div> -->
+        
+        <div id="news-bar">
+          <h3>Campus News</h3>
+           <div id="updates" data-theme="a"> 
+              <ul data-role="listview" data-inset="true">
+                  <li data-role="list-divider">Monday, March 3, 2014 <span class="ui-li-count">2</span></li>
+                  <li><a href="#home">
+                  <h2>Stephen Weber</h2>
+                  <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
+                  <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
+                      <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                  </a></li>
+                  <li><a href="#home">
+                  <h2>jQuery Team</h2>
+                  <p><strong>Boston Conference Planning</strong></p>
+                  <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
+                      <p class="ui-li-aside"><strong>9:18</strong>AM</p>
+                  </a></li>
+                  <li data-role="list-divider">Thursday, March 6, 2014 <span class="ui-li-count">1</span></li>
+                  <li><a href="#home">
+                  <h2>Avery Walker</h2>
+                  <p><strong>Re: Dinner Tonight</strong></p>
+                  <p>Sure, let's plan on meeting at Highland Kitchen at 8:00 tonight. Can't wait!</p>
+                      <p class="ui-li-aside"><strong>4:48</strong>PM</p>
+                  </a></li>
+              </ul>
+          </div>
+        </div>
+
+        <div id="alerts-bar">
+          <h3>Alerts</h3>
+        </div>
+
+        <div id="alerts-bar">
+          <h3>Updates</h3>
+        </div>
+
+        <div id="icon-bar">
+            
         </div>
         
+        <div id="info">
+        </div>
 
-        <div id="updates" data-theme="a">
-            <ul data-role="listview" data-inset="true">
-                <li data-role="list-divider">Monday, March 3, 2014 <span class="ui-li-count">2</span></li>
-                <li><a href="index.html">
-                <h2>Stephen Weber</h2>
-                <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
-                <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
-                    <p class="ui-li-aside"><strong>6:24</strong>PM</p>
-                </a></li>
-                <li><a href="index.html">
-                <h2>jQuery Team</h2>
-                <p><strong>Boston Conference Planning</strong></p>
-                <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
-                    <p class="ui-li-aside"><strong>9:18</strong>AM</p>
-                </a></li>
-                <li data-role="list-divider">Thursday, March 6, 2014 <span class="ui-li-count">1</span></li>
-                <li><a href="index.html">
-                <h2>Avery Walker</h2>
-                <p><strong>Re: Dinner Tonight</strong></p>
-                <p>Sure, let's plan on meeting at Highland Kitchen at 8:00 tonight. Can't wait!</p>
-                    <p class="ui-li-aside"><strong>4:48</strong>PM</p>
-                </a></li>
-            </ul>
+        <!-- FOOTER BUTTONS -->
+        <div id="custom-nav" data-role="navbar" data-iconpos="bottom" data-theme="b">
+          <ul class="ui-alt-icon ui-nodisc-icon">
+            <li><a href="#navigation" data-icon="navigation">Navigation</a></li>
+            <li><a href="#events" data-icon="calendar">Events @ NU</a></li>
+            <li><a href="#explore" data-icon="search">Explore NU</a></li>
+          </ul>
         </div>
 
         <!-- ** FOOTER **  
@@ -524,8 +553,8 @@
               <br/>
               <br/>
               <fieldset class="ui-grid-a">
-                <div class="ui-block-a" style="width:85%"><input class="eventTextbox" type="text" placeholder="Search Events"/></div>
-                <div class="ui-block-b" style="width:15%"><a data-role="button" href="#eventssearch" class="goButton">Go!</a></div>
+                <div class="ui-block-a"><input class="eventTextbox" type="text" placeholder="Search Events"/></div>
+                <div class="ui-block-b"><a data-role="button" href="#eventssearch" class="goButton">Go!</a></div>
               </fieldset>
             </div>
           </form>
