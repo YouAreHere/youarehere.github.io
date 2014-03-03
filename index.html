@@ -511,41 +511,13 @@
       
       <!-- **MAIN BODY** -->
       <div role="main" class="ui-content">
-          <form>
-            <div id="browse">
-              <span class="label">Browse</span>
-              <br/>
-              <br/>
-        
-              <fieldset class="ui-grid-a">
-                <div class="ui-block-a">
-                <select name="browseEvents">
-                  <option value="na">Browse Events</option>
-                  <option value="aca">Academics</option>
-                  <option value="ath">Athletics</option>
-                  <option value="ent">Entertainment</option>
-                  <option value="ge">Greek Events</option>
-                  <option value="nl">Night Life</option>
-                  <option value="sg">Student Group Events</option>
-                </select></div>
-                <div class="ui-block-b"><a data-role="button" href="#eventsbrowse" class="goButton">Go!</a></div>
-              </fieldset>         
+            <div class="choice_list">
+                <ul data-role="listview" data-inset="true" data-filter="true">
+                    <li><a href="#nu-game" data-transition="slidedown"><h3>NU Basketball Game</h3></a></li>
+                    <li><a href="#food" data-transition="slidedown"><h3>Food</h3></a></li>
+                    <li><a href="#" data-transition="slidedown"><h3>Entertainment</h3></a></li>
+                </ul>
             </div>
-            
-            <br/>
-            <hr/>
-            <br/>
-            
-            <div id="search">
-              <span class="label">Search</span>
-              <br/>
-              <br/>
-              <fieldset class="ui-grid-a">
-                <div class="ui-block-a"><input class="eventTextbox" type="text" placeholder="Search Events"/></div>
-                <div class="ui-block-b"><a data-role="button" href="#eventssearch" class="goButton">Go!</a></div>
-              </fieldset>
-            </div>
-          </form>
       </div>
 
       <!-- ** SIDEBAR PANEL ** -->
@@ -568,8 +540,8 @@
     </div>
   
   <!-- =========================================================================================================================== -->
-  <!-- Start of events browse page -->
-    <div data-role="page"  id="eventsbrowse" data-theme="a">
+  <!-- Start of events nu-game page -->
+    <div data-role="page"  id="nu-game" data-theme="a">
       
       <!-- **NAVIGATION HEADER MENU** -->
       <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
@@ -582,44 +554,27 @@
       <div role="main" class="ui-content">
           <table>
             <tr>
-              <th class="tableHeaderRows">Category</th>
-              <th class="tableHeaderRows">Event Name</th>
-              <th class="tableHeaderRows">Date</th>
-              <th class="tableHeaderRows">Time</th>
-              <th class="tableHeaderRows">Location</th>
-              <th class="tableHeaderRows">Description</th>
-            <tr/>
-            <tr>
-              <td class="tableRows">Academic</td>
-              <td class="tableRows">Study Hall</td>
-              <td class="tableRows">3/15/2014</td>
-              <td class="tableRows">2:00 PM</td>
-              <td class="tableRows">Tech LR5</td>
-              <td class="tableRows">Blah de de blah blah blah dee la la de la blah klah  blah blha bla aaaaaalllllaaaa</td>
-            <tr/>
-            <tr>
-              <td class="tableRows">Athletic</td>
-              <td class="tableRows">Game</td>
-              <td class="tableRows">3/26/2014</td>
-              <td class="tableRows">11:00 AM</td>
-              <td class="tableRows">Ryan Field</td>
-              <td class="tableRows">Blah de de blah blah blah dee la la de la blah klah  blah blha bla aaaaaalllllaaaa</td>
-            <tr/>
-            <tr>
-              <td class="tableRows">Student Group</td>
-              <td class="tableRows">NSBE</td>
-              <td class="tableRows">3/17/2014</td>
-              <td class="tableRows">1:30 PM</td>
-              <td class="tableRows">Norris</td>
-              <td class="tableRows">Blah de de blah blah blah dee la la de la blah klah  blah blha bla aaaaaalllllaaaa</td>
-            <tr/>
-            <tr>
-              <td class="tableRows">Entertainment</td>
-              <td class="tableRows">ASG Concert</td>
-              <td class="tableRows">3/25/2014</td>
-              <td class="tableRows">9:00 PM</td>
-              <td class="tableRows">Ryan Field</td>
-              <td class="tableRows">Blah de de blah blah blah dee la la de la blah klah  blah blha bla aaaaaalllllaaaa</td>
+				<td class="tableHeaderRows" cellspacing="2" cellpadding="12">Category</th>
+				<td class="tableRows">Athletic</td>
+			</tr>
+			<tr>
+				<td class="tableHeaderRows" cellspacing="2" cellpadding="12">Event Name</th>
+				<td class="tableRows">Game</td>
+			</tr>
+				<td class="tableHeaderRows" cellspacing="2" cellpadding="12">Date</th>
+				<td class="tableRows">3/29/2014</td>
+			</tr>
+			<tr>
+				<td class="tableHeaderRows" cellspacing="2" cellpadding="12">Time</th>
+				<td class="tableRows">11:00 AM</td>
+			</tr>
+			<tr>
+				<td class="tableHeaderRows" cellspacing="2" cellpadding="12">Location</th>
+				<td class="tableRows">Ryan Field</td>
+			</tr>
+			<tr>
+				<td class="tableHeaderRows" cellspacing="2" cellpadding="12" >Description</th>
+				<td class="tableRows">Come out support the NU Wildcats while they take on our rivals!</td>
             <tr/>
           </table>
       </div>
@@ -634,7 +589,7 @@
             <li data-icon="location" class="ui-mini"><a href="#">Maps</a></li>
             <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
             <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
-            <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
+            <li data-icon="alert" class="ui-mini"><a href="#">Alerts</	a></li>
             <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
           </ul>
         </div>

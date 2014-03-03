@@ -194,12 +194,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 .tableHeaderRows {
-	text-align: center; 
-	border-bottom: 4px solid #E9E9E9;
-	color: red;
+	text-align: left; 
+	width: 20%;
+	color: RGB(106, 58, 134);
 	height: 35px;
 }
 
 .tableRows {
 	height: 35px;
+	
 }
