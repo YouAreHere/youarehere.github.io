@@ -206,6 +206,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .moreInfo{
 	text-align:right;
+	line-height: 30px;
 }
 
 a.eventlink, a.eventlink:link, a.eventlink:visited, a.eventlink:hover, a.eventlink:focus, a.eventlink:active{
