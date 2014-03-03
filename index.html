@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="CSS/style.css" rel="stylesheet"/>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    
     <link href="CSS/jquery.mobile-1.4.1.css" rel="stylesheet"/>
     <link rel="stylesheet" href="CSS/themes/pack1.min.css" />
     <link rel="stylesheet" href="CSS/themes/jquery.mobile.icons.min.css" />
@@ -24,6 +23,9 @@
   <!-- =========================================================================================================================== -->
     <div data-role="page" id="home" data-theme="a">
 
+        
+
+
         <!-- HEADER -->
         <div id="custom-header">
           <div id="custom-panel">
@@ -33,18 +35,47 @@
 
 
         <!-- MAIN TEXT -->
-        <div id="custom-main">
-          <img src="Images/title1.gif"/>
+        <div id="custom-main" role="main" class="ui-content">
+          <img src="Images/title1.png"/>
         </div>
 
 
         <!-- MAIN BUTTONS -->
         <div data-role="navbar"  data-iconpos="bottom" data-theme="b">
-            <ul class="ui-alt-icon ui-nodisc-icon">
-                <li><a href="#navigation" data-icon="navigation">Navigation</a></li>
-                <li><a href="#events" data-icon="calendar">Events @ NU</a></li>
-                <li><a href="#explore" data-icon="heart">Explore NU</a></li>
-            </ul>
+          <ul class="ui-alt-icon ui-nodisc-icon">
+            <li><a href="#navigation" data-icon="navigation">Navigation</a></li>
+            <li><a href="#events" data-icon="calendar">Events @ NU</a></li>
+            <li><a href="#explore" data-icon="heart">Explore NU</a></li>
+          </ul>
+        </div>
+
+
+        <!-- ** SIDEBAR PANEL ** -->
+        <div data-role="panel" id="sidebar" data-position="right" data-display="push" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open ui-corner-all" data-theme="a">
+            <div class="ui-panel-inner">
+              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
+                <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
+                <li data-icon="heart" class="ui-mini"><a href="#explore">Explore</a></li>
+                <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
+                <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
+                <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
+                <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
+                <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
+              </ul>
+            </div>
+        </div>
+
+
+        <!-- ** FOOTER **  -->
+        <div data-role="footer">
+            <div data-role="collapsible" data-theme="a" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-inset="false">
+                <h4>Updates</h4>
+                <ul data-role="listview" data-inset="false">
+                    <li data-icon="alert">Monday, 2 March 2014 - Frostbite shuttles will be in effect. Click Here for more details. </li>
+                    <li>Read-only list item 2</li>
+                    <li>Read-only list item 3</li>
+                </ul>
+            </div>
         </div>
 
 
@@ -78,27 +109,6 @@
             </fieldset>
         </div>-->
 
-
-        <!-- ** SIDEBAR PANEL ** -->
-        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open ui-corner-all" data-theme="a">
-            <div class="ui-panel-inner">
-              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
-                <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
-                <li data-icon="heart" class="ui-mini"><a href="#explore">Explore</a></li>
-                <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
-                <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
-                <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
-                <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
-                <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
-              </ul>
-            </div>
-        </div>
-
-         <!-- ** FOOTER **  -->
-        <div data-role="footer">
-            <h1> Updates </h1>
-            <a href="#updates" class="ui-nodisc-icon ui-alt-icon ui-btn-icon-bottom ui-btn ui-icon-carat-d ui-btn-icon-notext ui-corner-all ui-mini" data-role="button" role="button">Menu</a>
-        </div>
     </div>
 
 
