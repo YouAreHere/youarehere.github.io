@@ -18,9 +18,9 @@
   
   <body>
 
-  <!-- =========================================================================================================================== -->
-  <!-- Start of first page                    HOME                    -->
-  <!-- =========================================================================================================================== -->
+  <!-- ===========================================================================================================================
+                Start of first page                    HOME                   
+       =========================================================================================================================== -->
     <div data-role="page" id="home" data-theme="a">
 
         <!-- HEADER -->
@@ -122,9 +122,9 @@
     </div>
 
 
-  <!-- =========================================================================================================================== -->
-  <!-- Start of second page                    NAVIGATION                    -->
-  <!-- =========================================================================================================================== -->
+  <!-- =========================================================================================================================== 
+                Start of second page                   NAVIGATION                    
+       =========================================================================================================================== -->
     <div data-role="page" id="navigation" data-theme="a">
 
         <!-- **NAVIGATION HEADER MENU** -->
@@ -163,14 +163,14 @@
     </div>
 
 
-  <!-- =========================================================================================================================== -->
-  <!-- Start of third page                    EXPLORE                    -->
-  <!-- =========================================================================================================================== -->
+  <!-- =========================================================================================================================== 
+                Start of third page                    EXPLORE                    
+       =========================================================================================================================== -->
     <div data-role="page" id="explore" data-theme="a">
 
         <!-- **NAVIGATION HEADER MENU** -->
         <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
-            <a href="#home" data-rel="back" data-icon="back"> Back</a>
+            <a href="#home" data-rel="back" data-icon="back" class="ui-nodisc-icon ui-alt-icon"> Back</a>
             <h1>Explore NU</h1>
             <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button"></a>
         </div>
@@ -205,21 +205,21 @@
         <div data-role="footer"></div>
     </div>
 
-    <!-- =========================================================================================================================== -->
+  <!-- =========================================================================================================================== -->
 
     <!-- Start of landmarks page -->
     <div data-role="page" id="nu-landmarks" data-theme="a">
 
         <!-- **NAVIGATION HEADER MENU** -->
         <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
-            <a href="index.html" data-rel="back" data-icon="back">Back</a>
+            <a href="#home" data-rel="back" data-icon="back" class="ui-nodisc-icon ui-alt-icon">Back</a>
             <h1>NU Landmarks</h1>
             <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
         </div>
 
         <!-- **MAIN BODY** -->
-        <div role="main" class="ui-content" style="margin:20px;">
-            <div class="choice_list" style="margin-left: 20em;width:50%;">
+        <div role="main" class="ui-content">
+            <div class="choice_list">
                 <ul data-role="listview" data-inset="true" data-filter="true">
                     <li><a href="#rock" data-role="button"><h3>The Rock</h3></a></li>
                     <li><a href="#navigation" data-role="button"><h3>Arch</h3></a></li>
@@ -250,98 +250,97 @@
 
   <!-- =========================================================================================================================== -->
 
-  <!-- Start of rock page -->
-  <div data-role="page" id="rock" data-theme="a">
-    
-    <!-- **NAVIGATION HEADER MENU** -->
-    <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
-        <a href="index.html" data-rel="back" data-icon="back"> Back</a>
-        <h1>The Rock</h1>
-        <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+    <!-- Start of rock page -->
+    <div data-role="page" id="rock" data-theme="a">
+      
+      <!-- **NAVIGATION HEADER MENU** -->
+      <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
+          <a href="#home" data-rel="back" data-icon="back" class="ui-nodisc-icon ui-alt-icon"> Back</a>
+          <h1>The Rock</h1>
+          <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+      </div>
+
+      <!-- **MAIN BODY** -->
+      <div class="ui-grid-a">
+          <div class="ui-block-a">
+            <p><strong> The Rock, near University Hall, is one of the best-known landmarks on the Evanston campus.</strong></p>
+            <p><strong>Students began painting the Rock in the 1950s, first as a prank, then as an accepted avenue of expression.
+            Now, almost every night, a different group paints a message or symbols promoting a particular cause or event.</strong></p>
+            <p> Quick Facts: </p>
+            <ul>
+                <li>Date: 1902</li>
+            </ul>
+          </div>
+
+          <div class="ui-block-b" >
+            <p><img src="Images/The-Rock.jpg" alt="The Rock-Northwestern" height="300" width="450"/></p>
+            <p>
+              <a href="http://digital.library.northwestern.edu/architecture/building.php?bid=25" data-role="button" style="width:60%">More information about The Rock</a>
+            </p>
+          </div>
+      </div>
+
+
+      <div class="ui-grid-a">
+          <div class="ui-block-a" style="padding-left: 2em;">
+                  <h2>Location</h2>
+                  <p>The Rock</p>
+                  <p> Northwestern University</p>
+                  <p>Evanston, IL 60208</p>
+          </div>
+
+          <div id="map_canvas" ></div>
+              <script type="text/javascript">
+                      function init_map(){
+                              if (map == undefined)   {
+                                      var map_canvas = document.getElementById('map_canvas');
+                                      map_canvas.offSetWidth = window.innerWidth;
+                                      map_canvas.offSetHeight = window.innerHeight;
+                                      var mapOpts = {
+                                              center: new google.maps.LatLng(42.054647, -87.677139),
+                                              zoom: 15,
+                                              streetViewControl: false,
+                                              mapTypeId: google.maps.MapTypeId.ROADMAP
+                                              };
+                                              var map = new google.maps.Map(map_canvas, mapOpts);
+                                              var marker = new google.maps.Marker({
+                                                      position: new google.maps.LatLng(42.05155,-87.67591),
+                                                      map: map,
+                                                      title: 'Rock!'
+                                                      });
+                                              }}
+                                              $(document).on("pageshow","#rock",function(){init_map();});
+              </script>
+
+      </div>
+
+      <!-- ** SIDEBAR PANEL ** -->
+          <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open ui-corner-all" data-theme="a">
+              <div class="ui-panel-inner">
+                <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
+                  <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
+                  <li data-icon="search" class="ui-mini"><a href="#explore">Explore</a></li>
+                  <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
+                  <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
+                  <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
+                  <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
+                  <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
+                </ul>
+              </div>
+          </div>
+
+          <!-- ** FOOTER **  -->
+          <div data-role="footer"></div>
     </div>
 
-    <!-- **MAIN BODY** -->
-    <div class="ui-grid-a">
-        <div class="ui-block-a">
-          <p><strong> The Rock, near University Hall, is one of the best-known landmarks on the Evanston campus.</strong></p>
-          <p><strong>Students began painting the Rock in the 1950s, first as a prank, then as an accepted avenue of expression.
-          Now, almost every night, a different group paints a message or symbols promoting a particular cause or event.</strong></p>
-          <p> Quick Facts: </p>
-          <ul>
-              <li>Date: 1902</li>
-          </ul>
-        </div>
-
-        <div class="ui-block-b" >
-          <p><img src="Images/The-Rock.jpg" alt="The Rock-Northwestern" height="300" width="450"/></p>
-          <p>
-            <a href="http://digital.library.northwestern.edu/architecture/building.php?bid=25" data-role="button" style="width:60%">More information about The Rock</a>
-          </p>
-        </div>
-    </div>
-
-
-    <div class="ui-grid-a">
-        <div class="ui-block-a" style="padding-left: 2em;">
-                <h2>Location</h2>
-                <p>The Rock</p>
-                <p> Northwestern University</p>
-                <p>Evanston, IL 60208</p>
-        </div>
-
-        <div id="map_canvas" ></div>
-            <script type="text/javascript">
-                    function init_map(){
-                            if (map == undefined)   {
-                                    var map_canvas = document.getElementById('map_canvas');
-                                    map_canvas.offSetWidth = window.innerWidth;
-                                    map_canvas.offSetHeight = window.innerHeight;
-                                    var mapOpts = {
-                                            center: new google.maps.LatLng(42.054647, -87.677139),
-                                            zoom: 15,
-                                            streetViewControl: false,
-                                            mapTypeId: google.maps.MapTypeId.ROADMAP
-                                            };
-                                            var map = new google.maps.Map(map_canvas, mapOpts);
-                                            var marker = new google.maps.Marker({
-                                                    position: new google.maps.LatLng(42.05155,-87.67591),
-                                                    map: map,
-                                                    title: 'Rock!'
-                                                    });
-                                            }}
-                                            $(document).on("pageshow","#rock",function(){init_map();});
-            </script>
-
-    </div>
-
-    <!-- ** SIDEBAR PANEL ** -->
-        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open ui-corner-all" data-theme="a">
-            <div class="ui-panel-inner">
-              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
-                <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
-                <li data-icon="search" class="ui-mini"><a href="#explore">Explore</a></li>
-                <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
-                <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
-                <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
-                <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
-                <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
-              </ul>
-            </div>
-        </div>
-
-        <!-- ** FOOTER **  -->
-        <div data-role="footer"></div>
-  </div>
-
-
-<!-- =========================================================================================================================== -->
+  <!-- =========================================================================================================================== -->
     <!-- Start of food page -->
-  <div data-role="page" id="food" data-theme="a">
+    <div data-role="page" id="food" data-theme="a">
 
       <!-- **NAVIGATION HEADER MENU** -->
       <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
-          <a href="index.html" data-rel="back" data-icon="back"> Back</a>
-          <h1></h1>
+          <a href="#home" data-rel="back" data-icon="back" class="ui-nodisc-icon ui-alt-icon"> Back</a>
+          <h1>Food</h1>
           <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
       </div>
 
@@ -384,80 +383,77 @@
 
           <!-- ** FOOTER **  -->
           <div data-role="footer"></div>
-  </div>
+    </div>
 
- <!-- =========================================================================================================================== -->
-  
+  <!-- =========================================================================================================================== -->
    <!-- Start of restuarant page -->
-  <div data-role="page" id="frontera">
+    <div data-role="page" id="frontera" data-theme="a">
 
-    <!-- **NAVIGATION HEADER MENU** -->
-    <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
-        <a href="index.html" data-rel="back" data-icon="back"> Back</a>
-        <h1></h1>
-        <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
-    </div>
+        <!-- **NAVIGATION HEADER MENU** -->
+        <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
+            <a href="#home" data-rel="back" data-icon="back" class="ui-nodisc-icon ui-alt-icon"> Back</a>
+            <h1>Frontera Fresco</h1>
+            <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+        </div>
 
-    <!-- **MAIN BODY** -->
-    <div role="main" class="ui-content" style="margin:20px;">
-          <div class="ui-grid-a" id="restau_infos">
-              <div class="ui-block-a">
-              <h1>Frontera</h1>
-              <p><strong>  Restaurant bar in the ground level of Norris University Center</strong></p>
-              <p> On the menu: </p>
-                    <ul>
-                            <li> Tacos</li>
-                            <li> Salads</li>
-                            <li> Tortas </li>
-                            <li> Huaraches</li>
-                            <li>Quesadillas</li>
-                            <li>Salads</li>
-                            <li>Desserts</li>
-                    </ul>
-            </div>
+        <!-- **MAIN BODY** -->
+        <div role="main" class="ui-content">
+              <div class="ui-grid-a" id="restau_infos">
+                  <div class="ui-block-a">
+                      <h1>Frontera</h1>
+                      <p><strong>  Restaurant bar in the ground level of Norris University Center</strong></p>
+                      <p> On the menu: </p>
+                      <ul>
+                        <li> Tacos</li>
+                        <li> Salads</li>
+                        <li> Tortas </li>
+                        <li> Huaraches</li>
+                        <li>Quesadillas</li>
+                        <li>Salads</li>
+                        <li>Desserts</li>
+                      </ul>
+                  </div>
 
-            <div class="ui-block-b">
-                <p><img src="http://www.waltchurchillsmarket.com/images/recipes/frontera%20logo.jpg" alt="Frontera Fresco"/></p>
-                <p><a href="http://www.fronterafresco.com/home.php" rel="external" data-role="button" style="width:35%"> See our website</a></p>
-            </div>
+                  <div class="ui-block-b">
+                      <p><img src="http://www.waltchurchillsmarket.com/images/recipes/frontera%20logo.jpg" alt="Frontera Fresco"/></p>
+                      <p><a href="http://www.fronterafresco.com/home.php" rel="external" data-role="button" style="width:35%"> See our website</a></p>
+                  </div>
+              </div>
 
-          </div>
+              <div class="ui-grid-a" id="contact_infos">
+                <div class="ui-block-a">
+                <h2>Location</h2>
+                <p>Northwestern University, Norris University Center</p>
+                <p> 1999 Campus Drive</p>
+                <p>Evanston, IL 60208</p>
+                </div>
+                <div id="map_canvas1"></div>
 
-          <div class="ui-grid-a" id="contact_infos">
-            <div class="ui-block-a">
-            <h2>Location</h2>
-            <p>Northwestern University, Norris University Center</p>
-            <p> 1999 Campus Drive</p>
-            <p>Evanston, IL 60208</p>
-            </div>
-            <div id="map_canvas1" style="height: 300px;width: 300px;">
-          </div>
+                <script type="text/javascript">
+                function init_map1(){
+                    if (map == undefined)   {
+                            var map_canvas1 = document.getElementById('map_canvas1');
+                            map_canvas.offSetWidth = window.innerWidth;
+                            map_canvas.offSetHeight = window.innerHeight;
+                            var mapOpts = {
+                                    center: new google.maps.LatLng(42.054647, -87.677139),
+                                    zoom: 15,
+                                    streetViewControl: false,
+                                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                                    };
+                                    var map = new google.maps.Map(map_canvas1, mapOpts);
+                                    var marker = new google.maps.Marker({
+                                            position: new google.maps.LatLng(42.05332,-87.67279),
+                                            map: map,
+                                            title: 'Frontera'
+                                            });
+                                    }}
+                                    $(document).on("pageshow","#frontera",function(){init_map1();});
+                </script>
+              </div>
+        </div>
 
-            <script type="text/javascript">
-            function init_map1(){
-                  if (map == undefined)   {
-                          var map_canvas1 = document.getElementById('map_canvas1');
-                          map_canvas.offSetWidth = window.innerWidth;
-                          map_canvas.offSetHeight = window.innerHeight;
-                          var mapOpts = {
-                                  center: new google.maps.LatLng(42.054647, -87.677139),
-                                  zoom: 15,
-                                  streetViewControl: false,
-                                  mapTypeId: google.maps.MapTypeId.ROADMAP
-                                  };
-                                  var map = new google.maps.Map(map_canvas1, mapOpts);
-                                  var marker = new google.maps.Marker({
-                                          position: new google.maps.LatLng(42.05332,-87.67279),
-                                          map: map,
-                                          title: 'Frontera'
-                                          });
-                                  }}
-                                  $(document).on("pageshow","#frontera",function(){init_map1();});
-                          </script>
-            </div>
-    </div>
-
-    <!-- ** SIDEBAR PANEL ** -->
+        <!-- ** SIDEBAR PANEL ** -->
         <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open ui-corner-all" data-theme="a">
             <div class="ui-panel-inner">
               <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
@@ -472,150 +468,143 @@
             </div>
         </div>
 
-    <!-- ** FOOTER **  -->
-    <div data-role="footer"></div>
+        <!-- ** FOOTER **  -->
+        <div data-role="footer"></div>
+    </div>
 
-  </div>
+  <!-- =========================================================================================================================== 
+                Start of fourth page                    EVENTS                   
+       =========================================================================================================================== -->
 
-  <!-- =========================================================================================================================== -->
-  <!-- Start of fourth page                    EVENTS                   -->
-  <!-- =========================================================================================================================== -->
-
-    <div data-role="page" id="events">
+    <div data-role="page" id="events" data-theme="a">
       
       <!-- **NAVIGATION HEADER MENU** -->
       <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
-          <a href="#home" data-rel="back" data-icon="back"> Back</a>
-          <h1> </h1>
+          <a href="#home" data-rel="back" data-icon="back" class="ui-nodisc-icon ui-alt-icon"> Back</a>
+          <h1>Events @ NU</h1>
           <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
       </div>
       
       <!-- **MAIN BODY** -->
-      <div role="main" class="ui-content" style="margin:20px;">
-  
-    <div id="title">
-      Events @ NU
-    </div>
-    
-    <form>
-      <div id="browse">
-        <span class="label">Browse</span>
-        <br/>
-        <br/>
-  
-        <fieldset class="ui-grid-a">
-          <div class="ui-block-a" style="width:85%">
-          <select name="browseEvents">
-            <option value="na">Browse Events</option>
-            <option value="aca">Academics</option>
-            <option value="ath">Athletics</option>
-            <option value="ent">Entertainment</option>
-            <option value="ge">Greek Events</option>
-            <option value="nl">Night Life</option>
-            <option value="sg">Student Group Events</option>
-          </select></div>
-          <div class="ui-block-b" style="width:15%"><a data-role="button" href="#eventsbrowse" class="goButton">Go!</a></div>
-        </fieldset>         
-      </div>
-      
-      <br/>
-      <hr/>
-      <br/>
-      
-      <div id="search">
-        <span class="label">Search</span>
-        <br/>
-        <br/>
-        <fieldset class="ui-grid-a">
-          <div class="ui-block-a" style="width:85%"><input class="eventTextbox" type="text" placeholder="Search Events"/></div>
-          <div class="ui-block-b" style="width:15%"><a data-role="button" href="#eventssearch" class="goButton">Go!</a></div>
-        </fieldset>
-      </div>
-    </form>
+      <div role="main" class="ui-content">
+          <form>
+            <div id="browse">
+              <span class="label">Browse</span>
+              <br/>
+              <br/>
+        
+              <fieldset class="ui-grid-a">
+                <div class="ui-block-a" style="width:85%">
+                <select name="browseEvents">
+                  <option value="na">Browse Events</option>
+                  <option value="aca">Academics</option>
+                  <option value="ath">Athletics</option>
+                  <option value="ent">Entertainment</option>
+                  <option value="ge">Greek Events</option>
+                  <option value="nl">Night Life</option>
+                  <option value="sg">Student Group Events</option>
+                </select></div>
+                <div class="ui-block-b" style="width:15%"><a data-role="button" href="#eventsbrowse" class="goButton">Go!</a></div>
+              </fieldset>         
+            </div>
+            
+            <br/>
+            <hr/>
+            <br/>
+            
+            <div id="search">
+              <span class="label">Search</span>
+              <br/>
+              <br/>
+              <fieldset class="ui-grid-a">
+                <div class="ui-block-a" style="width:85%"><input class="eventTextbox" type="text" placeholder="Search Events"/></div>
+                <div class="ui-block-b" style="width:15%"><a data-role="button" href="#eventssearch" class="goButton">Go!</a></div>
+              </fieldset>
+            </div>
+          </form>
       </div>
 
       <!-- ** SIDEBAR PANEL ** -->
-        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open ui-corner-all" data-theme="a">
-            <div class="ui-panel-inner">
-              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
-                <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
-                <li data-icon="search" class="ui-mini"><a href="#explore">Explore</a></li>
-                <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
-                <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
-                <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
-                <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
-                <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
-              </ul>
-            </div>
-        </div>
+      <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open ui-corner-all" data-theme="a">
+          <div class="ui-panel-inner">
+            <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
+              <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
+              <li data-icon="search" class="ui-mini"><a href="#explore">Explore</a></li>
+              <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
+              <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
+              <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
+              <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
+              <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
+            </ul>
+          </div>
+      </div>
 
-       <!-- ** FOOTER **  -->
+      <!-- ** FOOTER **  -->
       <div data-role="footer"></div>
     </div>
   
-  
+  <!-- =========================================================================================================================== -->
   <!-- Start of events browse page -->
-    <div data-role="page"  id="eventsbrowse">
+    <div data-role="page"  id="eventsbrowse" data-theme="a">
       
       <!-- **NAVIGATION HEADER MENU** -->
       <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
-          <a href="index.html" data-rel="back" data-icon="back"> Back</a>
-    <h1>Browse NU Events</h1>
+          <a href="#home" data-rel="back" data-icon="back" class="ui-nodisc-icon ui-alt-icon"> Back</a>
+          <h1>Browse NU Events</h1>
           <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
       </div>
       
       <!-- **MAIN BODY** -->
-      <div role="main" class="ui-content" style="margin:20px;">
-    <table style="width: 90%; margin: 0 auto;">
-      <tr>
-        <th class="tableHeaderRows">Category</th>
-        <th class="tableHeaderRows">Event Name</th>
-        <th class="tableHeaderRows">Date</th>
-        <th class="tableHeaderRows">Time</th>
-        <th class="tableHeaderRows">Location</th>
-        <th class="tableHeaderRows">Description</th>
-      <tr/>
-      <tr>
-        <td class="tableRows">Academic</td>
-        <td class="tableRows">Study Hall</td>
-        <td class="tableRows">3/15/2014</td>
-        <td class="tableRows">2:00 PM</td>
-        <td class="tableRows">Tech LR5</td>
-        <td class="tableRows">Blah de de blah blah blah dee la la de la blah klah  blah blha bla aaaaaalllllaaaa</td>
-      <tr/>
-      <tr>
-        <td class="tableRows">Athletic</td>
-        <td class="tableRows">Game</td>
-        <td class="tableRows">3/26/2014</td>
-        <td class="tableRows">11:00 AM</td>
-        <td class="tableRows">Ryan Field</td>
-        <td class="tableRows">Blah de de blah blah blah dee la la de la blah klah  blah blha bla aaaaaalllllaaaa</td>
-      <tr/>
-      <tr>
-        <td class="tableRows">Student Group</td>
-        <td class="tableRows">NSBE</td>
-        <td class="tableRows">3/17/2014</td>
-        <td class="tableRows">1:30 PM</td>
-        <td class="tableRows">Norris</td>
-        <td class="tableRows">Blah de de blah blah blah dee la la de la blah klah  blah blha bla aaaaaalllllaaaa</td>
-      <tr/>
-      <tr>
-        <td class="tableRows">Entertainment</td>
-        <td class="tableRows">ASG Concert</td>
-        <td class="tableRows">3/25/2014</td>
-        <td class="tableRows">9:00 PM</td>
-        <td class="tableRows">Ryan Field</td>
-        <td class="tableRows">Blah de de blah blah blah dee la la de la blah klah  blah blha bla aaaaaalllllaaaa</td>
-      <tr/>
-    </table>
-  
+      <div role="main" class="ui-content">
+          <table>
+            <tr>
+              <th class="tableHeaderRows">Category</th>
+              <th class="tableHeaderRows">Event Name</th>
+              <th class="tableHeaderRows">Date</th>
+              <th class="tableHeaderRows">Time</th>
+              <th class="tableHeaderRows">Location</th>
+              <th class="tableHeaderRows">Description</th>
+            <tr/>
+            <tr>
+              <td class="tableRows">Academic</td>
+              <td class="tableRows">Study Hall</td>
+              <td class="tableRows">3/15/2014</td>
+              <td class="tableRows">2:00 PM</td>
+              <td class="tableRows">Tech LR5</td>
+              <td class="tableRows">Blah de de blah blah blah dee la la de la blah klah  blah blha bla aaaaaalllllaaaa</td>
+            <tr/>
+            <tr>
+              <td class="tableRows">Athletic</td>
+              <td class="tableRows">Game</td>
+              <td class="tableRows">3/26/2014</td>
+              <td class="tableRows">11:00 AM</td>
+              <td class="tableRows">Ryan Field</td>
+              <td class="tableRows">Blah de de blah blah blah dee la la de la blah klah  blah blha bla aaaaaalllllaaaa</td>
+            <tr/>
+            <tr>
+              <td class="tableRows">Student Group</td>
+              <td class="tableRows">NSBE</td>
+              <td class="tableRows">3/17/2014</td>
+              <td class="tableRows">1:30 PM</td>
+              <td class="tableRows">Norris</td>
+              <td class="tableRows">Blah de de blah blah blah dee la la de la blah klah  blah blha bla aaaaaalllllaaaa</td>
+            <tr/>
+            <tr>
+              <td class="tableRows">Entertainment</td>
+              <td class="tableRows">ASG Concert</td>
+              <td class="tableRows">3/25/2014</td>
+              <td class="tableRows">9:00 PM</td>
+              <td class="tableRows">Ryan Field</td>
+              <td class="tableRows">Blah de de blah blah blah dee la la de la blah klah  blah blha bla aaaaaalllllaaaa</td>
+            <tr/>
+          </table>
       </div>
 
       <!-- ** SIDEBAR PANEL ** -->
       <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
         <div class="ui-panel-inner">
           <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
-            <li data-icon="home" class="ui-mini"><a href="index.html">Home</a></li>
+            <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
             <li data-icon="heart" class="ui-mini"><a href="#explore">Explore</a></li>
             <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
             <li data-icon="location" class="ui-mini"><a href="#">Maps</a></li>
@@ -631,78 +620,77 @@
       <div data-role="footer"></div>
     </div>
   
-  
+  <!-- =========================================================================================================================== -->
   <!-- Start of events search page -->
-    <div data-role="page"  id="eventssearch">
+    <div data-role="page"  id="eventssearch" data-theme="a">
       
       <!-- **NAVIGATION HEADER MENU** -->
       <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
-          <a href="index.html" data-rel="back" data-icon="back"> Back</a>
-    <h1>Events Search Results</h1>
+          <a href="#home" data-rel="back" data-icon="back"> Back</a>
+          <h1>Events Search Results</h1>
           <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
       </div>
       
       <!-- **MAIN BODY** -->
-      <div role="main" class="ui-content" style="margin:20px; text-align: center;">
-    
-    <table style="width: 90%; margin: 0 auto;">
-      <tr>
-        <th class="tableHeaderRows">Category</th>
-        <th class="tableHeaderRows">Event Name</th>
-        <th class="tableHeaderRows">Date</th>
-        <th class="tableHeaderRows">Time</th>
-        <th class="tableHeaderRows">Location</th>
-        <th class="tableHeaderRows">Description</th>
-      <tr/>
-      <tr>
-        <td class="tableRows">Academic</td>
-        <td class="tableRows">Study Hall</td>
-        <td class="tableRows">3/15/2014</td>
-        <td class="tableRows">2:00 PM</td>
-        <td class="tableRows">Tech LR5</td>
-        <td class="tableRows">Blah de de blah blah blah dee la la de la blah klah  blah blha bla aaaaaalllllaaaa</td>
-      <tr/>
-      <tr>
-        <td class="tableRows">Athletic</td>
-        <td class="tableRows">Game</td>
-        <td class="tableRows">3/26/2014</td>
-        <td class="tableRows">11:00 AM</td>
-        <td class="tableRows">Ryan Field</td>
-        <td class="tableRows">Blah de de blah blah blah dee la la de la blah klah  blah blha bla aaaaaalllllaaaa</td>
-      <tr/>
-      <tr>
-        <td class="tableRows">Student Group</td>
-        <td class="tableRows">NSBE</td>
-        <td class="tableRows">3/17/2014</td>
-        <td class="tableRows">1:30 PM</td>
-        <td class="tableRows">Norris</td>
-        <td class="tableRows">Blah de de blah blah blah dee la la de la blah klah  blah blha bla aaaaaalllllaaaa</td>
-      <tr/>
-      <tr>
-        <td class="tableRows">Entertainment</td>
-        <td class="tableRows">ASG Concert</td>
-        <td class="tableRows">3/25/2014</td>
-        <td class="tableRows">9:00 PM</td>
-        <td class="tableRows">Ryan Field</td>
-        <td class="tableRows">Blah de de blah blah blah dee la la de la blah klah  blah blha bla aaaaaalllllaaaa</td>
-      <tr/>
-    </table>
-  </div>
+      <div role="main" class="ui-content">
+          <table>
+            <tr>
+              <th class="tableHeaderRows">Category</th>
+              <th class="tableHeaderRows">Event Name</th>
+              <th class="tableHeaderRows">Date</th>
+              <th class="tableHeaderRows">Time</th>
+              <th class="tableHeaderRows">Location</th>
+              <th class="tableHeaderRows">Description</th>
+            <tr/>
+            <tr>
+              <td class="tableRows">Academic</td>
+              <td class="tableRows">Study Hall</td>
+              <td class="tableRows">3/15/2014</td>
+              <td class="tableRows">2:00 PM</td>
+              <td class="tableRows">Tech LR5</td>
+              <td class="tableRows">Blah de de blah blah blah dee la la de la blah klah  blah blha bla aaaaaalllllaaaa</td>
+            <tr/>
+            <tr>
+              <td class="tableRows">Athletic</td>
+              <td class="tableRows">Game</td>
+              <td class="tableRows">3/26/2014</td>
+              <td class="tableRows">11:00 AM</td>
+              <td class="tableRows">Ryan Field</td>
+              <td class="tableRows">Blah de de blah blah blah dee la la de la blah klah  blah blha bla aaaaaalllllaaaa</td>
+            <tr/>
+            <tr>
+              <td class="tableRows">Student Group</td>
+              <td class="tableRows">NSBE</td>
+              <td class="tableRows">3/17/2014</td>
+              <td class="tableRows">1:30 PM</td>
+              <td class="tableRows">Norris</td>
+              <td class="tableRows">Blah de de blah blah blah dee la la de la blah klah  blah blha bla aaaaaalllllaaaa</td>
+            <tr/>
+            <tr>
+              <td class="tableRows">Entertainment</td>
+              <td class="tableRows">ASG Concert</td>
+              <td class="tableRows">3/25/2014</td>
+              <td class="tableRows">9:00 PM</td>
+              <td class="tableRows">Ryan Field</td>
+              <td class="tableRows">Blah de de blah blah blah dee la la de la blah klah  blah blha bla aaaaaalllllaaaa</td>
+            <tr/>
+          </table>
+      </div>
 
       <!-- ** SIDEBAR PANEL ** -->
-        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open ui-corner-all" data-theme="a">
-            <div class="ui-panel-inner">
-              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
-                <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
-                <li data-icon="search" class="ui-mini"><a href="#explore">Explore</a></li>
-                <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
-                <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
-                <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
-                <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
-                <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
-              </ul>
-            </div>
-        </div>
+      <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open ui-corner-all" data-theme="a">
+          <div class="ui-panel-inner">
+            <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
+              <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
+              <li data-icon="search" class="ui-mini"><a href="#explore">Explore</a></li>
+              <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
+              <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
+              <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
+              <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
+              <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
+            </ul>
+          </div>
+      </div>
 
        <!-- ** FOOTER **  -->
       <div data-role="footer"></div>
