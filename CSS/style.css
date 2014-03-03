@@ -35,8 +35,29 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	height: 3%;
 }
 
-#custom-panel {
-	float: right;
+#updates-wrapper {
+	position: relative;
+	background: #f6f6f6;
+	/*width: 340px;*/
+    height: 150px;
+    border-radius: 6px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#updates-wrapper:after {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(246, 246, 246, 0);
+	border-bottom-color: #f6f6f6;
+	border-width: 15px;
+	margin-left: -15px;
 }
 
 /*#updates-wrapper{
@@ -45,7 +66,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	background-color: white;
 }*/
 
-#news-bar {
+/*#news-bar {
 	float: left;
 	height: 4em;
 	width: 33%;
@@ -80,7 +101,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 #updates-bar:hover {
 	border-top: 2px solid #3fbda5;
 }
-
+*/
 /*#info {
 	background-color: black;
 	width: 50%;
@@ -88,12 +109,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	margin: 0 auto;
 }
 */
-#updates{
+/*#updates{
 	margin: 5%;
 	height: 200px;
 	overflow: scroll;
 	width: auto;
-}
+}*/
 
 /*Panel*/
 /*.ui-panel {
