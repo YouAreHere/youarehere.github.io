@@ -2,13 +2,36 @@
 /* CSS Document */
 
 
-/* ----------- WHOLE DOCUMENT  ----------- */
 * {
 	font-family: 'Open Sans', sans-serif;
 }
 
 
-/* ----------- MAIN BODY  ----------- */
+/* ----------- HOME PAGE  ----------- */
+#home {
+	background-color: #d94949;
+	/*alternate*/
+	/*background-color: #084387;*/
+}
+
+#custom-main {
+	width: 50%;
+	margin: 0 auto;
+	padding-top: 12%;
+}
+
+#custom-header {
+	color: white;
+	height: 3%;
+}
+
+#custom-panel {
+	float: right;
+	background-color: white;
+}
+
+
+
 #logo {
 	width: 25%;
     margin: 0 auto;
