@@ -1,0 +1,180 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+* {
+	font-family: 'Open Sans', sans-serif;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+    display: block;
+}
+
+/* ----------- HOME PAGE  ----------- */
+#home {
+	background-color: #d94949;
+	/*alternate*/
+	/*background-color: #084387;*/
+}
+
+#custom-main {
+	width: 50%;
+	padding-top: 15%;
+	margin: 0 auto;
+}
+
+#custom-main img {
+	max-width: 175px;
+	height: auto;
+}
+
+#custom-header {
+	color: white;
+	height: 3%;
+}
+
+#custom-panel {
+	float: right;
+}
+
+#updates{
+	margin-top: -5%;
+	height: 200px;
+	overflow: scroll;
+	width: auto;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+#ribbon {
+ font-size: 14px !important;
+ /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to 
+ position each element for scalability. If you want to use a different font size 
+ you may have to play with the position of the ribbon elements */
+ width: 35%;
+    
+ position: relative;
+ background: #ba89b6;
+ color: #fff;
+ text-align: center;
+ padding: 1em; /* Adjust to suit */
+ margin: 1em auto 2em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+}
+
+#ribbon:before, #ribbon:after {
+ content: "";
+ position: absolute;
+ display: block;
+ bottom: -1em;
+ border: 1.5em solid #986794;
+ z-index: -1;
+}
+#ribbon:before {
+ left: -2em;
+ border-right-width: 1.5em;
+ border-left-color: transparent;
+}
+#ribbon:after {
+ right: -2em;
+ border-left-width: 1.5em;
+ border-right-color: transparent;
+}
+#ribbon #ribbon-content:before, #ribbon #ribbon-content:after {
+ content: "";
+ position: absolute;
+ display: block;
+ border-style: solid;
+ border-color: #804f7c transparent transparent transparent;
+ bottom: -1em;
+}
+#ribbon #ribbon-content:before {
+ left: 0;
+ border-width: 1em 0 0 1em;
+}
+
+#ribbon #ribbon-content:after {
+ right: 0;
+ border-width: 1em 1em 0 0;
+}
+
+.non-semantic-protector { position: relative; z-index: 1; }
+
+/* ----------- OTHER PAGES  ----------- */
+
+#logo {
+	width: 25%;
+    margin: 0 auto;
+}
+
+#title {
+	color: RGB(106, 58, 134);
+	font-size: 16pt;
+	text-align: center;
+	font-weight: bold;
+}
+
+.eventTextbox{
+	height: 45px;
+}
+
+.goButton{
+	height: 22px;
+	width: 60% !important;
+
+}
+
+#map_canvas {
+    width: 500px;
+    height: 500px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.controls {
+	margin-top: 16px;
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 32px;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#pac-input {
+	background-color: #fff;
+	padding: 0 11px 0 13px;
+    width: 100%;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    text-overflow: ellipsis;
+}
+
+#pac-input:focus {
+    border-color: #4d90fe;
+    margin-left: -1px;
+    padding-left: 14px;  /* Regular padding-left + 1. */
+    width: 100%;
+}
+
+.pac-container {
+	margin-top: 20px;
+	margin-left:30px;
+	width: 70%;
+	background: none;
+	border: none;
+	box-shadow: none;
+	font-family: Roboto;
+}
+
+.tableHeaderRows {
+	text-align: center; 
+	border-bottom: 4px solid #E9E9E9;
+	color: red;
+	height: 35px;
+}
+
+.tableRows {
+	height: 35px;
+}

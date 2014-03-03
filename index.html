@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <title> You Are Here </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="CSS/style.css" rel="stylesheet"/>
+    <link href="CSS/style.css" rel="stylesheet" media="screen"/>
+    <link href="CSS/mobile.css" rel="stylesheet" media="handheld"/>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href="CSS/jquery.mobile-1.4.1.css" rel="stylesheet"/>
     <link rel="stylesheet" href="CSS/themes/pack1.min.css" />
@@ -61,7 +62,7 @@
 
         <div class="non-semantic-protector"> 
           <div id="ribbon">
-            <h4 id="ribbon-content">Campus News</h4>
+            <h4 id="ribbon-content">Campus News + Alerts</h4>
           </div>
         </div>
         
@@ -500,7 +501,7 @@
               <br/>
         
               <fieldset class="ui-grid-a">
-                <div class="ui-block-a" style="width:85%">
+                <div class="ui-block-a">
                 <select name="browseEvents">
                   <option value="na">Browse Events</option>
                   <option value="aca">Academics</option>
@@ -510,7 +511,7 @@
                   <option value="nl">Night Life</option>
                   <option value="sg">Student Group Events</option>
                 </select></div>
-                <div class="ui-block-b" style="width:15%"><a data-role="button" href="#eventsbrowse" class="goButton">Go!</a></div>
+                <div class="ui-block-b"><a data-role="button" href="#eventsbrowse" class="goButton">Go!</a></div>
               </fieldset>         
             </div>
             
