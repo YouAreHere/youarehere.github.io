@@ -196,11 +196,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .tableHeaderRows {
 	text-align: left; 
 	width: 30%;
-	color: RGB(106, 58, 134);
+	color: #d94949;
 	height: 35px;
 }
 
 .tableRows {
 	height: 35px;
-	
+}
+
+.moreInfo{
+	text-align:right;
+}
+
+a.eventlink, a.eventlink:link, a.eventlink:visited, a.eventlink:hover, a.eventlink:focus, a.eventlink:active{
+	color: #d94949 !important;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal !important;
 }
