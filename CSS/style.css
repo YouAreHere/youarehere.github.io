@@ -19,7 +19,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 #custom-main {
 	width: 32%;
-	padding-top: 11%;
+	padding-top: 8%;
 	margin: 0 auto;
 }
 
@@ -44,12 +44,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	position: relative;
 	background: #3F3F3F;
 	/*width: 340px;*/
-    height: 194px;
+    height: 218px;
     /*max-height: 200px;*/
     /*max-height: 200px;*/
     border-radius: 6px;
     margin-left: 5%;
     margin-right: 5%;
+    margin-bottom: 6%;
 }
 
 #updates-wrapper:after {
@@ -68,7 +69,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 #updates, #alerts, #discover {
-	max-height: 194px;
+	max-height: 218px;
 	overflow: scroll;
 }
 
@@ -104,8 +105,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 #alerts-bar {
-	height:4em;
-	width: 4em;
+	height:4.5em;
+	width: 4.5em;
 	background-color: #3F3F3F;
 	color: white;
 	text-align: center;
@@ -117,8 +118,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 #updates-bar{
-	height: 4em;
-	width: 4em;
+	height: 4.5em;
+	width: 4.5em;
 	background-color: #3F3F3F;
 	text-align: center;
 	color: white;
@@ -130,8 +131,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 #other-bar {
-	height: 4em;
-	width: 4em;
+	height: 4.5em;
+	width: 4.5em;
 	background-color: #3F3F3F;
 	color: white;
 	text-align: center;
