@@ -295,8 +295,7 @@
                 <ul data-role="listview" data-inset="true" data-filter="true">
                     <li><a href="#rock" data-role="button"><h3>The Rock</h3></a></li>
                     <li><a href="#lakefill" data-role="button"><h3>The Lakefill</h3></a></li>
-					<li><a href="#" data-role="button"><h3>Arch</h3></a></li>
-                    <li><a href="#" data-role="button"><h3>Shakespeare Garden</h3></a></li>
+
                 </ul>
             </div>
         </div>
@@ -421,7 +420,7 @@ $(document).on("pageshow","#subway",function(){explore_init_map_subway();});
 <div class="choice_list" style="margin-left: 20em;width:50%;">
         <ul data-role="listview" data-inset="true" data-filter="true">
                 <li><a href="#cineplex" data-role="button"><h3>Cinemark Century 12</h3></a></li>
-                <li><a href="#" data-role="button"><h3>Block Cinema-Northwestern University</h3></a></li>
+               
         </ul>
 </div>
 </div>
@@ -570,7 +569,7 @@ $(document).on("pageshow","#cineplex",function(){explore_init_map_theater();});
                   <p>Evanston, IL 60208</p>
           </div>
 
-          <div id="map_canvas" ></div>
+          <div id="map_canvas"  style="height:300;width:300;"></div>
               <script type="text/javascript">
                       function init_map(){
                               if (map == undefined)   {
@@ -654,7 +653,7 @@ $(document).on("pageshow","#cineplex",function(){explore_init_map_theater();});
 			<p> Northwestern University,Evanston Campus</p>
 			<p> Evanston, IL 60201</p>
 			</div>
-			<div id="map_canvas1" style="height: 400px;width: 500px;">
+			<div id="map_canvas1" style="height: 300px;width: 300px;">
 			</div>
 			<script type="text/javascript">
 				function explore_init_map_lakefill(){
@@ -718,20 +717,19 @@ $(document).on("pageshow","#cineplex",function(){explore_init_map_theater();});
               <h1>Restuarants</h1>
               <ul data-role="listview" data-inset="true" data-filter="true">
                       <li><a href="#frontera" data-transition="slidedown"> <img src="http://www.waltchurchillsmarket.com/images/recipes/frontera%20logo.jpg"/> <h2> Frontera</h2> <p>Norris University Center </p></a></li>
-                      <li><a href="#" data-transition="slidedown"> <img src="http://fontmeme.com/images/Subway-Logo.jpg"/> <h2> Subway </h2> <p> Norris University Center </p> </a></li>
-                      <li><a href="#" data-transition="slidedown"> <img src="http://primalburgher.com/wp-content/uploads/2012/08/fork-Knife-Blk-white.jpg"/> <h2> Tech Express</h2> <p> Tech Institute</p> </a></li>
-                      <li><a href="#" data-transition="slidedown"> <h2> View More</h2> </a></li>
+                      <li><a href="#subway" data-transition="slidedown"> <img src="http://fontmeme.com/images/Subway-Logo.jpg"/> <h2> Subway </h2> <p> Norris University Center </p> </a></li>
+      
               </ul>
           </div>
 			<br/>
-          <div class="choice_list">
+   <!--       <div class="choice_list">
               <h1>Cafeteria</h1>
               <ul data-role="listview" data-inset="true" data-filter="true">
                       <li><a href="#" data-transition="slidedown"> <img src="http://www.brandinsightblog.com/wp-content/uploads/2008/04/starbucks-logo.png"/> <h2>Starbucks</h2> <p>Norris University Center </p></a></li>
                       <li><a href="#" data-transition="slidedown"> <img src="http://beltwaybargainmom.com/wp-content/uploads/2014/01/Einstein_Bros_Bagels_DC.jpg"/> <h2>Einstein Bagels</h2> <p>Pancoe</p> </a></li>
                       <li><a href="#" data-transition="slidedown"> <h2> View More</h2> </a></li>
               </ul>
-          </div>
+          </div> -->
        </div>
 
       <!-- ** SIDEBAR PANEL ** -->
@@ -798,9 +796,9 @@ $(document).on("pageshow","#cineplex",function(){explore_init_map_theater();});
                 <div id="map_canvas1" style="height:300;width:300;"></div>
 
                 <script type="text/javascript">
-                function init_map1(){
+                function explore_init_map_frontera(){
                     if (map == undefined)   {
-                            var map_canvas1 = document.getElementById('map_canvas1');
+                            var map_canvas = document.getElementById('map_canvas1');
                             map_canvas.offSetWidth = window.innerWidth;
                             map_canvas.offSetHeight = window.innerHeight;
                             var mapOpts = {
@@ -809,14 +807,14 @@ $(document).on("pageshow","#cineplex",function(){explore_init_map_theater();});
                                     streetViewControl: false,
                                     mapTypeId: google.maps.MapTypeId.ROADMAP
                                     };
-                                    var map = new google.maps.Map(map_canvas1, mapOpts);
+                                    var map = new google.maps.Map(map_canvas, mapOpts);
                                     var marker = new google.maps.Marker({
                                             position: new google.maps.LatLng(42.05332,-87.67279),
                                             map: map,
                                             title: 'Frontera'
                                             });
                                     }}
-                                    $(document).on("pageshow","#frontera",function(){init_map1();});
+                                    $(document).on("pageshow","#frontera",function(){explore_init_map_frontera();});
                 </script>
               </div>
         </div>
