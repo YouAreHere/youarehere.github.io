@@ -5,7 +5,7 @@
     <title> You Are Here </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="CSS/style.css" rel="stylesheet" />
-    <!-- <link href="CSS/mobile.css" rel="stylesheet" media="handheld"/> -->
+    <link href="CSS/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href="CSS/jquery.mobile-1.4.1.css" rel="stylesheet"/>
     <link rel="stylesheet" href="CSS/themes/pack1.min.css" />
@@ -53,22 +53,93 @@
 
         <!-- UPDATES PANEL -->
         <div id="updates-wrapper">
-            <p id="title"></p>
-            <div id="news-bar"></div>
-              
+            <div id="bars">
+                <div id="alerts-bar">
+                    <div class="bars-inner">
+                        <a href="#" onclick="alerts()">
+                            <i class="fa fa-warning fa-lg"></i>
+                            <p>Alerts</p>
+                        </a>
+                    </div>
+                </div>
+                
+                <div id="updates-bar">
+                    <div class="bars-inner">
+                        <a href="#" onclick="updates()">
+                            <i class="fa fa-gears fa-lg"></i>
+                            <p>Updates</p>
+                        </a>
+                    </div>
+                </div>
 
-            <div id="alerts-bar">
-              <!-- <h3>Alerts</h3> -->
+                <div id="other-bar">
+                    <div class="bars-inner">
+                        <a href="#" onclick="discover()">
+                            <i class="fa fa-heart fa-lg"></i>
+                            <p>Discover</p>
+                        </a>
+                    </div>
+                </div>
             </div>
 
-            <div id="alerts-bar">
-              <!-- <h3>Updates</h3> -->
+            <div id="alerts"> 
+                <ul data-role="listview" data-inset="true" data-theme="a">
+                    <li data-role="list-divider">Monday, March 3, 2014 <span class="ui-li-count">2</span></li>
+                    <li><a href="#home">
+                    <h2>Winter Weather Advisory</h2>
+                    <p><strong>Frostbite Shuttles will be in effect on Monday March 3, 2014 to Tuesday March 4, 2014.</strong></p>
+                    <p>Click Here to view</p>
+                        <p class="ui-li-aside"><strong>6:24</strong>AM</p>
+                    </a></li>
+                    <li><a href="#home">
+                    <h2>jQuery Team</h2>
+                    <p><strong>Boston Conference Planning</strong></p>
+                    <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
+                        <p class="ui-li-aside"><strong>9:18</strong>AM</p>
+                    </a></li>
+                    <li data-role="list-divider">Thursday, March 6, 2014 <span class="ui-li-count">1</span></li>
+                    <li><a href="#home">
+                    <h2>Avery Walker</h2>
+                    <p><strong>Re: Dinner Tonight</strong></p>
+                    <p>Sure, let's plan on meeting at Highland Kitchen at 8:00 tonight. Can't wait!</p>
+                        <p class="ui-li-aside"><strong>4:48</strong>PM</p>
+                    </a></li>
+                </ul>
             </div>
-            
-            <div id="info">
+
+            <div id="updates"> 
+                <ul data-role="listview" data-inset="true" data-theme="a">
+                    <li data-role="list-divider">Thursday, March 6, 2014 <span class="ui-li-count">1</span></li>
+                    <li><a href="#home">
+                    <h2>Avery Walker</h2>
+                    <p><strong>Re: Dinner Tonight</strong></p>
+                    <p>Sure, let's plan on meeting at Highland Kitchen at 8:00 tonight. Can't wait!</p>
+                        <p class="ui-li-aside"><strong>4:48</strong>PM</p>
+                    </a></li>
+                </ul>
+            </div>
+
+            <div id="discover"> 
+                <ul data-role="listview" data-split-icon="gear" data-split-theme="a" data-inset="true">
+                    <li><a href="#">
+                        <img src="Images/album-bb.jpg">
+                    <h2>Broken Bells</h2>
+                    <p>Broken Bells</p></a>
+                    </li>
+                    <li><a href="#">
+                        <img src="Images/album-hc.jpg">
+                    <h2>Warning</h2>
+                    <p>Hot Chip</p></a>
+                    </li>
+                    <li><a href="#">
+                        <img src="Images/album-p.jpg">
+                    <h2>Wolfgang Amadeus Phoenix</h2>
+                    <p>Phoenix</p></a>
+                    </li>
+                </ul>
             </div>
         </div>
-
+    
         <!-- FOOTER BUTTONS -->
         <div id="custom-nav" data-role="navbar" data-iconpos="bottom" data-theme="b">
           <ul class="ui-alt-icon ui-nodisc-icon">
@@ -80,30 +151,7 @@
 
 
         <!-- <h3>Campus News</h3> -->
-               <!-- <div id="updates" data-theme="a"> 
-                        <ul data-role="listview" data-inset="true">
-                            <li data-role="list-divider">Monday, March 3, 2014 <span class="ui-li-count">2</span></li>
-                            <li><a href="#home">
-                            <h2>Stephen Weber</h2>
-                            <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
-                            <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
-                                <p class="ui-li-aside"><strong>6:24</strong>PM</p>
-                            </a></li>
-                            <li><a href="#home">
-                            <h2>jQuery Team</h2>
-                            <p><strong>Boston Conference Planning</strong></p>
-                            <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
-                                <p class="ui-li-aside"><strong>9:18</strong>AM</p>
-                            </a></li>
-                            <li data-role="list-divider">Thursday, March 6, 2014 <span class="ui-li-count">1</span></li>
-                            <li><a href="#home">
-                            <h2>Avery Walker</h2>
-                            <p><strong>Re: Dinner Tonight</strong></p>
-                            <p>Sure, let's plan on meeting at Highland Kitchen at 8:00 tonight. Can't wait!</p>
-                                <p class="ui-li-aside"><strong>4:48</strong>PM</p>
-                            </a></li>
-                        </ul>
-                    </div> -->
+               
  
 
         <!-- ** FOOTER **  

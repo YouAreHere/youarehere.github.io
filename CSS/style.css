@@ -19,8 +19,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 #custom-main {
 	width: 32%;
-	padding-top: 15%;
+	padding-top: 11%;
 	margin: 0 auto;
+}
+
+#custom-main img{
+	max-width: 100%;
+	height: auto;
 }
 
 #custom-nav {
@@ -37,9 +42,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 #updates-wrapper {
 	position: relative;
-	background: #f6f6f6;
+	background: #3F3F3F;
 	/*width: 340px;*/
-    height: 150px;
+    height: 194px;
+    /*max-height: 200px;*/
+    /*max-height: 200px;*/
     border-radius: 6px;
     margin-left: 10%;
     margin-right: 10%;
@@ -55,9 +62,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	position: absolute;
 	pointer-events: none;
 	border-color: rgba(246, 246, 246, 0);
-	border-bottom-color: #f6f6f6;
+	border-bottom-color: #3F3F3F;
 	border-width: 15px;
 	margin-left: -15px;
+}
+
+#updates, #alerts, #discover {
+	max-height: 194px;
+	overflow: scroll;
+}
+
+#updates, #discover {
+	display: none;
 }
 
 #updates-wrapper p{
@@ -65,64 +81,94 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	margin:0;
 }
 
-/*#news-bar {
+#bars {
 	float: left;
-	height: 4em;
-	width: 33%;
-	background-color: #999;
+}
+
+#other-bar p, #updates-bar p, #alerts-bar p {
+	font-size: 10px;
+	font-weight: normal;
+	text-decoration: none;
+	text-transform: lowercase;
+	text-shadow: none;
+	padding-top: 3px;
+}
+
+.bars-inner {
+	padding-top: 1em;
+}
+
+.bars-inner a {
+	text-decoration: none;
+	color: white !important;
+}
+
+#alerts-bar {
+	height:4em;
+	width: 4em;
+	background-color: #3F3F3F;
 	color: white;
 	text-align: center;
-}
-
-#news-bar:hover {
-	border-top: 2px solid #084387;
-}
-
-#alerts-bar{
-	float: right;
-	height:4em;
-	width: 33.5%;
-	background-color: #666;
-	color: white;
+	border-bottom: 1px solid #333;
 }
 
 #alerts-bar:hover {
-	border-top: 2px solid #3fbda5;
+	border-right: 4px solid #3fbda5;
 }
 
 #updates-bar{
 	height: 4em;
-	width: 33%;
-	background-color: #222;
+	width: 4em;
+	background-color: #3F3F3F;
+	text-align: center;
 	color: white;
+	border-bottom: 1px solid #333;
 }
 
 #updates-bar:hover {
-	border-top: 2px solid #3fbda5;
-}
-*/
-/*#info {
-	background-color: black;
-	width: 50%;
-	height: 150px;
-	margin: 0 auto;
-}
-*/
-/*#updates{
-	margin: 5%;
-	height: 200px;
-	overflow: scroll;
-	width: auto;
-}*/
-
-/*Panel*/
-/*.ui-panel {
-	width: 10em;
+	border-right: 4px solid #3fbda5;
 }
 
-.ui-panel-inner {
-	padding: 0;
-}*/
+#other-bar {
+	height: 4em;
+	width: 4em;
+	background-color: #3F3F3F;
+	color: white;
+	text-align: center;
+}
+
+#other-bar:hover {
+	border-right: 4px solid #3fbda5;
+}
+
+
+.uparrowdiv {
+	width:600px;
+	min-height:40px; /*min height of DIV should be set to at least 2x the width of the arrow*/
+	background: black;
+	color:white;
+	padding:5px;
+	position:relative;
+	word-wrap:break-word;
+	-moz-border-radius:5px; /*add some nice CSS3 round corners*/
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	margin-bottom:2em;
+}
+
+.rightarrowdiv:after{ /*arrow added to rightarrowdiv DIV*/
+content:'';
+display:block;
+position:absolute;
+top:10px;
+left:100%; /*should be set to 100% */
+width:0;
+height:0;
+border-color: transparent transparent transparent black; /*border color should be same as div div background color*/
+border-style: solid;
+border-width: 10px;
+}
+
 /* ----------- OTHER PAGES  ----------- */
 
 #logo {
