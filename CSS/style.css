@@ -60,11 +60,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	margin-left: -15px;
 }
 
-/*#updates-wrapper{
-	height: 4em;
-	width: 100%;
-	background-color: white;
-}*/
+#updates-wrapper p{
+	padding:0;
+	margin:0;
+}
 
 /*#news-bar {
 	float: left;

@@ -15,7 +15,6 @@
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
     <script src="JS/navigate.js"></script>
     <script src="JS/updates.js"></script>
-	<script src="JS/navbar.js"></script>
   </head>
   
   <body>
@@ -52,17 +51,35 @@
             </div>
         </div>
 
-        <!-- <div class="non-semantic-protector"> 
-          <div id="ribbon">
-            <h4 id="ribbon-content">Campus News + Alerts</h4>
-          </div>
-        </div> -->
-        
         <!-- UPDATES PANEL -->
         <div id="updates-wrapper">
             <p id="title"></p>
-            <div id="news-bar">
-              <!-- <h3>Campus News</h3> -->
+            <div id="news-bar"></div>
+              
+
+            <div id="alerts-bar">
+              <!-- <h3>Alerts</h3> -->
+            </div>
+
+            <div id="alerts-bar">
+              <!-- <h3>Updates</h3> -->
+            </div>
+            
+            <div id="info">
+            </div>
+        </div>
+
+        <!-- FOOTER BUTTONS -->
+        <div id="custom-nav" data-role="navbar" data-iconpos="bottom" data-theme="b">
+          <ul class="ui-alt-icon ui-nodisc-icon">
+            <li><a href="#navigation" data-icon="navigation">Navigation</a></li>
+            <li><a href="#events" data-icon="calendar">Events @ NU</a></li>
+            <li><a href="#explore" data-icon="search">Explore NU</a></li>
+          </ul>
+        </div>
+
+
+        <!-- <h3>Campus News</h3> -->
                <!-- <div id="updates" data-theme="a"> 
                         <ul data-role="listview" data-inset="true">
                             <li data-role="list-divider">Monday, March 3, 2014 <span class="ui-li-count">2</span></li>
@@ -87,28 +104,7 @@
                             </a></li>
                         </ul>
                     </div> -->
-            </div>
-
-            <div id="alerts-bar">
-              <!-- <h3>Alerts</h3> -->
-            </div>
-
-            <div id="alerts-bar">
-              <!-- <h3>Updates</h3> -->
-            </div>
-            
-            <div id="info">
-            </div>
-        </div>
-
-        <!-- FOOTER BUTTONS -->
-        <div id="custom-nav" data-role="navbar" data-iconpos="bottom" data-theme="b">
-          <ul class="ui-alt-icon ui-nodisc-icon">
-            <li><a href="#navigation" data-icon="navigation">Navigation</a></li>
-            <li><a href="#events" data-icon="calendar">Events @ NU</a></li>
-            <li><a href="#explore" data-icon="search">Explore NU</a></li>
-          </ul>
-        </div>
+ 
 
         <!-- ** FOOTER **  
         <div data-role="footer" id="footer"></div>-->
