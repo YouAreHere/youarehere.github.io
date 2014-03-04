@@ -356,29 +356,10 @@
 <p> 1999 Campus Drive</p>
 <p>Evanston, IL 60208</p>
 </div>
-<div id="map_canvas3" style="height: 300px;width: 300px;">
+<div class="ui-block-b">
+<p><a href="#navigation" rel="external" data-role="button" style="width:35%">Navigate to this location</a></p>
 </div>
-<script type="text/javascript">
-function explore_init_map_subway(){
-if (map == undefined)   {
-var map_canvas = document.getElementById('map_canvas3');
-map_canvas.offSetWidth = window.innerWidth;
-map_canvas.offSetHeight = window.innerHeight;
-var mapOpts = {
-center: new google.maps.LatLng(42.054647, -87.677139),
-zoom: 15,
-streetViewControl: false,
-mapTypeId: google.maps.MapTypeId.ROADMAP
-};
-var map = new google.maps.Map(map_canvas, mapOpts);
-var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(42.05332,-87.67279),
-        map: map,
-        title: 'Subway'
-        });
-}}
-$(document).on("pageshow","#subway",function(){explore_init_map_subway();});
-</script>
+
 </div><!-- /grid-a -->
 <hr/>
 </div>
@@ -653,7 +634,7 @@ $(document).on("pageshow","#cineplex",function(){explore_init_map_theater();});
 			<p> Northwestern University,Evanston Campus</p>
 			<p> Evanston, IL 60201</p>
 			</div>
-			<div id="map_canvas1" style="height: 300px;width: 300px;">
+			<div id="map_canvas1">
 			</div>
 			<script type="text/javascript">
 				function explore_init_map_lakefill(){
@@ -793,29 +774,11 @@ $(document).on("pageshow","#cineplex",function(){explore_init_map_theater();});
                 <p> 1999 Campus Drive</p>
                 <p>Evanston, IL 60208</p>
                 </div>
-                <div id="map_canvas5" style="height:300;width:300;"></div>
+                <div class="ui-block-b">
+                	<p><a href="#navigation" rel="external" data-role="button" style="width:35%">Navigate to this location</a></p>
+                </div>
 
-                <script type="text/javascript">
-                function explore_init_map_frontera(){
-                    if (map == undefined)   {
-                            var map_canvas = document.getElementById('map_canvas5');
-                            map_canvas.offSetWidth = window.innerWidth;
-                            map_canvas.offSetHeight = window.innerHeight;
-                            var mapOpts = {
-                                    center: new google.maps.LatLng(42.054647, -87.677139),
-                                    zoom: 15,
-                                    streetViewControl: false,
-                                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                                    };
-                                    var map = new google.maps.Map(map_canvas, mapOpts);
-                                    var marker = new google.maps.Marker({
-                                            position: new google.maps.LatLng(42.05332,-87.67279),
-                                            map: map,
-                                            title: 'Frontera'
-                                            });
-                                    }}
-                                    $(document).on("pageshow","#frontera",function(){explore_init_map_frontera();});
-                </script>
+                
               </div>
         </div>
 
