@@ -48,8 +48,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     /*max-height: 200px;*/
     /*max-height: 200px;*/
     border-radius: 6px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 #updates-wrapper:after {
