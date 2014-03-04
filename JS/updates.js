@@ -11,17 +11,17 @@
 function alerts() {
 	$( "#updates" ).hide();
 	$( "#discover" ).hide();
-	$( "#alerts" ).toggle();
+	$( "#alerts" ).show();
 }
 
 function updates() {
 	$( "#discover" ).hide();
 	$( "#alerts" ).hide();
-	$( "#updates" ).toggle();
+	$( "#updates" ).show();
 }
 
 function discover() {
 	$( "#updates" ).hide();
 	$( "#alerts" ).hide();
-	$( "#discover" ).toggle();
+	$( "#discover" ).show();
 }
