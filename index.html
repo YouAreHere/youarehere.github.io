@@ -4,86 +4,145 @@
     <meta charset="utf-8">
     <title> You Are Here </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="CSS/style.css" rel="stylesheet" />
-    <!-- <link href="CSS/mobile.css" rel="stylesheet" media="handheld, only screen and (max-device-width:480px)"/> -->
+
     <link href="CSS/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href="CSS/jquery.mobile-1.4.1.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="CSS/themes/pack1.min.css" />
-    <link rel="stylesheet" href="CSS/themes/jquery.mobile.icons.min.css" />
+    <link href="CSS/themes/jquery.mobile.icons.min.css" rel="stylesheet" />
+    <link href="CSS/themes/pack1.min.css" rel="stylesheet"/>
+    <link href="CSS/mobile.css" rel="stylesheet" media="handheld, only screen and (max-device-width:480px)"/>
+    <link href="CSS/style.css" rel="stylesheet" />
+
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
     <script src="JS/navigate.js"></script>
-    <script src="JS/updates.js"></script>
+    <script src="JS/jPushMenu.js"></script>
   </head>
   
-  <body>
+  <body class="cbp-spmenu-push">
 
   <!-- ===========================================================================================================================
                 Start of first page                    HOME                   
        =========================================================================================================================== -->
     <div data-role="page" id="home" data-theme="a">
 
-        <!-- HEADER -->
+        <!-- ** HEADER ** -->
         <div id="custom-header">
           <div id="custom-panel">
-            <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+            <a href="#" class="toggle-menu menu-right push-body">
+                <i class="fa fa-bars fa-2x"></i>
+            </a>
           </div>
         </div>
 
-        <!-- MAIN TEXT -->
+        <!-- ** SIDEBAR PANEL ** -->
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+            <h3><img src="Images/icon.png" /></h3>
+            <li class="active"><a href="#home"><!-- <i class="fa fa-home fa-fw"></i> -->Home</a></li>
+            <li><a href="#explore"><!-- <i class="fa fa-search fa-fw"></i> -->Explore</a></li>
+            <li><a href="#navigation"><!-- <i class="fa fa-map-marker fa-fw"></i> -->Navigate</a></li>
+            <li><a href="#events"><!-- <i class="fa fa-calendar fa-fw"></i> -->Events</a></li>
+            <li><a href="#"><!-- <i class="fa fa-shopping-cart fa-fw"></i> -->Parking</a></li>
+            <li><a href="#"><!-- <i class="fa fa-warning fa-fw"></i> -->Alerts</a></li>
+            <li><a href="#"><!-- <i class="fa fa-info-circle fa-fw"></i> -->About</a></li>
+        </nav>
+
+        <!-- ** MAIN TEXT ** -->
         <div id="custom-main" role="main" class="ui-content">
-          <img src="Images/title1.png"/>
+            <img src="Images/title1.png"/>
         </div>
 
-        <!-- ** SIDEBAR PANEL **  -->
-        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-corner-all ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
-            <div class="ui-panel-inner">
-              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
-                <li data-icon="home"><a href="#home">Home</a></li>
-                <li data-icon="search"><a href="#explore">Explore</a></li>
-                <li data-icon="navigation"><a href="#navigation">Navigate</a></li>
-                <li data-icon="calendar"><a href="#events">Events</a></li>
-                <li data-icon="grid"><a href="#">Parking</a></li>
-                <li data-icon="alert"><a href="#">Alerts</a></li>
-                <li data-icon="info"><a href="#">About</a></li>
-              </ul>
+        
+        <div id="block-container">
+            <div id="block">
+                <p class="title-block">Campus <span style="text-shadow: 0 0 0 black;"><b>News</b></span></p>
             </div>
-        </div>
 
-        <!-- UPDATES PANEL -->
-        <div id="updates-wrapper">
-            <div id="bars">
-                <div id="alerts-bar">
-                    <div class="bars-inner">
-                        <a href="#" onclick="alerts()">
-                            <i class="fa fa-warning fa-lg"></i>
-                            <p>Alerts</p>
-                        </a>
-                    </div>
-                </div>
-                
-                <div id="updates-bar">
-                    <div class="bars-inner">
-                        <a href="#" onclick="updates()">
-                            <i class="fa fa-gears fa-lg"></i>
-                            <p>Updates</p>
-                        </a>
-                    </div>
-                </div>
+            <div id="block-updates">
+                <div class="boxes">
+                    <div id="alerts" class="news-boxes">
+                        <div class="icon-inner">
+                            <a href="#">
+                                <i class="fa fa-warning fa-lg"></i>
+                                <p>Alerts</p>
+                            </a>
+                        </div>
 
-                <div id="other-bar">
-                    <div class="bars-inner">
-                        <a href="#" onclick="discover()">
-                            <i class="fa fa-heart fa-lg"></i>
-                            <p>Discover</p>
-                        </a>
+                        <div class="content">
+                            <p class="content-title">Winter Weather Advisory</p>
+                            <p class="sub-title">Monday, March 3, 2014</p>
+                            <p class="content-text">Frostbite Shuttles will be in effect on Monday March 3, 2014 to Tuesday March 4, 2014.</p>
+                            <p class="content-link">Click Here to view</p>
+                        </div>
                     </div>
+
+                    <div id="updates" class="news-boxes">
+                        <div class="icon-inner">
+                            <a href="#">
+                                <i class="fa fa-gears fa-lg"></i>
+                                <p>Updates</p>
+                            </a>
+                        </div>
+
+                        <div class="content">
+                            <p class="content-title">New Features Coming Soon</p>
+                            <p class="content-text">You Are Here adds all kinds of new features and capabilities throughout. Stay tuned for more updates on the calendar extension, automatic parking updates, etc!</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
-            <div id="alerts"> 
+            
+
+        </div>
+    
+        <!-- FOOTER BUTTONS 
+        <div id="custom-nav-footer" data-role="navbar" data-iconpos="bottom" data-theme="a">
+          <ul class="ui-alt-icon ui-nodisc-icon">
+            <li><a href="#navigation" data-icon="navigation">Navigation</a></li>
+            <li><a href="#events" data-icon="calendar">Events @ NU</a></li>
+            <li><a href="#explore" data-icon="search">Explore NU</a></li>
+          </ul>
+        </div>-->
+
+        <!--call jPushMenu, required-->
+        <script>
+        jQuery(document).ready(function($) {
+            $('.toggle-menu').jPushMenu();
+        });
+        </script>
+
+        <!-- <div id="bars">
+                    <div id="alerts-bar">
+                        <div class="bars-inner">
+                            <a href="#" onclick="alerts()">
+                                <i class="fa fa-warning fa-lg"></i>
+                                <p>Alerts</p>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div id="updates-bar">
+                        <div class="bars-inner">
+                            <a href="#" onclick="updates()">
+                                <i class="fa fa-gears fa-lg"></i>
+                                <p>Updates</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="other-bar">
+                        <div class="bars-inner">
+                            <a href="#" onclick="discover()">
+                                <i class="fa fa-heart fa-lg"></i>
+                                <p>Discover</p>
+                            </a>
+                        </div>
+                    </div>
+                </div> -->
+
+        <!-- <div id="alerts"> 
                 <ul data-role="listview" data-inset="true" data-theme="a">
                     <li data-role="list-divider">Monday, March 3, 2014 <span class="ui-li-count">2</span></li>
                     <li><a href="#home">
@@ -108,47 +167,37 @@
                 </ul>
             </div>
 
-            <div id="updates"> 
-                <ul data-role="listview" data-inset="true" data-theme="a">
-                    <li data-role="list-divider">Thursday, March 6, 2014 <span class="ui-li-count">1</span></li>
-                    <li><a href="#home">
-                    <h2>Avery Walker</h2>
-                    <p><strong>Re: Dinner Tonight</strong></p>
-                    <p>Sure, let's plan on meeting at Highland Kitchen at 8:00 tonight. Can't wait!</p>
-                        <p class="ui-li-aside"><strong>4:48</strong>PM</p>
-                    </a></li>
-                </ul>
-            </div>
+                <div id="updates"> 
+                    <ul data-role="listview" data-inset="true" data-theme="a">
+                        <li data-role="list-divider">Thursday, March 6, 2014 <span class="ui-li-count">1</span></li>
+                        <li><a href="#home">
+                        <h2>Avery Walker</h2>
+                        <p><strong>Re: Dinner Tonight</strong></p>
+                        <p>Sure, let's plan on meeting at Highland Kitchen at 8:00 tonight. Can't wait!</p>
+                            <p class="ui-li-aside"><strong>4:48</strong>PM</p>
+                        </a></li>
+                    </ul>
+                </div>
 
-            <div id="discover"> 
-                <ul data-role="listview" data-split-icon="gear" data-split-theme="a" data-inset="true">
-                    <li><a href="#">
-                        <img src="Images/album-bb.jpg">
-                    <h2>Broken Bells</h2>
-                    <p>Broken Bells</p></a>
-                    </li>
-                    <li><a href="#">
-                        <img src="Images/album-hc.jpg">
-                    <h2>Warning</h2>
-                    <p>Hot Chip</p></a>
-                    </li>
-                    <li><a href="#">
-                        <img src="Images/album-p.jpg">
-                    <h2>Wolfgang Amadeus Phoenix</h2>
-                    <p>Phoenix</p></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    
-        <!-- FOOTER BUTTONS -->
-        <div id="custom-nav" data-role="navbar" data-iconpos="bottom" data-theme="b">
-          <ul class="ui-alt-icon ui-nodisc-icon">
-            <li><a href="#navigation" data-icon="navigation">Navigation</a></li>
-            <li><a href="#events" data-icon="calendar">Events @ NU</a></li>
-            <li><a href="#explore" data-icon="search">Explore NU</a></li>
-          </ul>
-        </div>
+                <div id="discover"> 
+                    <ul data-role="listview" data-split-icon="gear" data-split-theme="a" data-inset="true">
+                        <li><a href="#">
+                            <img src="Images/album-bb.jpg">
+                        <h2>Broken Bells</h2>
+                        <p>Broken Bells</p></a>
+                        </li>
+                        <li><a href="#">
+                            <img src="Images/album-hc.jpg">
+                        <h2>Warning</h2>
+                        <p>Hot Chip</p></a>
+                        </li>
+                        <li><a href="#">
+                            <img src="Images/album-p.jpg">
+                        <h2>Wolfgang Amadeus Phoenix</h2>
+                        <p>Phoenix</p></a>
+                        </li>
+                    </ul>
+                </div>  -->
 
         <!-- **NAVIGATION HEADER MENU** 
         <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
@@ -156,6 +205,21 @@
             <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
         </div>-->
         
+        <!-- ** SIDEBAR PANEL **  
+        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-corner-all ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
+            <div class="ui-panel-inner">
+              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
+                <li>Home</li>
+                <li data-icon="home"><a href="#home">Home</a></li>
+                <li data-icon="search"><a href="#explore">Explore</a></li>
+                <li data-icon="navigation"><a href="#navigation">Navigate</a></li>
+                <li data-icon="calendar"><a href="#events">Events</a></li>
+                <li data-icon="grid"><a href="#">Parking</a></li>
+                <li data-icon="alert"><a href="#">Alerts</a></li>
+                <li data-icon="info"><a href="#">About</a></li>
+              </ul>
+            </div>
+        </div>-->
 
         <!-- **MAIN BODY** 
         <div role="main" class="ui-content">
