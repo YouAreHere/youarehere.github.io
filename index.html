@@ -92,19 +92,17 @@
 
                 </div>
             </div>
-
-            
-
         </div>
-    
-        <!-- FOOTER BUTTONS 
+
+
+        <!-- FOOTER BUTTONS  -->
         <div id="custom-nav-footer" data-role="navbar" data-iconpos="bottom" data-theme="a">
           <ul class="ui-alt-icon ui-nodisc-icon">
             <li><a href="#navigation" data-icon="navigation">Navigation</a></li>
             <li><a href="#events" data-icon="calendar">Events @ NU</a></li>
             <li><a href="#explore" data-icon="search">Explore NU</a></li>
           </ul>
-        </div>-->
+        </div>
 
         <!--call jPushMenu, required-->
         <script>
@@ -256,9 +254,12 @@
         <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
             <a href="#home" data-rel="back" data-icon="back" class="ui-nodisc-icon ui-alt-icon">Back</a>
             <h1>Navigation</h1>
-            <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+            <a href="#" class="toggle-menu menu-right push-body">
+                <i class="fa fa-bars fa-lg"></i>
+            </a>
+            <!-- <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a> -->
         </div>
-        
+
         <!-- **MAIN BODY** -->
         <div role="main" class="ui-content">
           <div data-role="fieldcontain" class="pac-container">
@@ -269,19 +270,16 @@
         </div>
 
         <!-- ** SIDEBAR PANEL ** -->
-        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open ui-corner-all" data-theme="a">
-            <div class="ui-panel-inner">
-              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
-                <li data-icon="home" class="ui-mini"><a href="#home">Home</a></li>
-                <li data-icon="search" class="ui-mini"><a href="#explore">Explore</a></li>
-                <li data-icon="navigation" class="ui-mini"><a href="#navigation">Navigate</a></li>
-                <li data-icon="calendar" class="ui-mini"><a href="#events">Events</a></li>
-                <li data-icon="grid" class="ui-mini"><a href="#">Parking</a></li>
-                <li data-icon="alert" class="ui-mini"><a href="#">Alerts</a></li>
-                <li data-icon="info" class="ui-mini"><a href="#">About</a></li>
-              </ul>
-            </div>
-        </div>
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+            <h3><img src="Images/icon.png" /></h3>
+            <li class="active"><a href="#home"><!-- <i class="fa fa-home fa-fw"></i> -->Home</a></li>
+            <li><a href="#explore"><!-- <i class="fa fa-search fa-fw"></i> -->Explore</a></li>
+            <li><a href="#navigation"><!-- <i class="fa fa-map-marker fa-fw"></i> -->Navigate</a></li>
+            <li><a href="#events"><!-- <i class="fa fa-calendar fa-fw"></i> -->Events</a></li>
+            <li><a href="#"><!-- <i class="fa fa-shopping-cart fa-fw"></i> -->Parking</a></li>
+            <li><a href="#"><!-- <i class="fa fa-warning fa-fw"></i> -->Alerts</a></li>
+            <li><a href="#"><!-- <i class="fa fa-info-circle fa-fw"></i> -->About</a></li>
+        </nav>
 
         <!-- ** FOOTER **  -->
         <div data-role="footer"></div>
@@ -297,7 +295,10 @@
         <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
             <a href="#home" data-rel="back" data-icon="back" class="ui-nodisc-icon ui-alt-icon"> Back</a>
             <h1>Explore NU</h1>
-            <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button"></a>
+            <!-- <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button"></a> -->
+            <a href="#" class="toggle-menu menu-right push-body">
+                <i class="fa fa-bars fa-lg"></i>
+            </a>
         </div>
 
         <!-- **MAIN BODY** -->
@@ -362,20 +363,17 @@
             </a></li></ul>
         </div>
 
-        <!-- ** SIDEBAR PANEL **  -->
-        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-corner-all ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
-            <div class="ui-panel-inner">
-              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
-                <li data-icon="home"><a href="#home">Home</a></li>
-                <li data-icon="search"><a href="#explore">Explore</a></li>
-                <li data-icon="navigation"><a href="#navigation">Navigate</a></li>
-                <li data-icon="calendar"><a href="#events">Events</a></li>
-                <li data-icon="grid"><a href="#">Parking</a></li>
-                <li data-icon="alert"><a href="#">Alerts</a></li>
-                <li data-icon="info"><a href="#">About</a></li>
-              </ul>
-            </div>
-        </div>
+        <!-- ** SIDEBAR PANEL ** -->
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+            <h3><img src="Images/icon.png" /></h3>
+            <li class="active"><a href="#home"><!-- <i class="fa fa-home fa-fw"></i> -->Home</a></li>
+            <li><a href="#explore"><!-- <i class="fa fa-search fa-fw"></i> -->Explore</a></li>
+            <li><a href="#navigation"><!-- <i class="fa fa-map-marker fa-fw"></i> -->Navigate</a></li>
+            <li><a href="#events"><!-- <i class="fa fa-calendar fa-fw"></i> -->Events</a></li>
+            <li><a href="#"><!-- <i class="fa fa-shopping-cart fa-fw"></i> -->Parking</a></li>
+            <li><a href="#"><!-- <i class="fa fa-warning fa-fw"></i> -->Alerts</a></li>
+            <li><a href="#"><!-- <i class="fa fa-info-circle fa-fw"></i> -->About</a></li>
+        </nav>
 
         <!-- ** FOOTER **  -->
         <div data-role="footer"></div>
@@ -390,7 +388,10 @@
         <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
             <a href="#home" data-rel="back" data-icon="back" class="ui-nodisc-icon ui-alt-icon">Back</a>
             <h1>NU Landmarks</h1>
-            <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+            <a href="#" class="toggle-menu menu-right push-body">
+                <i class="fa fa-bars fa-lg"></i>
+            </a>
+            <!-- <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a> -->
         </div>
 
         <!-- **MAIN BODY** -->
@@ -404,20 +405,17 @@
             </div>
         </div>
 
-        <!-- ** SIDEBAR PANEL **  -->
-        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-corner-all ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
-            <div class="ui-panel-inner">
-              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
-                <li data-icon="home"><a href="#home">Home</a></li>
-                <li data-icon="search"><a href="#explore">Explore</a></li>
-                <li data-icon="navigation"><a href="#navigation">Navigate</a></li>
-                <li data-icon="calendar"><a href="#events">Events</a></li>
-                <li data-icon="grid"><a href="#">Parking</a></li>
-                <li data-icon="alert"><a href="#">Alerts</a></li>
-                <li data-icon="info"><a href="#">About</a></li>
-              </ul>
-            </div>
-        </div>
+        <!-- ** SIDEBAR PANEL ** -->
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+            <h3><img src="Images/icon.png" /></h3>
+            <li class="active"><a href="#home"><!-- <i class="fa fa-home fa-fw"></i> -->Home</a></li>
+            <li><a href="#explore"><!-- <i class="fa fa-search fa-fw"></i> -->Explore</a></li>
+            <li><a href="#navigation"><!-- <i class="fa fa-map-marker fa-fw"></i> -->Navigate</a></li>
+            <li><a href="#events"><!-- <i class="fa fa-calendar fa-fw"></i> -->Events</a></li>
+            <li><a href="#"><!-- <i class="fa fa-shopping-cart fa-fw"></i> -->Parking</a></li>
+            <li><a href="#"><!-- <i class="fa fa-warning fa-fw"></i> -->Alerts</a></li>
+            <li><a href="#"><!-- <i class="fa fa-info-circle fa-fw"></i> -->About</a></li>
+        </nav>
 
         <!-- ** FOOTER **  -->
         <div data-role="footer"></div>
@@ -433,7 +431,10 @@
       <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
           <a href="#home" data-rel="back" data-icon="back" class="ui-nodisc-icon ui-alt-icon"> Back</a>
           <h1>The Rock</h1>
-          <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+          <a href="#" class="toggle-menu menu-right push-body">
+                <i class="fa fa-bars fa-lg"></i>
+            </a>
+          <!-- <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a> -->
       </div>
 
       <!-- **MAIN BODY** -->
@@ -455,20 +456,17 @@
             <a href="#navigation" class="eventlink" rel="external" style="width:60%">Navigate to this location</a>
       </div>
 
-      <!-- ** SIDEBAR PANEL **  -->
-        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-corner-all ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
-            <div class="ui-panel-inner">
-              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
-                <li data-icon="home"><a href="#home">Home</a></li>
-                <li data-icon="search"><a href="#explore">Explore</a></li>
-                <li data-icon="navigation"><a href="#navigation">Navigate</a></li>
-                <li data-icon="calendar"><a href="#events">Events</a></li>
-                <li data-icon="grid"><a href="#">Parking</a></li>
-                <li data-icon="alert"><a href="#">Alerts</a></li>
-                <li data-icon="info"><a href="#">About</a></li>
-              </ul>
-            </div>
-        </div>
+      <!-- ** SIDEBAR PANEL ** -->
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+            <h3><img src="Images/icon.png" /></h3>
+            <li class="active"><a href="#home"><!-- <i class="fa fa-home fa-fw"></i> -->Home</a></li>
+            <li><a href="#explore"><!-- <i class="fa fa-search fa-fw"></i> -->Explore</a></li>
+            <li><a href="#navigation"><!-- <i class="fa fa-map-marker fa-fw"></i> -->Navigate</a></li>
+            <li><a href="#events"><!-- <i class="fa fa-calendar fa-fw"></i> -->Events</a></li>
+            <li><a href="#"><!-- <i class="fa fa-shopping-cart fa-fw"></i> -->Parking</a></li>
+            <li><a href="#"><!-- <i class="fa fa-warning fa-fw"></i> -->Alerts</a></li>
+            <li><a href="#"><!-- <i class="fa fa-info-circle fa-fw"></i> -->About</a></li>
+        </nav>
 
 
           <!-- ** FOOTER **  -->
@@ -484,7 +482,10 @@
         <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
           <a href="#home" data-rel="back" data-icon="back" class="ui-nodisc-icon ui-alt-icon"> Back</a>
           <h1></h1>
-          <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+          <a href="#" class="toggle-menu menu-right push-body">
+                <i class="fa fa-bars fa-lg"></i>
+            </a>
+          <!-- <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a> -->
         </div>
 		
 		<!-- **MAIN BODY** -->
@@ -511,20 +512,17 @@
 			<p><a href="#navigation" rel="external" class="eventlink">Navigate to this location</a></p>
 		</div>
 		
-		<!-- ** SIDEBAR PANEL **  -->
-        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-corner-all ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
-            <div class="ui-panel-inner">
-              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
-                <li data-icon="home"><a href="#home">Home</a></li>
-                <li data-icon="search"><a href="#explore">Explore</a></li>
-                <li data-icon="navigation"><a href="#navigation">Navigate</a></li>
-                <li data-icon="calendar"><a href="#events">Events</a></li>
-                <li data-icon="grid"><a href="#">Parking</a></li>
-                <li data-icon="alert"><a href="#">Alerts</a></li>
-                <li data-icon="info"><a href="#">About</a></li>
-              </ul>
-            </div>
-        </div>
+		<!-- ** SIDEBAR PANEL ** -->
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+            <h3><img src="Images/icon.png" /></h3>
+            <li class="active"><a href="#home"><!-- <i class="fa fa-home fa-fw"></i> -->Home</a></li>
+            <li><a href="#explore"><!-- <i class="fa fa-search fa-fw"></i> -->Explore</a></li>
+            <li><a href="#navigation"><!-- <i class="fa fa-map-marker fa-fw"></i> -->Navigate</a></li>
+            <li><a href="#events"><!-- <i class="fa fa-calendar fa-fw"></i> -->Events</a></li>
+            <li><a href="#"><!-- <i class="fa fa-shopping-cart fa-fw"></i> -->Parking</a></li>
+            <li><a href="#"><!-- <i class="fa fa-warning fa-fw"></i> -->Alerts</a></li>
+            <li><a href="#"><!-- <i class="fa fa-info-circle fa-fw"></i> -->About</a></li>
+        </nav>
 
 		<!-- ** FOOTER **  -->
 		<div data-role="footer"></div>
@@ -539,7 +537,10 @@
       <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
           <a href="#home" data-rel="back" data-icon="back" class="ui-nodisc-icon ui-alt-icon"> Back</a>
           <h1>Food</h1>
-          <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+          <a href="#" class="toggle-menu menu-right push-body">
+                <i class="fa fa-bars fa-lg"></i>
+            </a>
+          <!-- <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a> -->
       </div>
 
       <!-- **MAIN BODY** -->
@@ -554,21 +555,17 @@
           </div>
        </div>
 
-      <!-- ** SIDEBAR PANEL **  -->
-        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-corner-all ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
-            <div class="ui-panel-inner">
-              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
-                <li data-icon="home"><a href="#home">Home</a></li>
-                <li data-icon="search"><a href="#explore">Explore</a></li>
-                <li data-icon="navigation"><a href="#navigation">Navigate</a></li>
-                <li data-icon="calendar"><a href="#events">Events</a></li>
-                <li data-icon="grid"><a href="#">Parking</a></li>
-                <li data-icon="alert"><a href="#">Alerts</a></li>
-                <li data-icon="info"><a href="#">About</a></li>
-              </ul>
-            </div>
-        </div>
-
+      <!-- ** SIDEBAR PANEL ** -->
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+            <h3><img src="Images/icon.png" /></h3>
+            <li class="active"><a href="#home"><!-- <i class="fa fa-home fa-fw"></i> -->Home</a></li>
+            <li><a href="#explore"><!-- <i class="fa fa-search fa-fw"></i> -->Explore</a></li>
+            <li><a href="#navigation"><!-- <i class="fa fa-map-marker fa-fw"></i> -->Navigate</a></li>
+            <li><a href="#events"><!-- <i class="fa fa-calendar fa-fw"></i> -->Events</a></li>
+            <li><a href="#"><!-- <i class="fa fa-shopping-cart fa-fw"></i> -->Parking</a></li>
+            <li><a href="#"><!-- <i class="fa fa-warning fa-fw"></i> -->Alerts</a></li>
+            <li><a href="#"><!-- <i class="fa fa-info-circle fa-fw"></i> -->About</a></li>
+        </nav>
 
           <!-- ** FOOTER **  -->
           <div data-role="footer"></div>
@@ -582,7 +579,10 @@
         <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
             <a href="#home" data-rel="back" data-icon="back" class="ui-nodisc-icon ui-alt-icon"> Back</a>
             <h1>Frontera Fresco</h1>
-            <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+            <a href="#" class="toggle-menu menu-right push-body">
+                <i class="fa fa-bars fa-lg"></i>
+            </a>
+            <!-- <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a> -->
         </div>
 
         <!-- **MAIN BODY** -->
@@ -616,20 +616,17 @@
 			<p><a href="#navigation" rel="external" class="eventlink" style="width:35%">Navigate to this location</a></p>
 	  </div>
 
-        <!-- ** SIDEBAR PANEL **  -->
-        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-corner-all ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
-            <div class="ui-panel-inner">
-              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
-                <li data-icon="home"><a href="#home">Home</a></li>
-                <li data-icon="search"><a href="#explore">Explore</a></li>
-                <li data-icon="navigation"><a href="#navigation">Navigate</a></li>
-                <li data-icon="calendar"><a href="#events">Events</a></li>
-                <li data-icon="grid"><a href="#">Parking</a></li>
-                <li data-icon="alert"><a href="#">Alerts</a></li>
-                <li data-icon="info"><a href="#">About</a></li>
-              </ul>
-            </div>
-        </div>
+        <!-- ** SIDEBAR PANEL ** -->
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+            <h3><img src="Images/icon.png" /></h3>
+            <li class="active"><a href="#home"><!-- <i class="fa fa-home fa-fw"></i> -->Home</a></li>
+            <li><a href="#explore"><!-- <i class="fa fa-search fa-fw"></i> -->Explore</a></li>
+            <li><a href="#navigation"><!-- <i class="fa fa-map-marker fa-fw"></i> -->Navigate</a></li>
+            <li><a href="#events"><!-- <i class="fa fa-calendar fa-fw"></i> -->Events</a></li>
+            <li><a href="#"><!-- <i class="fa fa-shopping-cart fa-fw"></i> -->Parking</a></li>
+            <li><a href="#"><!-- <i class="fa fa-warning fa-fw"></i> -->Alerts</a></li>
+            <li><a href="#"><!-- <i class="fa fa-info-circle fa-fw"></i> -->About</a></li>
+        </nav>
 
 
         <!-- ** FOOTER **  -->
@@ -645,7 +642,10 @@
         <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
             <a href="#home" data-rel="back" data-icon="back"> Back</a>
             <h1>Food Option</h1>
-            <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+            <a href="#" class="toggle-menu menu-right push-body">
+                <i class="fa fa-bars fa-lg"></i>
+            </a>
+            <!-- <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a> -->
         </div>
 
         <!-- **MAIN BODY** -->
@@ -673,20 +673,17 @@
                 	<p><a href="#navigation" rel="external" class="eventlink" style="width:35%">Navigate to this location</a></p>
         </div>
 
-        <!-- ** SIDEBAR PANEL **  -->
-        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-corner-all ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
-            <div class="ui-panel-inner">
-              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
-                <li data-icon="home"><a href="#home">Home</a></li>
-                <li data-icon="search"><a href="#explore">Explore</a></li>
-                <li data-icon="navigation"><a href="#navigation">Navigate</a></li>
-                <li data-icon="calendar"><a href="#events">Events</a></li>
-                <li data-icon="grid"><a href="#">Parking</a></li>
-                <li data-icon="alert"><a href="#">Alerts</a></li>
-                <li data-icon="info"><a href="#">About</a></li>
-              </ul>
-            </div>
-        </div>
+        <!-- ** SIDEBAR PANEL ** -->
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+            <h3><img src="Images/icon.png" /></h3>
+            <li class="active"><a href="#home"><!-- <i class="fa fa-home fa-fw"></i> -->Home</a></li>
+            <li><a href="#explore"><!-- <i class="fa fa-search fa-fw"></i> -->Explore</a></li>
+            <li><a href="#navigation"><!-- <i class="fa fa-map-marker fa-fw"></i> -->Navigate</a></li>
+            <li><a href="#events"><!-- <i class="fa fa-calendar fa-fw"></i> -->Events</a></li>
+            <li><a href="#"><!-- <i class="fa fa-shopping-cart fa-fw"></i> -->Parking</a></li>
+            <li><a href="#"><!-- <i class="fa fa-warning fa-fw"></i> -->Alerts</a></li>
+            <li><a href="#"><!-- <i class="fa fa-info-circle fa-fw"></i> -->About</a></li>
+        </nav>
 
         <!-- ** FOOTER **  -->
         <div data-role="footer"></div>
@@ -701,7 +698,10 @@
         <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
             <a href="#home" data-rel="back" data-icon="back" class="ui-nodisc-icon ui-alt-icon"> Back</a>
             <h1>Entertainment</h1>
-            <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button"></a>
+            <a href="#" class="toggle-menu menu-right push-body">
+                <i class="fa fa-bars fa-lg"></i>
+            </a>
+            <!-- <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button"></a> -->
         </div>
 
         <!-- **MAIN BODY** -->
@@ -713,20 +713,17 @@
             </div>
         </div>
 
-        <!-- ** SIDEBAR PANEL **  -->
-        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-corner-all ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
-            <div class="ui-panel-inner">
-              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
-                <li data-icon="home"><a href="#home">Home</a></li>
-                <li data-icon="search"><a href="#explore">Explore</a></li>
-                <li data-icon="navigation"><a href="#navigation">Navigate</a></li>
-                <li data-icon="calendar"><a href="#events">Events</a></li>
-                <li data-icon="grid"><a href="#">Parking</a></li>
-                <li data-icon="alert"><a href="#">Alerts</a></li>
-                <li data-icon="info"><a href="#">About</a></li>
-              </ul>
-            </div>
-        </div>
+        <!-- ** SIDEBAR PANEL ** -->
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+            <h3><img src="Images/icon.png" /></h3>
+            <li class="active"><a href="#home"><!-- <i class="fa fa-home fa-fw"></i> -->Home</a></li>
+            <li><a href="#explore"><!-- <i class="fa fa-search fa-fw"></i> -->Explore</a></li>
+            <li><a href="#navigation"><!-- <i class="fa fa-map-marker fa-fw"></i> -->Navigate</a></li>
+            <li><a href="#events"><!-- <i class="fa fa-calendar fa-fw"></i> -->Events</a></li>
+            <li><a href="#"><!-- <i class="fa fa-shopping-cart fa-fw"></i> -->Parking</a></li>
+            <li><a href="#"><!-- <i class="fa fa-warning fa-fw"></i> -->Alerts</a></li>
+            <li><a href="#"><!-- <i class="fa fa-info-circle fa-fw"></i> -->About</a></li>
+        </nav>
 
         <!-- ** FOOTER **  -->
         <div data-role="footer"></div>
@@ -741,7 +738,10 @@
         <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
             <a href="#home" data-rel="back" data-icon="back"> Back</a>
             <h1>Century 12</h1>
-            <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+            <a href="#" class="toggle-menu menu-right push-body">
+                <i class="fa fa-bars fa-lg"></i>
+            </a>
+            <!-- <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a> -->
         </div>
 
         <!-- **MAIN BODY** -->
@@ -758,25 +758,23 @@
        </div>
 	  <div class="moreInfo">
                 <a href="http://www.cinemark.com/theatre-detail.aspx?node_id=1658" rel="external" class="eventlink" style="width:35%"> Visit the Official Cinemark Site</a><br/>
-        <h3>Location</h3>
+                <h3>Location</h3>
                   <p>1715 Maple Ave<br/>
                     Evanston, IL 60201</p>
                   <p><a href="#navigation" class="eventlink" rel="external" style="width:60%">Navigate to this location</a></p>
 	  </div>
-        <!-- ** SIDEBAR PANEL **  -->
-        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-corner-all ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
-            <div class="ui-panel-inner">
-              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
-                <li data-icon="home"><a href="#home">Home</a></li>
-                <li data-icon="search"><a href="#explore">Explore</a></li>
-                <li data-icon="navigation"><a href="#navigation">Navigate</a></li>
-                <li data-icon="calendar"><a href="#events">Events</a></li>
-                <li data-icon="grid"><a href="#">Parking</a></li>
-                <li data-icon="alert"><a href="#">Alerts</a></li>
-                <li data-icon="info"><a href="#">About</a></li>
-              </ul>
-            </div>
-        </div>
+
+        <!-- ** SIDEBAR PANEL ** -->
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+            <h3><img src="Images/icon.png" /></h3>
+            <li class="active"><a href="#home"><!-- <i class="fa fa-home fa-fw"></i> -->Home</a></li>
+            <li><a href="#explore"><!-- <i class="fa fa-search fa-fw"></i> -->Explore</a></li>
+            <li><a href="#navigation"><!-- <i class="fa fa-map-marker fa-fw"></i> -->Navigate</a></li>
+            <li><a href="#events"><!-- <i class="fa fa-calendar fa-fw"></i> -->Events</a></li>
+            <li><a href="#"><!-- <i class="fa fa-shopping-cart fa-fw"></i> -->Parking</a></li>
+            <li><a href="#"><!-- <i class="fa fa-warning fa-fw"></i> -->Alerts</a></li>
+            <li><a href="#"><!-- <i class="fa fa-info-circle fa-fw"></i> -->About</a></li>
+        </nav>
 
         <!-- ** FOOTER **  -->
         <div data-role="footer"></div>
@@ -791,7 +789,10 @@
       <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
           <a href="#home" data-rel="back" data-icon="back" class="ui-nodisc-icon ui-alt-icon"> Back</a>
           <h1>Events @ NU</h1>
-          <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+          <a href="#" class="toggle-menu menu-right push-body">
+                <i class="fa fa-bars fa-lg"></i>
+            </a>
+          <!-- <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a> -->
       </div>
       
       <!-- **MAIN BODY** -->
@@ -805,20 +806,17 @@
             </div>
       </div>
 
-      <!-- ** SIDEBAR PANEL **  -->
-        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-corner-all ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
-            <div class="ui-panel-inner">
-              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
-                <li data-icon="home"><a href="#home">Home</a></li>
-                <li data-icon="search"><a href="#explore">Explore</a></li>
-                <li data-icon="navigation"><a href="#navigation">Navigate</a></li>
-                <li data-icon="calendar"><a href="#events">Events</a></li>
-                <li data-icon="grid"><a href="#">Parking</a></li>
-                <li data-icon="alert"><a href="#">Alerts</a></li>
-                <li data-icon="info"><a href="#">About</a></li>
-              </ul>
-            </div>
-        </div>
+      <!-- ** SIDEBAR PANEL ** -->
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+            <h3><img src="Images/icon.png" /></h3>
+            <li class="active"><a href="#home"><!-- <i class="fa fa-home fa-fw"></i> -->Home</a></li>
+            <li><a href="#explore"><!-- <i class="fa fa-search fa-fw"></i> -->Explore</a></li>
+            <li><a href="#navigation"><!-- <i class="fa fa-map-marker fa-fw"></i> -->Navigate</a></li>
+            <li><a href="#events"><!-- <i class="fa fa-calendar fa-fw"></i> -->Events</a></li>
+            <li><a href="#"><!-- <i class="fa fa-shopping-cart fa-fw"></i> -->Parking</a></li>
+            <li><a href="#"><!-- <i class="fa fa-warning fa-fw"></i> -->Alerts</a></li>
+            <li><a href="#"><!-- <i class="fa fa-info-circle fa-fw"></i> -->About</a></li>
+        </nav>
 
 
       <!-- ** FOOTER **  -->
@@ -833,7 +831,10 @@
       <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
           <a href="#home" data-rel="back" data-icon="back" class="ui-nodisc-icon ui-alt-icon"> Back</a>
           <h1>Event Details</h1>
-          <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+          <a href="#" class="toggle-menu menu-right push-body">
+                <i class="fa fa-bars fa-lg"></i>
+            </a>
+          <!-- <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a> -->
       </div>
       
       <!-- **MAIN BODY** -->
@@ -875,20 +876,17 @@
 		</div>
       </div>
 
-      <!-- ** SIDEBAR PANEL **  -->
-        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-corner-all ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
-            <div class="ui-panel-inner">
-              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
-                <li data-icon="home"><a href="#home">Home</a></li>
-                <li data-icon="search"><a href="#explore">Explore</a></li>
-                <li data-icon="navigation"><a href="#navigation">Navigate</a></li>
-                <li data-icon="calendar"><a href="#events">Events</a></li>
-                <li data-icon="grid"><a href="#">Parking</a></li>
-                <li data-icon="alert"><a href="#">Alerts</a></li>
-                <li data-icon="info"><a href="#">About</a></li>
-              </ul>
-            </div>
-        </div>
+      <!-- ** SIDEBAR PANEL ** -->
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+            <h3><img src="Images/icon.png" /></h3>
+            <li class="active"><a href="#home"><!-- <i class="fa fa-home fa-fw"></i> -->Home</a></li>
+            <li><a href="#explore"><!-- <i class="fa fa-search fa-fw"></i> -->Explore</a></li>
+            <li><a href="#navigation"><!-- <i class="fa fa-map-marker fa-fw"></i> -->Navigate</a></li>
+            <li><a href="#events"><!-- <i class="fa fa-calendar fa-fw"></i> -->Events</a></li>
+            <li><a href="#"><!-- <i class="fa fa-shopping-cart fa-fw"></i> -->Parking</a></li>
+            <li><a href="#"><!-- <i class="fa fa-warning fa-fw"></i> -->Alerts</a></li>
+            <li><a href="#"><!-- <i class="fa fa-info-circle fa-fw"></i> -->About</a></li>
+        </nav>
 
 
        <!-- ** FOOTER **  -->
@@ -903,7 +901,10 @@
       <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
           <a href="#home" data-rel="back" data-icon="back" class="ui-nodisc-icon ui-alt-icon"> Back</a>
           <h1>Event Details</h1>
-          <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+          <a href="#" class="toggle-menu menu-right push-body">
+                <i class="fa fa-bars fa-lg"></i>
+            </a>
+          <!-- <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a> -->
       </div>
       
       <!-- **MAIN BODY** -->
@@ -945,20 +946,17 @@
 		</div>
       </div>
 
-      <!-- ** SIDEBAR PANEL **  -->
-        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-corner-all ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
-            <div class="ui-panel-inner">
-              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
-                <li data-icon="home"><a href="#home">Home</a></li>
-                <li data-icon="search"><a href="#explore">Explore</a></li>
-                <li data-icon="navigation"><a href="#navigation">Navigate</a></li>
-                <li data-icon="calendar"><a href="#events">Events</a></li>
-                <li data-icon="grid"><a href="#">Parking</a></li>
-                <li data-icon="alert"><a href="#">Alerts</a></li>
-                <li data-icon="info"><a href="#">About</a></li>
-              </ul>
-            </div>
-        </div>
+      <!-- ** SIDEBAR PANEL ** -->
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+            <h3><img src="Images/icon.png" /></h3>
+            <li class="active"><a href="#home"><!-- <i class="fa fa-home fa-fw"></i> -->Home</a></li>
+            <li><a href="#explore"><!-- <i class="fa fa-search fa-fw"></i> -->Explore</a></li>
+            <li><a href="#navigation"><!-- <i class="fa fa-map-marker fa-fw"></i> -->Navigate</a></li>
+            <li><a href="#events"><!-- <i class="fa fa-calendar fa-fw"></i> -->Events</a></li>
+            <li><a href="#"><!-- <i class="fa fa-shopping-cart fa-fw"></i> -->Parking</a></li>
+            <li><a href="#"><!-- <i class="fa fa-warning fa-fw"></i> -->Alerts</a></li>
+            <li><a href="#"><!-- <i class="fa fa-info-circle fa-fw"></i> -->About</a></li>
+        </nav>
 
 
        <!-- ** FOOTER **  -->
@@ -973,7 +971,10 @@
       <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
           <a href="#home" data-rel="back" data-icon="back" class="ui-nodisc-icon ui-alt-icon"> Back</a>
           <h1>Event Details</h1>
-          <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
+          <a href="#" class="toggle-menu menu-right push-body">
+                <i class="fa fa-bars fa-lg"></i>
+            </a>
+          <!-- <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a> -->
       </div>
       
       <!-- **MAIN BODY** -->
@@ -1015,21 +1016,17 @@
 		</div>
       </div>
 
-      <!-- ** SIDEBAR PANEL **  -->
-        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-corner-all ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
-            <div class="ui-panel-inner">
-              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
-                <li data-icon="home"><a href="#home">Home</a></li>
-                <li data-icon="search"><a href="#explore">Explore</a></li>
-                <li data-icon="navigation"><a href="#navigation">Navigate</a></li>
-                <li data-icon="calendar"><a href="#events">Events</a></li>
-                <li data-icon="grid"><a href="#">Parking</a></li>
-                <li data-icon="alert"><a href="#">Alerts</a></li>
-                <li data-icon="info"><a href="#">About</a></li>
-              </ul>
-            </div>
-        </div>
-
+      <!-- ** SIDEBAR PANEL ** -->
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+            <h3><img src="Images/icon.png" /></h3>
+            <li class="active"><a href="#home"><!-- <i class="fa fa-home fa-fw"></i> -->Home</a></li>
+            <li><a href="#explore"><!-- <i class="fa fa-search fa-fw"></i> -->Explore</a></li>
+            <li><a href="#navigation"><!-- <i class="fa fa-map-marker fa-fw"></i> -->Navigate</a></li>
+            <li><a href="#events"><!-- <i class="fa fa-calendar fa-fw"></i> -->Events</a></li>
+            <li><a href="#"><!-- <i class="fa fa-shopping-cart fa-fw"></i> -->Parking</a></li>
+            <li><a href="#"><!-- <i class="fa fa-warning fa-fw"></i> -->Alerts</a></li>
+            <li><a href="#"><!-- <i class="fa fa-info-circle fa-fw"></i> -->About</a></li>
+        </nav>
 
        <!-- ** FOOTER **  -->
       <div data-role="footer"></div>

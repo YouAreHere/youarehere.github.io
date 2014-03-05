@@ -6,6 +6,7 @@
  * Original version (pure JS) is created by Mary Lou http://tympanus.net/
  */
 
+
 (function($) {
 		
 	$.fn.jPushMenu = function(customOptions) {

@@ -15,8 +15,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 #custom-header {
 	color: white;
-	height: 3%;
+	height: 5em;
+	/*position: fixed;*/
+	/*background-color: black;*/
+	/*width: 100%;*/
 }
+/*
+#custom-header h1 {
+	font-size: 12px;
+	text-decoration: none;
+	text-transform: none;
+	text-align: center;
+}
+
+#custom-header a {
+	font-size: 12px;
+	text-decoration: none;
+	text-transform: none;
+	text-align: center;
+}*/
 
 #custom-panel {
 	color: white;
@@ -48,9 +65,9 @@ img {
 }
 
 #block-container {
-	margin-top: -1em;
 	height: 33%;
 	width: 100%;
+	position: relative;
 }
 
 #block {
@@ -73,7 +90,7 @@ img {
 	height:0;
 	border-color: #d94949 transparent transparent transparent; /*border color should be same as div div background color*/
 	border-style: solid;
-	border-width: 10px;
+	border-width: 20px;
 }
 
 .title-block {
@@ -86,7 +103,7 @@ img {
 #block-updates {
 	width: 100%;
 	height: auto;
-	background: black;
+	background: #414141;
 	position: fixed;
 }
 
@@ -102,7 +119,7 @@ img {
 	height: auto;
 	min-height: 4.5em;
 	margin-top: 2%;
-	border-bottom: 1px solid #333;
+	border-bottom: 1px solid #222;
 }
 
 .icon-inner a, .icon-inner p{
@@ -143,6 +160,10 @@ img {
 	font-size: 0.7em;
 	margin: 0;
 	padding: 0;
+}
+
+#alerts {
+	margin-top: 3%;
 }
 
 /*#alerts:hover {
@@ -219,7 +240,7 @@ img {
 /* Orientation-dependent styles for the content of the menu */
 
 .cbp-spmenu-vertical {
-    width: 240px;
+    width: 20%;
     height: 100%;
     top: 0;
     z-index: 1000;
@@ -233,7 +254,7 @@ img {
 /* Vertical menu that slides from the left or right */
 
 .cbp-spmenu-right {
-    right: -240px;
+    right: -20%;
 }
 
 .cbp-spmenu-right.cbp-spmenu-open {
@@ -250,11 +271,11 @@ img {
 }
 
 .cbp-spmenu-push-toright {
-    left: 240px;
+    left: 20%;
 }
 
 .cbp-spmenu-push-toleft {
-    left: -240px;
+    left: -20%;
 }
 
 /* Transitions */
