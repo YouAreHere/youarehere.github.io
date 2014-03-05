@@ -3,7 +3,8 @@
 
 #custom-main {
 	width: 100%;
-	margin: 0 auto;
+	padding-bottom: 0;
+	margin-bottom: 0;
 }
 
 #custom-main img {
@@ -23,11 +24,11 @@
 	height: auto;
 	min-height: 4.5em;
 	margin-top: 50px;
-	padding-top: 30px;
+	padding-top: 50px;
 	border-bottom: 1px solid #222;
 }
 
 .content-text {
-	color: white;
+	color: white !important;
 	font-size: 0.7em;
 }
