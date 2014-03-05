@@ -7,7 +7,7 @@
 }
 
 #custom-main img {
-	width: 325px;
+	width: 100%;
 	height: auto;
 }
 
@@ -25,4 +25,9 @@
 	margin-top: 50px;
 	padding-top: 30px;
 	border-bottom: 1px solid #222;
+}
+
+.content-text {
+	color: white;
+	font-size: 0.7em;
 }
