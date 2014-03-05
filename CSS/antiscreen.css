@@ -1,0 +1,17 @@
+#custom-main {
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+#custom-main img {
+	padding-left: 0;
+	max-width: 300px;
+	height: auto;
+}
+
+#alerts {
+	margin-top: 0;
+	padding-top: 15px;
+}
