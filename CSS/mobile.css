@@ -6,10 +6,10 @@
 	margin: 0 auto;
 }
 
-/*#custom-main img {
-	width: 100%;
+#custom-main img {
+	width: 300px;
 	height: auto;
-}*/
+}
 
 .boxes {
 	margin-left: 20px;
