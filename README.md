@@ -8,14 +8,19 @@ with an easier way to navigate Northwestern's campus using real-time data.
 
 Designers:
 ====================
-Amanda Anumba
+Amanda Anumba 
+
 Taiwon Chung
+
 Jhanani Dhakshnamoorthy
+
 Shantaviae Wynn
 
 
 Credit:
 ====================
 jQuery Mobile
+
 Font Awesome for icons
+
 jPushMenu by takien
