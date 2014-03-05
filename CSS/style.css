@@ -52,10 +52,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	margin: 0 auto;
 }
 
-img {
+/*img {
 	max-width: 100%;
 	height: auto;
-}
+}*/
 
 #custom-nav-footer {
 	bottom: 0;
