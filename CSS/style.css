@@ -49,14 +49,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 #custom-main {
-	padding-top: 8%;
+	width: 50%;
+	padding-top: 4%;
 	margin: 0 auto;
+	padding-bottom: 0;
+	margin-bottom: 0;
 }
 
-/*img {
-	max-width: 100%;
-	height: auto;
-}*/
+#custom-main img {
+	padding-left: 15%;
+}
 
 #custom-nav-footer {
 	bottom: 0;
@@ -66,14 +68,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 #block-container {
-	height: 33%;
+	height: 25%;
 	width: 100%;
-	position: relative;
+	/*position: relative;*/
 }
 
 #block {
 	width:100%;
-	height: 3em;
+	height: 1.6em;
 	background: #d94949;
 	padding: 5px;
 	position:relative;
@@ -91,25 +93,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	height:0;
 	border-color: #d94949 transparent transparent transparent; /*border color should be same as div div background color*/
 	border-style: solid;
-	border-width: 20px;
+	border-width: 15px;
 }
 
 .title-block {
 	color: black;
 	text-shadow: none;
 	font-size: 0.8em;
-	margin-left: 10px;
+	margin: 0 0 0 10px;
 }
 
 #block-updates {
 	width: 100%;
 	height: auto;
+	max-height: 300px;
 	background: #414141;
-	position: fixed;
+	position: absolute;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 .boxes {
-	margin-left: 2%;
+	margin-left: 1%;
 	font-weight: normal;
 	text-decoration: none;
 	text-shadow: none;
@@ -118,21 +123,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .news-boxes {
 	width: 100%;
 	height: auto;
-	min-height: 4.5em;
-	margin-top: 2%;
+	/*min-height: 3.5em;*/
+	padding-bottom: 10px;
 	border-bottom: 1px solid #222;
+	margin-top: 2%;
 }
 
-.icon-inner a, .icon-inner p{
+.icon-inner a, .icon-inner p, .icon-inner {
 	color: white !important;
-	font-size: 0.8em;
+	font-size: 0.9em;
 	font-weight: normal;
 	text-decoration: none;
 	text-transform: lowercase;
 	text-shadow: none;
 	float: left;
-	height:4em;
-	width: 4em;
+	height: 5em;
+	width: 5em;
 	text-align: center;
 	/*border-bottom: 1px solid #333;*/
 }
@@ -164,7 +170,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 #alerts {
-	margin-top: 4%;
+	margin-top: 2%;
 }
 
 /*#alerts:hover {
