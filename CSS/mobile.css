@@ -3,17 +3,11 @@
 
 #custom-main {
 	width: 100%;
-	padding-top: 50px;
 	margin: 0 auto;
 }
 
 #custom-main img {
-	min-width: 200px;
-	height: auto;
-}
-
-img {
-	width: 100%;
+	width: 225px;
 	height: auto;
 }
 
