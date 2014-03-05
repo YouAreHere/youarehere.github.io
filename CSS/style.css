@@ -253,6 +253,7 @@ border-width: 10px;
 .moreInfo{
 	text-align:right;
 	line-height: 30px;
+	margin:20px;
 }
 
 a.eventlink, a.eventlink:link, a.eventlink:visited, a.eventlink:hover, a.eventlink:focus, a.eventlink:active{
@@ -265,7 +266,7 @@ a.eventlink, a.eventlink:link, a.eventlink:visited, a.eventlink:hover, a.eventli
   width: 60px;
   height: 16px;
   display: block;
-  background: url('Images/star-rating.gif') 0 0 no-repeat;
+  background: url('http://www.itsalif.info/blogfiles/rating/star-rating.png') 0 0 no-repeat;
 }
 
 #explore .rating-50 { background-position: 0 0; }
