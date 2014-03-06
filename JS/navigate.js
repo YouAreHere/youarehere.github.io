@@ -77,3 +77,11 @@ $(document).on("pageshow","#navigation",
 						google.maps.event.trigger(nav_map, 'resize');
 					}
 				});
+
+$( document ).ready(function() {
+  $('.navigatelink').click(function(){
+            var $this = $(this);
+            var p1 = $this.data('address');
+            console.log(p1);
+        });
+});
