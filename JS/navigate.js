@@ -55,10 +55,14 @@ function init_navi()
     		var bounds = nav_map.getBounds();
     		searchBox.setBounds(bounds);
   		});
-	} else {
-		google.maps.event.trigger(nav_map, 'resize');
 	}
 }
+
+function navigateToPlace(place)
+{
+	nav_map.setCenter(new google.maps.LatLng(42.054647, -87.677139));
+}
+
 $(document).on("pageshow","#navigation",
 				function(){
 					var the_height = ($(window).height() - $(this).find('[data-role="header"]').height() - $(this).find('[data-role="footer"]').height());
@@ -67,5 +71,9 @@ $(document).on("pageshow","#navigation",
     					$(this).find('[data-role="header"]').width()-30
     				);
     				//console.log($(this).find('[id="map_canvas"]'));
-					init_navi();
+    				if (nav_map == undefined) {
+						init_navi();
+					} else {
+						google.maps.event.trigger(nav_map, 'resize');
+					}
 				});
