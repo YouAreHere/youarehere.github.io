@@ -2,6 +2,17 @@ var nav_map, searchBox;
 var markers=[];
 var default_center = new google.maps.LatLng(42.054647, -87.677139);
 var markerAtCenter = 0;
+
+function formatSearchbox()
+{
+	console.log($('#pac-input').parent());
+	var parent = $('#pac-input').parent();
+	var gparent = $('#pac-input').parent().parent();
+	gparent.height(30);
+	gparent.css('border-radius', '10px');
+	parent.css('margin', '0px 0px');
+}
+
 function init_navi()
 {
 	if (nav_map == undefined) {
@@ -14,6 +25,7 @@ function init_navi()
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
 		nav_map = new google.maps.Map(map_canvas, mapOpts);
+		formatSearchbox();
 		searchBox = new google.maps.places.SearchBox(document.getElementById('pac-input'));
 		google.maps.event.addListener(searchBox, 'places_changed', function() {
     		var places = searchBox.getPlaces();

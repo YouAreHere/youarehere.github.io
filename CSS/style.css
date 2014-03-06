@@ -377,10 +377,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 #pac-input {
-	background-color: #fff;
-	padding: 0 11px 0 13px;
-    width: 100%;
     font-family: Roboto;
+    margin-top: -4px;
     font-size: 15px;
     font-weight: 300;
     text-overflow: ellipsis;
@@ -389,15 +387,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 #pac-input:focus {
     border-color: #4d90fe;
     margin-left: -1px;
-    padding-left: 14px;  /* Regular padding-left + 1. */
     width: 100%;
 }
 
 .pac-container {
-	margin-top: 20px;
 	margin-left:30px;
+	overflow: visible;
 	width: 70%;
-	background: none;
+	background: white;
 	border: none;
 	box-shadow: none;
 	font-family: Roboto;
