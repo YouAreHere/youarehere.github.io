@@ -69,3 +69,11 @@ $(document).on("pageshow","#navigation",
     				//console.log($(this).find('[id="map_canvas"]'));
 					init_navi();
 				});
+
+$( document ).ready(function() {
+  $('.navigatelink').click(function(){
+            var $this = $(this);
+            var p1 = $this.data('address');
+            console.log(p1);
+        });
+});
