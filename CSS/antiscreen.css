@@ -13,7 +13,11 @@
 
 #alerts {
 	margin-top: 0;
-	padding-top: 15px;
+	padding-top: 25px;
+}
+
+.news-boxes {
+	margin-top: 25px;
 }
 
 #block-container {
