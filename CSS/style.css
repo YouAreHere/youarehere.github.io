@@ -6,6 +6,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     display: block;
 }
 
+h1 {
+	font-weight: normal;
+}
+
 /* ------------------------------ HOME PAGE  ------------------------------ */
 /* ======================================================================== */
 #home {
@@ -400,28 +404,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	font-family: Roboto;
 }
 
-.tableHeaderRows {
-	text-align: left; 
-	width: 40%;
-	color: #d94949;
-	height: 35px;
-}
 
-.tableRows {
-	height: 35px;
-}
-
-.moreInfo{
-	text-align:left;
-	line-height: 30px;
-	/*margin:20px;*/
-}
-
-a.eventlink, a.eventlink:link, a.eventlink:visited, a.eventlink:hover, a.eventlink:focus, a.eventlink:active{
-	color: #d94949 !important;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: normal !important;
-}
 
 #explore .star{
   width: 60px;
@@ -442,3 +425,71 @@ a.eventlink, a.eventlink:link, a.eventlink:visited, a.eventlink:hover, a.eventli
 #explore .rating-25 { background-position: -24px -16px; }
 #explore .rating-35 { background-position: -12px -16px; }
 #explore .rating-45 { background-position: 0 -16px; }
+
+
+/* ----------------------------------------- EVENTS PAGE  ----------------------------------------- */
+/* =============================================================================================== */
+#list-events {
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+a.eventlink, a.eventlink:link, a.eventlink:visited, a.eventlink:hover, a.eventlink:focus, a.eventlink:active{
+	color: #d94949 !important;
+	font-weight: normal !important;
+}
+
+.tableHeaderRows {
+	text-align: left; 
+	width: 40%;
+	color: #d94949;
+	height: 35px;
+}
+
+.tableRows {
+	height: 35px;
+}
+
+.moreInfo {
+	text-align:left;
+	line-height: 30px;
+	/*margin:20px;*/
+}
+
+.custom-btns {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.addtl-buttons {
+	text-transform: none;
+	text-shadow: none;
+	font-size: 0.8em;
+	font-weight: normal;
+	color: black !important;
+}
+
+.athletics {
+	padding: 3px;
+	background: #660066;
+	margin-right: 10px;
+}
+/*
+.addthisevent-drop 						{display:inline-block;position:relative;z-index:999998;font-family:'Roboto',sans-serif;color:#fff!important;text-decoration:none;font-size:15px;text-decoration:none;}
+.addthisevent-drop:hover 				{color:#fff;font-size:15px;text-decoration:none;}
+.addthisevent_dropdown 					{position:relative;text-align:left;display:block!important;}
+.addthisevent_dropdown span 			{display:inline-block;position:relative;line-height:110%;background:#ebebeb url(../gfx/button-bg.png) repeat-x;text-decoration:none;font-size:14px;font-weight:300;color:#333;cursor:pointer;padding:7px 14px 8px 12px;border:1px solid #e1e1e1;margin:0px 6px 0px 0px;-moz-border-radius:4px;-webkit-border-radius:4px;}
+.addthisevent_dropdown span:hover 		{background:#f4f4f4;color:#000;text-decoration:none;font-size:14px;}
+.addthisevent_dropdown span:active 		{top:1px;}
+.addthisevent_dropdown .ateoutlook 		{border-top:3px solid #fa9d00;}
+.addthisevent_dropdown .ategoogle 		{border-top:3px solid #d53900;}
+.addthisevent_dropdown .atehotmail 		{border-top:3px solid #1473c5;}
+.addthisevent_dropdown .ateyahoo 		{border-top:3px solid #65106e;}
+.addthisevent_dropdown .ateical 		{border-top:3px solid #ab373a;}
+.addthisevent span 						{display:none!important;}
+.addthisevent-drop ._url,.addthisevent-drop ._start,.addthisevent-drop ._end,.addthisevent-drop ._summary,.addthisevent-drop ._description,.addthisevent-drop ._location,.addthisevent-drop ._organizer,.addthisevent-drop ._organizer_email,.addthisevent-drop ._facebook_event,.addthisevent-drop ._all_day_event {display:none!important;}
+.addthisevent_dropdown .copyx 			{display:none;}
+.addthisevent_dropdown .brx 			{display:none;}
+.addthisevent_dropdown .frs 			{position:absolute;top:8px;cursor:pointer;right:13px;padding-left:10px;font-style:normal;font-weight:normal;text-align:right;z-index:101;line-height:110%;background:#fff;text-decoration:none;font-size:10px;color:#cacaca;}
+.addthisevent_dropdown .frs:hover 		{color:#6d84b4;}
+.addthisevent 							{visibility:hidden;}*/

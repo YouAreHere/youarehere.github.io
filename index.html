@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
     <title> You Are Here </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
 
     <link href="CSS/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="CSS/jquery.mobile-1.4.1.css" rel="stylesheet"/>
@@ -15,12 +15,14 @@
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+    <!-- <script type="text/javascript" src="http://js.addthisevent.com/atemay.js"></script> -->
+    <script src="JS/calendar.js"></script>
     <script src="JS/navigate.js"></script>
     <script src="JS/jPushMenu.js"></script>
   </head>
   
   <body class="cbp-spmenu-push">
-
+    <script type="text/javascript" src="http://js.addthisevent.com/atemay.js"></script>
   <!-- ===========================================================================================================================
                 Start of first page                    HOME                   
        =========================================================================================================================== -->
@@ -283,7 +285,6 @@
         <!-- ** FOOTER **  -->
         <div data-role="footer"></div>
     </div>
-
 
 <!-- =========================================================================================================================== 
             Start of third page                    EXPLORE                    
@@ -632,7 +633,7 @@
         <div data-role="footer"></div>
     </div>
 
-	<!-- =========================================================================================================================== -->
+<!-- =========================================================================================================================== -->
 
     <!-- Start of subway restuarant page -->
     <div data-role="page" id="subway" data-theme="a">
@@ -778,34 +779,126 @@
         <!-- ** FOOTER **  -->
         <div data-role="footer"></div>
     </div>
+
 <!-- =========================================================================================================================== 
             Start of fourth page                    EVENTS                   
-   =========================================================================================================================== -->
-
-    <div data-role="page" id="events" data-theme="a">
+     =========================================================================================================================== -->
+        
+        <div data-role="page" id="events" data-theme="a">
       
-      <!-- **NAVIGATION HEADER MENU** -->
-      <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
-          <a href="#home" data-rel="back" data-icon="back" class="ui-nodisc-icon ui-alt-icon"> Back</a>
-          <h1>Events @ NU</h1>
-          <a href="#" class="toggle-menu menu-right push-body">
+        <!-- **NAVIGATION HEADER MENU** -->
+        <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
+            <a href="#home" data-rel="back" data-icon="back" class="ui-nodisc-icon ui-alt-icon"> Back</a>
+            <h1>Events @ NU</h1>
+            <a href="#" class="toggle-menu menu-right push-body">
                 <i class="fa fa-bars fa-lg"></i>
             </a>
-          <!-- <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a> -->
-      </div>
+            <!-- <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a> -->
+        </div>
       
-      <!-- **MAIN BODY** -->
-      <div role="main" class="ui-content" style="margin:20px;">
-            <div class="choice_list">
-                <ul data-role="listview" data-inset="true" data-filter="true">
-                    <li><a href="#nu-game" data-transition="slidedown"><h3>Mar 20 | Men's Basketball Game</h3></a></li>
-                    <li><a href="#concert" data-transition="slidedown"><h3>Mar 21 | ASG Concert</h3></a></li>
-                    <li><a href="#springbreak" data-transition="slidedown"><h3>Mar 24 | 1st Day of Spring Break!</h3></a></li>
+
+        <!-- **MAIN BODY** -->
+        <div role="main" class="ui-content" style="margin:20px;">
+            <div data-role="collapsibleset" data-mini="true" data-inset="false" id="list-events">
+                
+                <ul data-role="listview" data-filter-placeholder="Find an event..." data-filter="true" class="ui-nodisc-icon ui-alt-icon">
+                    
+                    <div data-role="collapsible" data-mini="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                        <h4><span class="athletics"></span> Men's Basketball Game - NU vs. Ohio State</h4>
+                        <p>Friday, March 14, 2014</p>
+                        <a href="#nu-game" data-transition="fade">Click Here for more details</a>
+                    </div>
+
+                    <div data-role="collapsible" data-mini="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                        <h4>A&O Spring Concert - Beyonce and Jay-Z</h4>
+                        <p>Friday, April 15, 2014</p>
+                        <a href="#concert" data-transition="fade">Click Here for more details</a>
+                    </div>
+
+                    <div data-role="collapsible" data-mini="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                        <h4>Spring Break Begins</h4>
+                        <p>Friday, March 14, 2014</p>
+                        <a href="#spring" data-transition="fade">Click Here for more details</a>
+                    </div>
+
+                    <div data-role="collapsible" data-mini="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                        <h4>Dance Marathon 40th Anniversary Exhibit</h4>
+                        <p>Friday, March 14, 2014</p>
+                        <a href="#event1" data-transition="fade">Click Here for more details</a>
+                    </div>
+
+                    <div data-role="collapsible" data-mini="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                        <h4><span class="athletics"></span> Lacrosse vs. Johns Hopkins</h4>
+                        <p>Sunday, April 13, 2014</p>
+                        <p>12:00 PM - 2:00 PM</p>
+                        <p>Henry Crown Sports Pavilion / Norris Aquatic Center, Lakeside Field</p>
+                        <a href="#nu-game" data-transition="fade">Click Here for more details</a>
+                    </div>
+
+                    <div data-role="collapsible" data-mini="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                        <h4>RecycleMania</h4>
+                        <p>Friday, March 14, 2014</p>
+                        <a href="#event2" data-transition="fade">Click Here for more details</a>
+                    </div>
+
+                    <div data-role="collapsible" data-mini="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                        <h4>Biomedical Research Symposium</h4>
+                        <p>Friday, March 14, 2014</p>
+                        <a href="#event3" data-transition="fade">Click Here for more details</a>
+                    </div>
+
+                    <div data-role="collapsible" data-mini="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                        <h4>Easter Sunday Celebration</h4>
+                        <p>Friday, March 14, 2014</p>
+                        <a href="#event4" data-transition="fade">Click Here for more details</a>
+                    </div>
+
+                    <div data-role="collapsible" data-mini="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                        <h4>Dearborn Observatory Public Viewing</h4>
+                        <p>Friday, April 15, 2014</p>
+                        <a href="#event5" data-transition="fade">Click Here for more details</a>
+                    </div>
+
+                    <div data-role="collapsible" data-mini="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                        <h4>Block Cinema: City Streets</h4>
+                        <p>Friday, March 14, 2014</p>
+                        <a href="#event6" data-transition="fade">Click Here for more details</a>
+                    </div>
+
+                    <div data-role="collapsible" data-mini="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                        <h4>Danceworks 2014: Hot Buttons</h4>
+                        <p>Friday, March 14, 2014</p>
+                        <a href="#event7" data-transition="fade">Click Here for more details</a>
+                    </div>
+
+                    <div data-role="collapsible" data-mini="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                        <h4>'Cats Helping Cats: NUSAC Pet Food & Supply Drive</h4>
+                        <p>Friday, March 14, 2014</p>
+                        <a href="#event8" data-transition="fade">Click Here for more details</a>
+                    </div>
+
+                    <div data-role="collapsible" data-mini="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                        <h4>Free Dunkin' Donuts</h4>
+                        <p>Friday, March 14, 2014</p>
+                        <a href="#event9" data-transition="fade">Click Here for more details</a>
+                    </div>
+
+                    <div data-role="collapsible" data-mini="true" data-iconpos="right" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                        <h4>EECS Seminar: Dr. Meisam Nazari</h4>
+                        <p>EECS Seminar: Dr. Meisam Nazari</p>
+                        <p>Post-doctoral Scholar, EE Dept, California Institute of Technology</p>
+                        <p>Thursday, March 13, 2014</p>
+                        <p>11:00 AM - 12:00 PM</p>
+                        <p>Technological Institute, L324</p>
+                        <a href="#event10" data-transition="fade">Click Here for more details</a>
+                    </div>
+
                 </ul>
             </div>
-      </div>
+        </div>
+        
 
-      <!-- ** SIDEBAR PANEL ** -->
+        <!-- ** SIDEBAR PANEL ** -->
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
             <h3><img src="Images/icon.png" /></h3>
             <li class="active"><a href="#home"><!-- <i class="fa fa-home fa-fw"></i> -->Home</a></li>
@@ -817,65 +910,64 @@
             <li><a href="#"><!-- <i class="fa fa-info-circle fa-fw"></i> -->About</a></li>
         </nav>
 
+        <!-- ** FOOTER **  -->
+        <div data-role="footer"></div>
+    
+    </div> 
 
-      <!-- ** FOOTER **  -->
-      <div data-role="footer"></div>
-    </div>
-  
 <!-- =========================================================================================================================== -->
   <!-- Start of events nu-game page -->
     <div data-role="page"  id="nu-game" data-theme="a">
       
-      <!-- **NAVIGATION HEADER MENU** -->
-      <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
+        <!-- **NAVIGATION HEADER MENU** -->
+        <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
           <a href="#home" data-rel="back" data-icon="back" class="ui-nodisc-icon ui-alt-icon"> Back</a>
           <h1>Event Details</h1>
           <a href="#" class="toggle-menu menu-right push-body">
                 <i class="fa fa-bars fa-lg"></i>
             </a>
           <!-- <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a> -->
-      </div>
+        </div>
       
-      <!-- **MAIN BODY** -->
-      <div role="main" class="ui-content">
-          <table>
-            <tr>
-				<td class="tableHeaderRows" cellspacing="2" cellpadding="12">Category</th>
-				<td class="tableRows">Athletic</td>
-			</tr>
-			<tr>
-				<td class="tableHeaderRows" cellspacing="2" cellpadding="12">Event Name</th>
-				<td class="tableRows">Men's Basketball Game</td>
-			</tr>
-				<td class="tableHeaderRows" cellspacing="2" cellpadding="12">Date</th>
-				<td class="tableRows">3/20/2014</td>
-			</tr>
-			<tr>
-				<td class="tableHeaderRows" cellspacing="2" cellpadding="12">Time</th>
-				<td class="tableRows">7:00 PM</td>
-			</tr>
-			<tr>
-				<td class="tableHeaderRows" cellspacing="2" cellpadding="12">Location</th>
-				<td class="tableRows">Ryan Field</td>
-			</tr>
-			<tr>
-				<td class="tableHeaderRows" cellspacing="2" cellpadding="12" colspan="2">Description</th>
-			</tr>
-			<tr>
-				<td class="tableRows" cellspacing="2" cellpadding="12" colspan="2">
-				Come out support the NU Wildcats as they take on our rivals!</td>
-            <tr/>
-          </table>
-		  
-		<div class="moreInfo">
-			<br/>
-			<a class="eventlink" href="http://www.nusports.com/sports/m-baskbl/">More Information</a><br/>
-			<a class="eventlink navigatelink" href="#navigation" data-address="Ryan Field">Navigate to this event</a><br/>
-			
-		</div>
-      </div>
+        <!-- **MAIN BODY** -->
+        <div role="main" class="ui-content">
+            <table>
+                <tr>
+                	<td class="tableHeaderRows" cellspacing="2" cellpadding="12">Category</th>
+                	<td class="tableRows">Athletic</td>
+                </tr>
+                <tr>
+                	<td class="tableHeaderRows" cellspacing="2" cellpadding="12">Event Name</th>
+                	<td class="tableRows">Men's Basketball Game</td>
+                </tr>
+                	<td class="tableHeaderRows" cellspacing="2" cellpadding="12">Date</th>
+                	<td class="tableRows">3/20/2014</td>
+                </tr>
+                <tr>
+                	<td class="tableHeaderRows" cellspacing="2" cellpadding="12">Time</th>
+                	<td class="tableRows">7:00 PM</td>
+                </tr>
+                <tr>
+                	<td class="tableHeaderRows" cellspacing="2" cellpadding="12">Location</th>
+                	<td class="tableRows">Ryan Field</td>
+                </tr>
+                <tr>
+                	<td class="tableHeaderRows" cellspacing="2" cellpadding="12" colspan="2">Description</th>
+                </tr>
+                <tr>
+                	<td class="tableRows" cellspacing="2" cellpadding="12" colspan="2">
+                	Come out support the NU Wildcats as they take on our rivals!</td>
+                <tr/>
+            </table>
+          
+            <div class="moreInfo">
+            	<a class="eventlink" href="http://www.nusports.com/sports/m-baskbl/">More Information</a><br/>
+            	<!-- <a class="eventlink navigatelink" href="#navigation" data-address="Ryan Field"></a><br/> -->
+            </div>
 
-      <!-- ** SIDEBAR PANEL ** -->
+        </div>
+
+        <!-- ** SIDEBAR PANEL ** -->
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
             <h3><img src="Images/icon.png" /></h3>
             <li class="active"><a href="#home"><!-- <i class="fa fa-home fa-fw"></i> -->Home</a></li>
@@ -888,8 +980,31 @@
         </nav>
 
 
+        <!-- CUSTOM BUTTONS -->
+        <div class="custom-btns">
+            <a href="#" class="addtl-buttons ui-link ui-btn ui-shadow ui-corner-all ui-btn-inline" href="#navigation" data-address="Ryan Field" data-role="button">
+                <i class="fa fa-location-arrow fa-lg"></i>
+                <p>Navigate to Event</p>
+            </a>
+
+            <a href="http://example.com/link-to-your-event" title="Add to Calendar" class="addthisevent">
+                Add to Calendar
+                <span class="_start">10-05-2014 11:38:46</span>
+                <span class="_end">11-05-2014 11:38:46</span>
+                <span class="_zonecode">11</span>
+                <span class="_summary">Summary of the event</span>
+                <span class="_description">Description of the event</span>
+                <span class="_location">Location of the event</span>
+                <span class="_organizer">Organizer</span>
+                <span class="_organizer_email">Organizer e-mail</span>
+                <span class="_all_day_event">true</span>
+                <span class="_date_format">MM/DD/YYYY</span>
+            </a>
+        </div>
+
        <!-- ** FOOTER **  -->
       <div data-role="footer"></div>
+
     </div>
 
 <!-- =========================================================================================================================== -->
@@ -964,7 +1079,7 @@
 	
 <!-- =========================================================================================================================== -->
   <!-- Start of events spring break page -->
-    <div data-role="page"  id="springbreak" data-theme="a">
+    <div data-role="page"  id="spring" data-theme="a">
       
       <!-- **NAVIGATION HEADER MENU** -->
       <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
