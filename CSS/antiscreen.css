@@ -28,3 +28,10 @@
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
+
+.boxes {
+	margin-top: 50px;
+	font-weight: normal;
+	text-decoration: none;
+	text-shadow: none;
+}
