@@ -17,15 +17,14 @@
 }
 
 .news-boxes {
-	margin-top: 5px;
+	margin-top: 0;
 }
 
 #block-container {
 	height: 200px;
 	position: fixed;
 	bottom: 0;
-	margin-bottom: 75px;
+	margin-bottom: 60px;
 	overflow-y: scroll;
 	overflow-x: hidden;
-
 }
