@@ -117,16 +117,13 @@
 <!-- =========================================================================================================================== 
             Start of second page                   NAVIGATION                    
      =========================================================================================================================== -->
-    <div data-role="page" id="navigation" data-theme="a" data-dom-cache="false">
+    <div data-role="page" id="navigation" data-theme="a" data-url="navigation" class="swipe">
 
         <!-- **NAVIGATION HEADER MENU** -->
-        <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
+        <div data-role="header" role="banner">
             <a href="#home" data-rel="back" data-icon="back" class="ui-nodisc-icon ui-alt-icon">Back</a>
             <h1>Navigation</h1>
-            <a href="#right-panel" class="toggle-menu menu-right push-body">
-                <i class="fa fa-bars fa-lg"></i>
-            </a>
-            <!-- <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a> -->
+            <a href="#right-panel"><i class="fa fa-bars fa-lg"></i></a>
         </div>
 
         <!-- **MAIN BODY** -->
@@ -139,9 +136,9 @@
         </div>
 
         <!-- ** SIDEBAR PANEL ** -->
-        <div data-role="panel" id="right-panel" data-display="push" data-position="right" data-theme="b">
-            <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
-                <h3><img src="Images/mini-logo.png" /></h3>
+        <div data-role="panel" id="right-panel" data-display="push" data-position="right">
+            <h3><img src="Images/mini-logo.png" /></h3>
+            <ul>
                 <li class="active"><a href="#home"><!-- <i class="fa fa-home fa-fw"></i> -->Home</a></li>
                 <li><a href="#explore"><!-- <i class="fa fa-search fa-fw"></i> -->Explore</a></li>
                 <li><a href="#navigation"><!-- <i class="fa fa-map-marker fa-fw"></i> -->Navigate</a></li>
@@ -149,11 +146,13 @@
                 <li><a href="#"><!-- <i class="fa fa-shopping-cart fa-fw"></i> -->Parking</a></li>
                 <li><a href="#"><!-- <i class="fa fa-warning fa-fw"></i> -->Alerts</a></li>
                 <li><a href="#"><!-- <i class="fa fa-info-circle fa-fw"></i> -->About</a></li>
-            </nav>
+            </ul>
         </div>
 
         <!-- ** FOOTER **  -->
         <div data-role="footer"></div>
+
+
     </div>
 
 <!-- =========================================================================================================================== 
@@ -662,7 +661,7 @@
             Start of fourth page                    EVENTS                   
      =========================================================================================================================== -->
         
-    <div data-role="page" id="events" data-theme="a" data-url="events">
+    <div data-role="page" id="events" data-theme="a" data-url="events" class="swipe">
       
         <!-- **NAVIGATION HEADER MENU** -->
         <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">

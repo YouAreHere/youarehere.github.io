@@ -22,7 +22,7 @@
 
 #block-container {
 	height: 200px;
-	position: fixed;
+	position: absolute;
 	bottom: 0;
 	margin-bottom: 60px;
 	overflow-y: scroll;
