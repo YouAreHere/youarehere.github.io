@@ -23,8 +23,6 @@
 #block-container {
 	height: 200px;
 	margin-bottom: 60px;
-	overflow-y: scroll;
-	overflow-x: hidden;
 }
 
 .boxes {
