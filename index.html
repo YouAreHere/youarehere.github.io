@@ -15,248 +15,115 @@
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
-    <!-- <script type="text/javascript" src="http://js.addthisevent.com/atemay.js"></script> -->
-    <script src="JS/calendar.js"></script>
     <script src="JS/navigate.js"></script>
-    <script src="JS/jPushMenu.js"></script>
+    <script src="JS/snap.js"></script>
+    <script src="JS/menu.js"></script>   
   </head>
-  
-  <body class="cbp-spmenu-push">
+
+
+  <body>
     <script type="text/javascript" src="http://js.addthisevent.com/atemay.js"></script>
 
-<!-- ===========================================================================================================================
+<!--===========================================================================================================================
             Start of first page                    HOME                   
     =========================================================================================================================== -->
     <div data-role="page" id="home" data-theme="a">
-
-        <!-- ** HEADER ** -->
-        <div id="custom-header">
-          <div id="custom-panel">
-            <a href="#" class="toggle-menu menu-right push-body">
-                <i class="fa fa-bars fa-2x"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- ** SIDEBAR PANEL ** -->
-        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
-            <h3><img src="Images/mini-logo.png" /></h3>
-            <li><a href="#home"><!-- <i class="fa fa-home fa-fw"></i> -->Home</a></li>
-            <li><a href="#explore"><!-- <i class="fa fa-search fa-fw"></i> -->Explore</a></li>
-            <li><a href="#navigation"><!-- <i class="fa fa-map-marker fa-fw"></i> -->Navigate</a></li>
-            <li><a href="#events"><!-- <i class="fa fa-calendar fa-fw"></i> -->Events</a></li>
-            <li><a href="#"><!-- <i class="fa fa-shopping-cart fa-fw"></i> -->Parking</a></li>
-            <li><a href="#"><!-- <i class="fa fa-warning fa-fw"></i> -->Alerts</a></li>
-            <li><a href="#"><!-- <i class="fa fa-info-circle fa-fw"></i> -->About</a></li>
-        </nav>
-
-        <!-- ** MAIN TEXT ** -->
-        <div id="custom-main" role="main" class="ui-content">
-            <img src="Images/title1.png"/>
-        </div>
         
-        <div id="block-container">
-            <div id="block">
-                <p class="title-block">Campus <span style="text-shadow: 0 0 0 black;"><b>News</b></span></p>
-            </div>
-
-            <div id="block-updates">
-                <div class="boxes">
-                    <div id="alerts" class="news-boxes">
-                        <div class="icon-inner">
-                            <a href="#">
-                                <i class="fa fa-warning fa-lg"></i>
-                                <p>Alerts</p>
-                            </a>
-                        </div>
-
-                        <div class="content">
-                            <p class="content-title">Winter Weather Advisory</p>
-                            <p class="sub-title">Monday, March 3, 2014</p>
-                            <p class="content-text">Frostbite Shuttles will be in effect on Monday March 3, 2014 to Tuesday March 4, 2014.</p>
-                            <p class="content-link">Click Here to view</p>
-                        </div>
-                    </div>
-
-                    <div id="updates" class="news-boxes">
-                        <div class="icon-inner">
-                            <a href="#">
-                                <i class="fa fa-gears fa-lg"></i>
-                                <p>Updates</p>
-                            </a>
-                        </div>
-
-                        <div class="content">
-                            <p class="content-title">New Features Coming Soon</p>
-                            <p class="content-text">You Are Here adds all kinds of new features and capabilities throughout. Stay tuned for more updates on the calendar extension, automatic parking updates, etc!</p>
-                        </div>
-                    </div>
-
+        <!-- ** SIDEBAR PANEL ** -->
+        <div class="snap-drawers">
+            <div class="snap-drawer snap-drawer-right">
+                <div >
+                    <h3><img src="Images/mini-logo.png" /></h3>
+                    <ul>
+                        <li><a href="#home"><!-- <i class="fa fa-home fa-fw"></i> -->Home</a></li>
+                        <li><a href="#explore"><!-- <i class="fa fa-search fa-fw"></i> -->Explore</a></li>
+                        <li><a href="#navigation"><!-- <i class="fa fa-map-marker fa-fw"></i> -->Navigate</a></li>
+                        <li><a href="#events"><!-- <i class="fa fa-calendar fa-fw"></i> -->Events</a></li>
+                        <li><a href="#"><!-- <i class="fa fa-shopping-cart fa-fw"></i> -->Parking</a></li>
+                        <li><a href="#"><!-- <i class="fa fa-warning fa-fw"></i> -->Alerts</a></li>
+                        <li><a href="#"><!-- <i class="fa fa-info-circle fa-fw"></i> -->About</a></li> 
+                    </ul>
                 </div>
             </div>
         </div>
 
 
-        <!-- FOOTER BUTTONS  -->
-        <div id="custom-nav-footer" data-role="navbar" data-iconpos="bottom" data-theme="a">
-          <ul class="ui-alt-icon ui-nodisc-icon">
-            <li><a href="#navigation" data-icon="navigation">Navigation</a></li>
-            <li><a href="#events" data-icon="calendar">Events @ NU</a></li>
-            <li><a href="#explore" data-icon="search">Explore NU</a></li>
-          </ul>
-        </div>
+        <!-- ** BODY ** -->
+        <div id="content" class="snap-content">
+            <div id="custom-panel">
+                <a href="#" id="open-right">
+                    <i class="fa fa-bars fa-2x"></i>
+                </a>
+            </div>
+            
+            <!-- ** MAIN TEXT ** -->
+            <div id="main-wrapper">
+                <div id="custom-main" role="main" class="ui-content">
+                    <img src="Images/title1.png"/>
+                </div>
+            </div>
 
-        <!--call jPushMenu, required-->
-        <script>
-        jQuery(document).ready(function($) {
-            $('.toggle-menu').jPushMenu();
-        });
-        </script>
+            <div id="block-container">
+                <div id="block">
+                    <p class="title-block">Campus <span style="text-shadow: 0 0 0 black;"><b>News</b></span></p>
+                </div>
 
-        <!-- <div id="bars">
-                    <div id="alerts-bar">
-                        <div class="bars-inner">
-                            <a href="#" onclick="alerts()">
-                                <i class="fa fa-warning fa-lg"></i>
-                                <p>Alerts</p>
-                            </a>
+                <div id="block-updates">
+                    <div class="boxes">
+                        <div id="alerts" class="news-boxes">
+                            <div class="icon-inner">
+                                <a href="#">
+                                    <i class="fa fa-warning fa-lg"></i>
+                                    <p>Alerts</p>
+                                </a>
+                            </div>
+
+                            <div class="content">
+                                <p class="content-title">Winter Weather Advisory</p>
+                                <p class="sub-title">Monday, March 3, 2014</p>
+                                <p class="content-text">Frostbite Shuttles will be in effect on Monday March 3, 2014 to Tuesday March 4, 2014.</p>
+                                <p class="content-link">Click Here to view</p>
+                            </div>
+                        </div>
+
+                        <div id="updates" class="news-boxes">
+                            <div class="icon-inner">
+                                <a href="#">
+                                    <i class="fa fa-gears fa-lg"></i>
+                                    <p>Updates</p>
+                                </a>
+                            </div>
+
+                            <div class="content">
+                                <p class="content-title">New Features Coming Soon</p>
+                                <p class="content-text">You Are Here adds all kinds of new features and capabilities throughout. Stay tuned for more updates on the calendar extension, automatic parking updates, etc!</p>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div id="updates-bar">
-                        <div class="bars-inner">
-                            <a href="#" onclick="updates()">
-                                <i class="fa fa-gears fa-lg"></i>
-                                <p>Updates</p>
-                            </a>
-                        </div>
-                    </div>
+                </div>
+            </div>
 
-                    <div id="other-bar">
-                        <div class="bars-inner">
-                            <a href="#" onclick="discover()">
-                                <i class="fa fa-heart fa-lg"></i>
-                                <p>Discover</p>
-                            </a>
-                        </div>
-                    </div>
-                </div> -->
-
-        <!-- 
-        <div id="alerts"> 
-            <ul data-role="listview" data-inset="true" data-theme="a">
-                <li data-role="list-divider">Monday, March 3, 2014 <span class="ui-li-count">2</span></li>
-                <li><a href="#home">
-                <h2>Winter Weather Advisory</h2>
-                <p><strong>Frostbite Shuttles will be in effect on Monday March 3, 2014 to Tuesday March 4, 2014.</strong></p>
-                <p>Click Here to view</p>
-                    <p class="ui-li-aside"><strong>6:24</strong>AM</p>
-                </a></li>
-                <li><a href="#home">
-                <h2>jQuery Team</h2>
-                <p><strong>Boston Conference Planning</strong></p>
-                <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
-                    <p class="ui-li-aside"><strong>9:18</strong>AM</p>
-                </a></li>
-                <li data-role="list-divider">Thursday, March 6, 2014 <span class="ui-li-count">1</span></li>
-                <li><a href="#home">
-                <h2>Avery Walker</h2>
-                <p><strong>Re: Dinner Tonight</strong></p>
-                <p>Sure, let's plan on meeting at Highland Kitchen at 8:00 tonight. Can't wait!</p>
-                    <p class="ui-li-aside"><strong>4:48</strong>PM</p>
-                </a></li>
-            </ul>
-        </div>
-
-        <div id="updates"> 
-            <ul data-role="listview" data-inset="true" data-theme="a">
-                <li data-role="list-divider">Thursday, March 6, 2014 <span class="ui-li-count">1</span></li>
-                <li><a href="#home">
-                <h2>Avery Walker</h2>
-                <p><strong>Re: Dinner Tonight</strong></p>
-                <p>Sure, let's plan on meeting at Highland Kitchen at 8:00 tonight. Can't wait!</p>
-                    <p class="ui-li-aside"><strong>4:48</strong>PM</p>
-                </a></li>
-            </ul>
-        </div>
-
-        <div id="discover"> 
-            <ul data-role="listview" data-split-icon="gear" data-split-theme="a" data-inset="true">
-                <li><a href="#">
-                    <img src="Images/album-bb.jpg">
-                <h2>Broken Bells</h2>
-                <p>Broken Bells</p></a>
-                </li>
-                <li><a href="#">
-                    <img src="Images/album-hc.jpg">
-                <h2>Warning</h2>
-                <p>Hot Chip</p></a>
-                </li>
-                <li><a href="#">
-                    <img src="Images/album-p.jpg">
-                <h2>Wolfgang Amadeus Phoenix</h2>
-                <p>Phoenix</p></a>
-                </li>
-            </ul>
-        </div>  -->
-
-        <!-- **NAVIGATION HEADER MENU** 
-        <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
-            <h1></h1>
-            <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
-        </div>-->
-        
-        <!-- ** SIDEBAR PANEL **  
-        <div data-role="panel" id="sidebar" data-position="right" data-display="overlay" class="jqm-navmenu-panel ui-corner-all ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open" data-theme="a">
-            <div class="ui-panel-inner">
-              <ul data-role="listview" data-inset="true" class="ui-alt-icon ui-nodisc-icon ui-listview">
-                <li>Home</li>
-                <li data-icon="home"><a href="#home">Home</a></li>
-                <li data-icon="search"><a href="#explore">Explore</a></li>
-                <li data-icon="navigation"><a href="#navigation">Navigate</a></li>
-                <li data-icon="calendar"><a href="#events">Events</a></li>
-                <li data-icon="grid"><a href="#">Parking</a></li>
-                <li data-icon="alert"><a href="#">Alerts</a></li>
-                <li data-icon="info"><a href="#">About</a></li>
+            <!-- FOOTER BUTTONS  -->
+            <div id="custom-nav-footer" data-role="navbar" data-iconpos="bottom" data-theme="a">
+              <ul class="ui-alt-icon ui-nodisc-icon">
+                <li><a href="#navigation" data-icon="navigation">Navigation</a></li>
+                <li><a href="#events" data-icon="calendar">Events @ NU</a></li>
+                <li><a href="#explore" data-icon="search">Explore NU</a></li>
               </ul>
             </div>
-        </div>-->
-
-        <!-- **MAIN BODY** 
-        <div role="main" class="ui-content">
-            logo
-            <div id="logo">
-                <img width="250px" src="Images/logo2.png" />
-            </div>
-
-            main on-screen buttons
-            <fieldset class="ui-grid-b" width="500px;">
-                <div class="ui-block-a">
-                  <a href="#navigation" class="ui-btn ui-btn-inline ui-shadow">Navigation</a>
-                </div>
-
-                <div class="ui-block-b">
-                  <a href="#events" class="ui-btn ui-btn-inline ui-shadow">Events @ NU</a>
-                </div>
-
-                <div class="ui-block-c">
-                  <a href="#explore" class="ui-btn ui-btn-inline ui-shadow">Explore NU</a>
-                </div>
-            </fieldset>
-        </div>-->
-
+        </div>
     </div>
 
 <!-- =========================================================================================================================== 
             Start of second page                   NAVIGATION                    
      =========================================================================================================================== -->
-    <div data-role="page" id="navigation" data-theme="a">
+    <div data-role="page" id="navigation" data-theme="a" data-dom-cache="false">
 
         <!-- **NAVIGATION HEADER MENU** -->
         <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
             <a href="#home" data-rel="back" data-icon="back" class="ui-nodisc-icon ui-alt-icon">Back</a>
             <h1>Navigation</h1>
-            <a href="#" class="toggle-menu menu-right push-body">
+            <a href="#right-panel" class="toggle-menu menu-right push-body">
                 <i class="fa fa-bars fa-lg"></i>
             </a>
             <!-- <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a> -->
@@ -272,16 +139,18 @@
         </div>
 
         <!-- ** SIDEBAR PANEL ** -->
-        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
-            <h3><img src="Images/mini-logo.png" /></h3>
-            <li class="active"><a href="#home"><!-- <i class="fa fa-home fa-fw"></i> -->Home</a></li>
-            <li><a href="#explore"><!-- <i class="fa fa-search fa-fw"></i> -->Explore</a></li>
-            <li><a href="#navigation"><!-- <i class="fa fa-map-marker fa-fw"></i> -->Navigate</a></li>
-            <li><a href="#events"><!-- <i class="fa fa-calendar fa-fw"></i> -->Events</a></li>
-            <li><a href="#"><!-- <i class="fa fa-shopping-cart fa-fw"></i> -->Parking</a></li>
-            <li><a href="#"><!-- <i class="fa fa-warning fa-fw"></i> -->Alerts</a></li>
-            <li><a href="#"><!-- <i class="fa fa-info-circle fa-fw"></i> -->About</a></li>
-        </nav>
+        <div data-role="panel" id="right-panel" data-display="push" data-position="right" data-theme="b">
+            <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+                <h3><img src="Images/mini-logo.png" /></h3>
+                <li class="active"><a href="#home"><!-- <i class="fa fa-home fa-fw"></i> -->Home</a></li>
+                <li><a href="#explore"><!-- <i class="fa fa-search fa-fw"></i> -->Explore</a></li>
+                <li><a href="#navigation"><!-- <i class="fa fa-map-marker fa-fw"></i> -->Navigate</a></li>
+                <li><a href="#events"><!-- <i class="fa fa-calendar fa-fw"></i> -->Events</a></li>
+                <li><a href="#"><!-- <i class="fa fa-shopping-cart fa-fw"></i> -->Parking</a></li>
+                <li><a href="#"><!-- <i class="fa fa-warning fa-fw"></i> -->Alerts</a></li>
+                <li><a href="#"><!-- <i class="fa fa-info-circle fa-fw"></i> -->About</a></li>
+            </nav>
+        </div>
 
         <!-- ** FOOTER **  -->
         <div data-role="footer"></div>
@@ -292,92 +161,100 @@
     =========================================================================================================================== -->
     <div data-role="page" id="explore" data-theme="a">
 
-        <!-- **NAVIGATION HEADER MENU** -->
-        <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
-            <a href="#home" data-rel="back" data-icon="back" class="ui-nodisc-icon ui-alt-icon"> Back</a>
-            <h1>Explore NU</h1>
-            <!-- <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button"></a> -->
-            <a href="#" class="toggle-menu menu-right push-body">
-                <i class="fa fa-bars fa-lg"></i>
-            </a>
-        </div>
-
-        <!-- **MAIN BODY** -->
-		<div class="choice_list" style="margin:20px;">
-				<ul data-role="listview" class="ui-listview" data-inset="true">
-					<li data-role="list-divider" style="font-size:large;font-weight:bold;">Explore NU Landmarks
-					<li>
-						<a href="#rock">
-							<h3>The Rock</h3>
-							<p><b>Built:</b>1902</p>
-							<p class="ui-li-aside" style="font-size:15px;font-weight:bold;">0.5 mi</p>
-						</a>
-					</li>
-					<li>
-						<a href="#lakefill">
-							<h3>The Lakefill</h3>
-							<p><b>Built:</b>1964</p>
-							<p class="ui-li-aside" style="font-size:15px;font-weight:bold;">3.5 mi</p>
-						</a>
-					</li>
-					<li><a href="#nu-landmarks">
-						<h3>View more in this list</h3>
-					</a></li>
-				</ul>
-		</div>
-		<div class="choice_list" style="margin:20px;">
-			 <ul data-role="listview" class="ui-listview" data-inset="true">
-				<li data-role="list-divider" style="font-size:large;font-weight:bold;">Explore Restuarants
-				<li>
-					<a href="#frontera">
-						<h3>Frontera</h3>
-						<p class="star rating-30"></p>
-						<p class="ui-li-aside" style="font-size:15px;font-weight:bold;">1.5 mi</p>
-					</a>
-				</li>
-				<li>
-					<a href="#subway">
-					<h3>Subway</h3>
-					<p class="star rating-25"></p>
-					<p class="ui-li-aside" style="font-size:15px;font-weight:bold;">1.5 mi</p>
-					</a>
-				</li>
-				<li>
-					<a href="#food">
-					<h3>View more in this list</h3>
-					</a>
-				</li>
-			</ul>
-        </div>
-        <div class="choice_list" style="margin:20px;">
-            <ul data-role="listview" class="ui-listview" data-inset="true">
-            <li data-role="list-divider" style="font-size:large;font-weight:bold;">Explore Entertainment spots
-            <li>
-            <a href="#cineplex">
-                <h3>Cinemark Century 12</h3>
-                <p class="star rating-40"></p>
-                <p class="ui-li-aside" style="font-size:15px;font-weight:bold;">6 mi</p>
-            </a>
-            </li>
-            <li><a href="#entertainment">
-            <h3>View more in this list</h3>
-            </a></li></ul>
-        </div>
-
         <!-- ** SIDEBAR PANEL ** -->
-        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
-            <h3><img src="Images/mini-logo.png" /></h3>
-            <li class="active"><a href="#home"><!-- <i class="fa fa-home fa-fw"></i> -->Home</a></li>
-            <li><a href="#explore"><!-- <i class="fa fa-search fa-fw"></i> -->Explore</a></li>
-            <li><a href="#navigation"><!-- <i class="fa fa-map-marker fa-fw"></i> -->Navigate</a></li>
-            <li><a href="#events"><!-- <i class="fa fa-calendar fa-fw"></i> -->Events</a></li>
-            <li><a href="#"><!-- <i class="fa fa-shopping-cart fa-fw"></i> -->Parking</a></li>
-            <li><a href="#"><!-- <i class="fa fa-warning fa-fw"></i> -->Alerts</a></li>
-            <li><a href="#"><!-- <i class="fa fa-info-circle fa-fw"></i> -->About</a></li>
-        </nav>
+        <div class="snap-drawers">
+            <div class="snap-drawer snap-drawer-right">
+                <div >
+                    <h3><img src="Images/mini-logo.png" /></h3>
+                    <ul>
+                        <li><a href="#home"><!-- <i class="fa fa-home fa-fw"></i> -->Home</a></li>
+                        <li><a href="#explore"><!-- <i class="fa fa-search fa-fw"></i> -->Explore</a></li>
+                        <li><a href="#navigation"><!-- <i class="fa fa-map-marker fa-fw"></i> -->Navigate</a></li>
+                        <li><a href="#events"><!-- <i class="fa fa-calendar fa-fw"></i> -->Events</a></li>
+                        <li><a href="#"><!-- <i class="fa fa-shopping-cart fa-fw"></i> -->Parking</a></li>
+                        <li><a href="#"><!-- <i class="fa fa-warning fa-fw"></i> -->Alerts</a></li>
+                        <li><a href="#"><!-- <i class="fa fa-info-circle fa-fw"></i> -->About</a></li> 
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-        <!-- ** FOOTER **  -->
-        <div data-role="footer"></div>
+
+        <!-- ** BODY ** -->
+        <div class="snap-content">
+
+            <!-- ** HEADER MENU ** -->
+            <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
+                <a href="#home" data-rel="back" data-icon="back" class="ui-nodisc-icon ui-alt-icon">Back</a>
+                <h1>Explore NU</h1>
+                <a href="#" id="open-right"><i class="fa fa-bars fa-lg"></i></a>
+            </div>
+
+            <!-- **MAIN BODY** -->
+            <div class="choice_list" style="margin:20px;">
+                    <ul data-role="listview" class="ui-listview" data-inset="true">
+                        <li data-role="list-divider" style="font-size:large;font-weight:bold;">Explore NU Landmarks
+                        <li>
+                            <a href="#rock">
+                                <h3>The Rock</h3>
+                                <p><b>Built:</b>1902</p>
+                                <p class="ui-li-aside" style="font-size:15px;font-weight:bold;">0.5 mi</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#lakefill">
+                                <h3>The Lakefill</h3>
+                                <p><b>Built:</b>1964</p>
+                                <p class="ui-li-aside" style="font-size:15px;font-weight:bold;">3.5 mi</p>
+                            </a>
+                        </li>
+                        <li><a href="#nu-landmarks">
+                            <h3>View more in this list</h3>
+                        </a></li>
+                    </ul>
+            </div>
+            <div class="choice_list" style="margin:20px;">
+                 <ul data-role="listview" class="ui-listview" data-inset="true">
+                    <li data-role="list-divider" style="font-size:large;font-weight:bold;">Explore Restuarants
+                    <li>
+                        <a href="#frontera">
+                            <h3>Frontera</h3>
+                            <p class="star rating-30"></p>
+                            <p class="ui-li-aside" style="font-size:15px;font-weight:bold;">1.5 mi</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#subway">
+                        <h3>Subway</h3>
+                        <p class="star rating-25"></p>
+                        <p class="ui-li-aside" style="font-size:15px;font-weight:bold;">1.5 mi</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#food">
+                        <h3>View more in this list</h3>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="choice_list" style="margin:20px;">
+                <ul data-role="listview" class="ui-listview" data-inset="true">
+                <li data-role="list-divider" style="font-size:large;font-weight:bold;">Explore Entertainment spots
+                <li>
+                <a href="#cineplex">
+                    <h3>Cinemark Century 12</h3>
+                    <p class="star rating-40"></p>
+                    <p class="ui-li-aside" style="font-size:15px;font-weight:bold;">6 mi</p>
+                </a>
+                </li>
+                <li><a href="#entertainment">
+                <h3>View more in this list</h3>
+                </a></li></ul>
+            </div>
+
+            <!-- ** FOOTER **  -->
+            <div data-role="footer"></div>
+        </div>
     </div>
 
 <!-- =========================================================================================================================== -->
@@ -785,13 +662,13 @@
             Start of fourth page                    EVENTS                   
      =========================================================================================================================== -->
         
-    <div data-role="page" id="events" data-theme="a">
+    <div data-role="page" id="events" data-theme="a" data-url="events">
       
         <!-- **NAVIGATION HEADER MENU** -->
         <div data-role="header" class="jqm-header ui-header ui-bar-inherit" role="banner">
             <a href="#home" data-rel="back" data-icon="back" class="ui-nodisc-icon ui-alt-icon"> Back</a>
             <h1>Events @ NU</h1>
-            <a href="#" class="toggle-menu menu-right push-body">
+            <a href="#right-panel" class="toggle-menu menu-right push-body">
                 <i class="fa fa-bars fa-lg"></i>
             </a>
             <!-- <a href="#sidebar" class="ui-nodisc-icon ui-alt-icon ui-btn-right ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a> -->
@@ -924,16 +801,18 @@
         
 
         <!-- ** SIDEBAR PANEL ** -->
-        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
-            <h3><img src="Images/mini-logo.png" /></h3>
-            <li class="active"><a href="#home"><!-- <i class="fa fa-home fa-fw"></i> -->Home</a></li>
-            <li><a href="#explore"><!-- <i class="fa fa-search fa-fw"></i> -->Explore</a></li>
-            <li><a href="#navigation"><!-- <i class="fa fa-map-marker fa-fw"></i> -->Navigate</a></li>
-            <li><a href="#events"><!-- <i class="fa fa-calendar fa-fw"></i> -->Events</a></li>
-            <li><a href="#"><!-- <i class="fa fa-shopping-cart fa-fw"></i> -->Parking</a></li>
-            <li><a href="#"><!-- <i class="fa fa-warning fa-fw"></i> -->Alerts</a></li>
-            <li><a href="#"><!-- <i class="fa fa-info-circle fa-fw"></i> -->About</a></li>
-        </nav>
+        <div data-role="panel" id="right-panel" data-display="push" data-position="right" data-theme="b">
+            <nav>
+                <h3><img src="Images/mini-logo.png" /></h3>
+                <li class="active"><a href="#home"><!-- <i class="fa fa-home fa-fw"></i> -->Home</a></li>
+                <li><a href="#explore"><!-- <i class="fa fa-search fa-fw"></i> -->Explore</a></li>
+                <li><a href="#navigation"><!-- <i class="fa fa-map-marker fa-fw"></i> -->Navigate</a></li>
+                <li><a href="#events"><!-- <i class="fa fa-calendar fa-fw"></i> -->Events</a></li>
+                <li><a href="#"><!-- <i class="fa fa-shopping-cart fa-fw"></i> -->Parking</a></li>
+                <li><a href="#"><!-- <i class="fa fa-warning fa-fw"></i> -->Alerts</a></li>
+                <li><a href="#"><!-- <i class="fa fa-info-circle fa-fw"></i> -->About</a></li>
+            </nav>
+        </div>
 
         <!-- ** FOOTER **  -->
         <div data-role="footer"></div>
@@ -1201,7 +1080,7 @@
         <div data-role="footer"></div>
     </div>
 <!-- =========================================================================================================================== -->
-  <!-- Start of events spring break page -->
+  <!-- Start of events1 page -->
     <div data-role="page"  id="event1" data-theme="a">
       
       <!-- **NAVIGATION HEADER MENU** -->
@@ -1289,7 +1168,7 @@
     </div>
 
 <!-- =========================================================================================================================== -->
-  <!-- Start of events spring break page -->
+  <!-- Start of events2 page -->
     <div data-role="page"  id="event11" data-theme="a">
       
       <!-- **NAVIGATION HEADER MENU** -->
@@ -1381,7 +1260,7 @@
     </div>
 
 <!-- =========================================================================================================================== -->
-  <!-- Start of events spring break page -->
+  <!-- Start of events3 page -->
     <div data-role="page"  id="event2" data-theme="a">
       
       <!-- **NAVIGATION HEADER MENU** -->
@@ -1469,7 +1348,7 @@
     </div>
 
 <!-- =========================================================================================================================== -->
-  <!-- Start of events spring break page -->
+  <!-- Start of events4 page -->
     <div data-role="page"  id="event3" data-theme="a">
       
       <!-- **NAVIGATION HEADER MENU** -->
@@ -1566,7 +1445,7 @@
     </div>
 
 <!-- =========================================================================================================================== -->
-  <!-- Start of events spring break page -->
+  <!-- Start of events5 page -->
     <div data-role="page"  id="event4" data-theme="a">
       
       <!-- **NAVIGATION HEADER MENU** -->
@@ -1658,7 +1537,7 @@
     </div>
 
 <!-- =========================================================================================================================== -->
-  <!-- Start of events spring break page -->
+  <!-- Start of events6 page -->
     <div data-role="page"  id="event5" data-theme="a">
       
       <!-- **NAVIGATION HEADER MENU** -->
@@ -1746,7 +1625,7 @@
     </div>
 
 <!-- =========================================================================================================================== -->
-  <!-- Start of events spring break page -->
+  <!-- Start of events7 page -->
     <div data-role="page"  id="event6" data-theme="a">
       
       <!-- **NAVIGATION HEADER MENU** -->
@@ -1842,7 +1721,7 @@
     </div>
 
 <!-- =========================================================================================================================== -->
-  <!-- Start of events spring break page -->
+  <!-- Start of events8 page -->
     <div data-role="page"  id="event7" data-theme="a">
       
       <!-- **NAVIGATION HEADER MENU** -->
@@ -1941,7 +1820,7 @@
     </div>
 
 <!-- =========================================================================================================================== -->
-  <!-- Start of events spring break page -->
+  <!-- Start of events9 page -->
     <div data-role="page"  id="event8" data-theme="a">
       
       <!-- **NAVIGATION HEADER MENU** -->
@@ -2033,7 +1912,7 @@
     </div>
 
 <!-- =========================================================================================================================== -->
-  <!-- Start of events spring break page -->
+  <!-- Start of events10 page -->
     <div data-role="page"  id="event9" data-theme="a">
       
       <!-- **NAVIGATION HEADER MENU** -->
@@ -2121,7 +2000,7 @@
     </div>
 
 <!-- =========================================================================================================================== -->
-  <!-- Start of events spring break page -->
+  <!-- Start of events11 page -->
     <div data-role="page"  id="event10" data-theme="a">
       
       <!-- **NAVIGATION HEADER MENU** -->
@@ -2212,6 +2091,52 @@
         <!-- ** FOOTER **  -->
         <div data-role="footer"></div>
     </div>
+
+    <!-- SCRIPT FOR SWIPE MENU -->
+    <script type="text/javascript">
+
+        /* initiate snapper object, define element to slide left or right ('#content'), and disable right drag */
+        var snapper = new Snap({
+            element: document.getElementById('content'),
+            disable: 'left'
+        });
+
+
+        /*  create cross-browser event handler. */
+        var addEvent = function addEvent(element, eventName, func) {
+            if (element.addEventListener) {
+                return element.addEventListener(eventName, func, false);
+            } else if (element.attachEvent) {
+                return element.attachEvent("on" + eventName, func);
+            }
+        };
+
+        /* when the element with id 'open-left' is clicked, use the public snapper.open() method to slide the content div rightward, to reveal the LEFT menu */
+        addEvent(document.getElementById('open-right'), 'click', function() {
+            snapper.open('right');
+        });
+    
+        function refreshPage() {
+          $.mobile.changePage(
+            window.location.href,
+            {
+              allowSamePageTransition : true,
+              transition              : 'none',
+              showLoadMsg             : false,
+              reloadPage              : true
+            }
+          );
+        }
+
+        jQuery('div').live('pagehide', function(event, ui){
+          var page = jQuery(event.target);
+
+          if(page.attr('data-cache') == 'never'){
+            page.remove();
+          };
+        });
+
+    </script>
 
   </body>
 </html>
