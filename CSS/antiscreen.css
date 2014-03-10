@@ -22,8 +22,6 @@
 
 #block-container {
 	height: 200px;
-	position: fixed;
-	bottom: 0;
 	margin-bottom: 60px;
 	overflow-y: scroll;
 	overflow-x: hidden;
@@ -31,7 +29,4 @@
 
 .boxes {
 	margin-top: 50px;
-	font-weight: normal;
-	text-decoration: none;
-	text-shadow: none;
 }

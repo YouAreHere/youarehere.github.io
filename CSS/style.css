@@ -96,7 +96,7 @@ html, body {
 	height: 1.6em;
 	background: #d94949;
 	padding: 5px;
-	position: fixed;
+	position: relative;
 	/*margin-bottom:1em;*/
 }
 
