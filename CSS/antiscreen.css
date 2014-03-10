@@ -22,11 +22,13 @@
 
 #block-container {
 	height: 200px;
-	position: absolute;
-	bottom: 0;
 	margin-bottom: 60px;
 	overflow-y: scroll;
 	overflow-x: hidden;
+}
+
+#block {
+	position: fixed;
 }
 
 .boxes {
