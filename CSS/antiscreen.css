@@ -21,6 +21,7 @@
 }
 
 #block-container {
+	position: fixed;
 	height: 200px;
 	margin-bottom: 60px;
 	overflow-y: scroll;
