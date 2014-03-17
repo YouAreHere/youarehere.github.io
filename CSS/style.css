@@ -357,7 +357,7 @@ html, body {
 
 .ui-input-search, .ui-body-inherit, .ui-corner-all, .ui-shadow-inset, .ui-input-has-clear
 {
-	box-shadow: 0 0 12px #000000;
+	box-shadow: 0 0 6px #000000;
 }
 
 .pac-container {
